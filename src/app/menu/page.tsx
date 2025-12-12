@@ -1,31 +1,12 @@
 "use client"
 
-import { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import {
-  Flame,
-  Leaf,
-  Clock,
-  Star,
-  Plus,
-  Minus,
-  ShoppingBag,
-  Check,
-  Info,
-} from "lucide-react"
-import { toast } from "sonner"
+import { Leaf, Clock, Star, Info } from "lucide-react"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -81,38 +62,6 @@ const menuItem = {
 }
 
 export default function MenuPage() {
-  const [selectedSize, setSelectedSize] = useState(menuItem.prices[0])
-  const [selectedSpice, setSelectedSpice] = useState(menuItem.spiceLevels[1])
-  const [selectedWater, setSelectedWater] = useState(menuItem.waterTypes[0])
-  const [quantity, setQuantity] = useState(1)
-  const [selectedExtras, setSelectedExtras] = useState<string[]>([])
-  const [isAdded, setIsAdded] = useState(false)
-
-  const toggleExtra = (extraId: string) => {
-    setSelectedExtras((prev) =>
-      prev.includes(extraId)
-        ? prev.filter((id) => id !== extraId)
-        : [...prev, extraId]
-    )
-  }
-
-  const calculateTotal = () => {
-    const basePrice = selectedSize.price * quantity
-    const extrasPrice = selectedExtras.reduce((sum, extraId) => {
-      const extra = menuItem.extras.find((e) => e.id === extraId)
-      return sum + (extra?.price || 0) * quantity
-    }, 0)
-    return basePrice + extrasPrice
-  }
-
-  const handleAddToCart = () => {
-    setIsAdded(true)
-    toast.success("Added to cart!", {
-      description: `${quantity}x ${selectedSize.name} - ₹${calculateTotal()}`,
-    })
-    setTimeout(() => setIsAdded(false), 2000)
-  }
-
   return (
     <div className="overflow-hidden">
       <section className="relative py-32 bg-charcoal">
@@ -175,8 +124,7 @@ export default function MenuPage() {
                   />
                   <Badge className="absolute top-4 left-4 bg-saffron text-white">
                     <Star className="w-3 h-3 mr-1 fill-current" />
-                    {menuItem.rating} ({menuItem.reviews.toLocaleString()}{" "}
-                    reviews)
+                    {menuItem.rating} ({menuItem.reviews.toLocaleString()} reviews)
                   </Badge>
                 </div>
 
@@ -237,182 +185,92 @@ export default function MenuPage() {
                 <CardContent className="p-6 space-y-6">
                   <div>
                     <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Select Size
+                      Portions & Pricing
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       {menuItem.prices.map((price) => (
-                        <button
+                        <div
                           key={price.id}
-                          onClick={() => setSelectedSize(price)}
-                          className={`p-4 rounded-xl border-2 transition-all text-left ${
-                            selectedSize.id === price.id
-                              ? "border-saffron bg-saffron/5"
-                              : "border-border hover:border-saffron/50"
-                          }`}
+                          className="p-4 rounded-xl border-2 border-border bg-white shadow-sm"
                         >
                           <p className="font-medium text-charcoal text-sm">
                             {price.name}
                           </p>
-                          <p className="text-saffron font-bold text-lg">
-                            ₹{price.price}
+                          <p className="text-saffron font-bold text-2xl">
+                            ${price.price}
                           </p>
-                        </button>
+                        </div>
                       ))}
                     </div>
                   </div>
 
                   <div>
                     <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Spice Level
+                      Spice Levels
                     </label>
-                    <div className="flex gap-3">
+                    <div className="grid sm:grid-cols-3 gap-3">
                       {menuItem.spiceLevels.map((spice) => (
-                        <button
+                        <div
                           key={spice.id}
-                          onClick={() => setSelectedSpice(spice)}
-                          className={`flex-1 p-3 rounded-xl border-2 transition-all ${
-                            selectedSpice.id === spice.id
-                              ? "border-saffron bg-saffron/5"
-                              : "border-border hover:border-saffron/50"
-                          }`}
+                          className="p-3 rounded-xl border-2 border-border bg-white text-center"
                         >
                           <p className="text-xl mb-1">{spice.icon}</p>
                           <p className="text-sm font-medium text-charcoal">
                             {spice.name}
                           </p>
-                        </button>
+                        </div>
                       ))}
                     </div>
                   </div>
 
                   <div>
                     <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Pani Type
+                      Pani Options
                     </label>
-                    <Select
-                      value={selectedWater.id}
-                      onValueChange={(val) =>
-                        setSelectedWater(
-                          menuItem.waterTypes.find((w) => w.id === val)!
-                        )
-                      }
-                    >
-                      <SelectTrigger className="w-full">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {menuItem.waterTypes.map((water) => (
-                          <SelectItem key={water.id} value={water.id}>
-                            <div className="flex flex-col">
-                              <span>{water.name}</span>
-                              <span className="text-xs text-muted-foreground">
-                                {water.description}
-                              </span>
-                            </div>
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    <div className="space-y-3">
+                      {menuItem.waterTypes.map((water) => (
+                        <div
+                          key={water.id}
+                          className="p-3 rounded-xl border-2 border-border bg-white flex justify-between gap-3"
+                        >
+                          <div>
+                            <p className="font-semibold text-charcoal">{water.name}</p>
+                            <p className="text-sm text-muted-foreground">
+                              {water.description}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
                   <div>
                     <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Extras
+                      Add-ons
                     </label>
                     <div className="space-y-2">
                       {menuItem.extras.map((extra) => (
-                        <button
+                        <div
                           key={extra.id}
-                          onClick={() => toggleExtra(extra.id)}
-                          className={`w-full flex items-center justify-between p-3 rounded-xl border-2 transition-all ${
-                            selectedExtras.includes(extra.id)
-                              ? "border-saffron bg-saffron/5"
-                              : "border-border hover:border-saffron/50"
-                          }`}
+                          className="flex items-center justify-between p-3 rounded-xl border-2 border-border bg-white"
                         >
-                          <div className="flex items-center gap-3">
-                            <div
-                              className={`w-5 h-5 rounded-md border-2 flex items-center justify-center transition-colors ${
-                                selectedExtras.includes(extra.id)
-                                  ? "border-saffron bg-saffron"
-                                  : "border-border"
-                              }`}
-                            >
-                              {selectedExtras.includes(extra.id) && (
-                                <Check className="w-3 h-3 text-white" />
-                              )}
-                            </div>
-                            <span className="font-medium text-charcoal">
-                              {extra.name}
-                            </span>
-                          </div>
-                          <span className="text-saffron font-medium">
-                            +₹{extra.price}
+                          <span className="font-medium text-charcoal">
+                            {extra.name}
                           </span>
-                        </button>
+                          <span className="text-saffron font-semibold">${extra.price}</span>
+                        </div>
                       ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Quantity
-                    </label>
-                    <div className="flex items-center gap-4">
-                      <button
-                        onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                        className="w-12 h-12 rounded-xl border-2 border-border hover:border-saffron flex items-center justify-center transition-colors"
-                      >
-                        <Minus className="w-5 h-5 text-charcoal" />
-                      </button>
-                      <span className="text-2xl font-bold text-charcoal w-12 text-center">
-                        {quantity}
-                      </span>
-                      <button
-                        onClick={() => setQuantity(quantity + 1)}
-                        className="w-12 h-12 rounded-xl border-2 border-border hover:border-saffron flex items-center justify-center transition-colors"
-                      >
-                        <Plus className="w-5 h-5 text-charcoal" />
-                      </button>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <div className="flex items-center justify-between p-6 bg-charcoal rounded-2xl mb-6">
-                <div>
-                  <p className="text-cream/70 text-sm">Total</p>
-                  <p className="text-cream text-3xl font-serif font-bold">
-                    ₹{calculateTotal()}
-                  </p>
-                </div>
-                <Button
-                  onClick={handleAddToCart}
-                  size="lg"
-                  className={`rounded-full px-8 py-6 text-lg shadow-xl transition-all ${
-                    isAdded
-                      ? "bg-green hover:bg-green-dark"
-                      : "bg-saffron hover:bg-saffron-dark"
-                  }`}
-                  disabled={isAdded}
-                >
-                  {isAdded ? (
-                    <>
-                      <Check className="w-5 h-5 mr-2" />
-                      Added!
-                    </>
-                  ) : (
-                    <>
-                      <ShoppingBag className="w-5 h-5 mr-2" />
-                      Add to Cart
-                    </>
-                  )}
-                </Button>
+              <div className="p-6 bg-charcoal rounded-2xl text-cream">
+                <p className="text-lg font-serif font-bold">Visit Us to Order</p>
+                <p className="text-cream/80 mt-2">
+                  Menu is display-only. Pricing shown in USD for in-person and pickup orders. No online ordering.
+                </p>
               </div>
-
-              <p className="text-center text-muted-foreground text-sm">
-                Pickup only • Ready in {menuItem.prepTime}
-              </p>
             </motion.div>
           </div>
         </div>

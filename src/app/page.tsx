@@ -122,9 +122,9 @@ export default function HomePage() {
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
-                width={800}
-                height={280}
-                className="h-40 sm:h-48 lg:h-60 w-auto"
+                width={1000}
+                height={360}
+                className="h-48 sm:h-60 lg:h-72 w-auto max-w-[90vw]"
                 priority
               />
             </motion.div>
@@ -150,7 +150,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
-                <Link href="/menu">Order Pani Puri</Link>
+                <Link href="/menu">View Menu</Link>
               </Button>
               <Button
                 asChild
@@ -291,7 +291,7 @@ export default function HomePage() {
                   className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 shadow-lg"
                 >
                   <Link href="/menu">
-                    Order Now — Starting at ₹80
+                    View Menu — Starting at $8
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
@@ -482,7 +482,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
-                <Link href="/menu">Order Now</Link>
+                <Link href="/menu">View Menu</Link>
               </Button>
               <Button
                 asChild
