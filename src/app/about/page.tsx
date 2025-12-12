@@ -219,7 +219,7 @@ export default function AboutPage() {
                       <span className="text-saffron font-serif text-3xl font-bold">
                         {item.year}
                       </span>
-                      <h3 className="text-xl font-serif font-bold text-cream mt-2 mb-3 !whitespace-pre-line">
+                      <h3 className="text-xl font-serif font-bold text-cream mt-2 mb-3 !whitespace-pre-line !whitespace-pre-line">
                         {item.title}
                       </h3>
                       <p className="text-cream/70">{item.description}</p>
