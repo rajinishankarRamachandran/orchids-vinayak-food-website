@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, ShoppingBag } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -52,8 +53,15 @@ export function Navbar() {
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-saffron to-saffron-dark flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                <span className="text-white font-serif font-bold text-lg">V</span>
+              <div className="relative w-12 h-12 rounded-full shadow-lg overflow-hidden ring-2 ring-saffron/50 group-hover:scale-105 transition-transform">
+                <Image
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                  alt="Vinayak Food Inc logo"
+                  fill
+                  className="object-contain bg-white"
+                  sizes="48px"
+                  priority
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold text-charcoal leading-tight">
