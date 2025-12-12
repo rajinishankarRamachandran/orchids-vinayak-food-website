@@ -40,7 +40,7 @@ const timeline = [
 },
 {
   year: "2024",
-  title: "24 Years of Authentic Heritage",
+  title: "Years of Authentic Heritage",
   description:
   "24 years of authentic flavor, unchanged and unforgettable."
 },
