@@ -303,7 +303,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 shadow-lg">
 
-                  <Link href="/menu" className="!whitespace-pre-line">View menu
+                  <Link href="/menu" className="!whitespace-pre-line !whitespace-pre-line">View menu
 
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
