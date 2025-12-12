@@ -167,6 +167,43 @@
   animation: gradient-shift 15s ease infinite;
 }
 
+.traditional-indian-bg {
+  background: linear-gradient(135deg, #E76F00 0%, #D35400 25%, #C45D00 50%, #E67E22 75%, #FF8C33 100%);
+  background-size: 400% 400%;
+  animation: gradient-shift 20s ease infinite;
+}
+
+.bg-indian-texture {
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px),
+    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,.03) 35px, rgba(255,255,255,.03) 70px),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 15 L30 45 M15 30 L45 30' stroke='rgba(255,255,255,0.08)' stroke-width='1' fill='none'/%3E%3Ccircle cx='30' cy='30' r='3' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
+}
+
+.indian-orb-1 {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 140, 51, 0.4), rgba(231, 111, 0, 0.1));
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 140, 51, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(231, 111, 0, 0.37);
+  filter: blur(2px);
+}
+
+.indian-orb-2 {
+  background: radial-gradient(circle at 70% 70%, rgba(196, 93, 0, 0.4), rgba(230, 126, 34, 0.1));
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(196, 93, 0, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(196, 93, 0, 0.37);
+  filter: blur(2px);
+}
+
+.indian-orb-3 {
+  background: radial-gradient(circle at 50% 50%, rgba(211, 84, 0, 0.4), rgba(255, 140, 51, 0.1));
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(211, 84, 0, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(211, 84, 0, 0.37);
+  filter: blur(2px);
+}
+
 .liquid-glass-bg {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
   background-size: 400% 400%;
