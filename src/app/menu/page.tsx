@@ -197,7 +197,8 @@ export default function MenuPage() {
               variants={fadeInUp}
               className="text-white/90 text-xl mb-10"
             >
-              Menu is display-only. Pricing shown in USD for in-person and pickup orders. No online ordering.
+              Step into our store and savor the authentic taste of tradition —<br />
+              handcrafted pani puri served fresh, one burst of flavor at a time.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Button
