@@ -64,10 +64,10 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold text-charcoal leading-tight">
+                <span className="font-serif text-xl font-bold text-white drop-shadow-lg leading-tight">
                   Vinayak Food
                 </span>
-                <span className="text-xs text-saffron font-medium tracking-wider">
+                <span className="text-xs text-saffron font-medium tracking-wider drop-shadow-lg">
                   Since 2000
                 </span>
               </div>
@@ -78,7 +78,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative font-medium text-charcoal hover:text-saffron transition-colors py-2 group"
+                  className="relative font-medium text-white drop-shadow-lg hover:text-saffron transition-colors py-2 group"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-saffron transition-all duration-300 group-hover:w-full" />
@@ -89,13 +89,13 @@ export function Navbar() {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg hover:bg-cream-dark transition-colors"
+                className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6 text-charcoal" />
+                  <X className="w-6 h-6 text-white drop-shadow-lg" />
                 ) : (
-                  <Menu className="w-6 h-6 text-charcoal" />
+                  <Menu className="w-6 h-6 text-white drop-shadow-lg" />
                 )}
               </button>
             </div>
