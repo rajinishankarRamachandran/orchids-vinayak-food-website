@@ -88,7 +88,7 @@ export default function ContactPage() {
 
   return (
     <div className="overflow-hidden">
-      <section className="relative py-32 bg-charcoal">
+      <section className="relative py-24 md:py-32 bg-charcoal">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=600&fit=crop"
@@ -109,19 +109,19 @@ export default function ContactPage() {
           >
             <motion.span
               variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase"
+              className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
             >
               Get in Touch
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl sm:text-6xl font-serif font-bold text-cream mt-4 mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-cream mt-3 md:mt-4 mb-4 md:mb-6"
             >
               Contact <span className="text-saffron">Us</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-cream/80 max-w-2xl mx-auto"
+              className="text-base md:text-xl text-cream/80 max-w-2xl mx-auto px-2"
             >
               Have questions or want to place a large order? We&apos;d love to
               hear from you.
@@ -130,26 +130,26 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-cream">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16"
           >
             {contactInfo.map((info, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow bg-white">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-saffron/10 flex items-center justify-center">
-                      <info.icon className="w-7 h-7 text-saffron" />
+                  <CardContent className="p-4 md:p-6 text-center">
+                    <div className="w-11 h-11 md:w-14 md:h-14 mx-auto mb-3 md:mb-4 rounded-full bg-saffron/10 flex items-center justify-center">
+                      <info.icon className="w-5 h-5 md:w-7 md:h-7 text-saffron" />
                     </div>
-                    <h3 className="text-lg font-serif font-bold text-charcoal mb-2">
+                    <h3 className="text-base md:text-lg font-serif font-bold text-charcoal mb-1 md:mb-2">
                       {info.title}
                     </h3>
-                    <p className="text-muted-foreground whitespace-pre-line mb-4">
+                    <p className="text-muted-foreground whitespace-pre-line mb-3 md:mb-4 text-xs md:text-base">
                       {info.content}
                     </p>
                     {info.action && (
@@ -157,7 +157,7 @@ export default function ContactPage() {
                         href={info.action.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-saffron font-medium hover:underline"
+                        className="text-saffron font-medium hover:underline text-xs md:text-sm"
                       >
                         {info.action.label} →
                       </a>
@@ -168,29 +168,29 @@ export default function ContactPage() {
             ))}
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-charcoal mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-charcoal mb-4 md:mb-6">
                 Send Us a Message
               </h2>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base">
                 Fill out the form below and we&apos;ll get back to you as soon
                 as possible. For urgent inquiries, please call us directly.
               </p>
 
               {isSubmitted ? (
                 <Card className="border-2 border-green bg-green/5">
-                  <CardContent className="p-8 text-center">
-                    <CheckCircle className="w-16 h-16 text-green mx-auto mb-4" />
-                    <h3 className="text-2xl font-serif font-bold text-charcoal mb-2">
+                  <CardContent className="p-6 md:p-8 text-center">
+                    <CheckCircle className="w-12 h-12 md:w-16 md:h-16 text-green mx-auto mb-3 md:mb-4" />
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-charcoal mb-2">
                       Message Sent!
                     </h3>
-                    <p className="text-muted-foreground mb-6">
+                    <p className="text-muted-foreground mb-4 md:mb-6 text-sm md:text-base">
                       Thank you for reaching out. We&apos;ll respond within 24
                       hours.
                     </p>
@@ -204,56 +204,56 @@ export default function ContactPage() {
                   </CardContent>
                 </Card>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Your Name</Label>
+                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                    <div className="space-y-1.5 md:space-y-2">
+                      <Label htmlFor="name" className="text-sm md:text-base">Your Name</Label>
                       <Input
                         id="name"
                         placeholder="John Doe"
                         required
-                        className="bg-white"
+                        className="bg-white h-11 md:h-12"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
+                    <div className="space-y-1.5 md:space-y-2">
+                      <Label htmlFor="phone" className="text-sm md:text-base">Phone Number</Label>
                       <Input
                         id="phone"
                         type="tel"
                         placeholder="+1 (415) 555-1234"
-                        className="bg-white/50"
+                        className="bg-white/50 h-11 md:h-12"
                         required
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
+                  <div className="space-y-1.5 md:space-y-2">
+                    <Label htmlFor="email" className="text-sm md:text-base">Email Address</Label>
                     <Input
                       id="email"
                       type="email"
                       placeholder="john@example.com"
                       required
-                      className="bg-white"
+                      className="bg-white h-11 md:h-12"
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
+                  <div className="space-y-1.5 md:space-y-2">
+                    <Label htmlFor="subject" className="text-sm md:text-base">Subject</Label>
                     <Input
                       id="subject"
                       placeholder="How can we help you?"
                       required
-                      className="bg-white"
+                      className="bg-white h-11 md:h-12"
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                  <div className="space-y-1.5 md:space-y-2">
+                    <Label htmlFor="message" className="text-sm md:text-base">Message</Label>
                     <Textarea
                       id="message"
                       placeholder="Tell us more about your inquiry..."
-                      rows={5}
+                      rows={4}
                       required
                       className="bg-white resize-none"
                     />
@@ -262,7 +262,7 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-saffron hover:bg-saffron-dark text-white rounded-full py-6"
+                    className="w-full bg-saffron hover:bg-saffron-dark text-white rounded-full py-5 md:py-6"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -290,7 +290,7 @@ export default function ContactPage() {
                       </span>
                     ) : (
                       <>
-                        <Send className="w-5 h-5 mr-2" />
+                        <Send className="w-4 h-4 md:w-5 md:h-5 mr-2" />
                         Send Message
                       </>
                     )}
@@ -305,8 +305,8 @@ export default function ContactPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="sticky top-28">
-                <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl mb-6">
+              <div className="sticky top-24 md:top-28">
+                <div className="relative aspect-video rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl mb-4 md:mb-6">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5103451421735!2d-122.4039525!3d37.793618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064a40f6f2b%3A0x70b4957332b26738!2s145%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1733960000000!5m2!1sen!2sus"
                     width="100%"
@@ -320,28 +320,28 @@ export default function ContactPage() {
                 </div>
 
                 <Card className="border-none shadow-lg bg-charcoal text-cream">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-serif font-bold mb-4">
+                  <CardContent className="p-5 md:p-6">
+                    <h3 className="text-lg md:text-xl font-serif font-bold mb-3 md:mb-4">
                       Follow Us
                     </h3>
-                    <p className="text-cream/70 mb-4">
+                    <p className="text-cream/70 mb-3 md:mb-4 text-sm md:text-base">
                       Stay updated with our latest offerings and behind-the-scenes
                       content.
                     </p>
-                    <div className="flex gap-4">
+                    <div className="flex gap-3 md:gap-4">
                       <a
                         href="#"
-                        className="w-12 h-12 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
+                        className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
                         aria-label="Instagram"
                       >
-                        <Instagram className="w-6 h-6" />
+                        <Instagram className="w-5 h-5 md:w-6 md:h-6" />
                       </a>
                       <a
                         href="#"
-                        className="w-12 h-12 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
+                        className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
                         aria-label="Facebook"
                       >
-                        <Facebook className="w-6 h-6" />
+                        <Facebook className="w-5 h-5 md:w-6 md:h-6" />
                       </a>
                     </div>
                   </CardContent>
@@ -352,7 +352,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-green to-green-dark">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-green to-green-dark">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial="hidden"
@@ -362,13 +362,13 @@ export default function ContactPage() {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-white mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6"
             >
               Catering & Large Orders
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-white/90 text-xl mb-10"
+              className="text-white/90 text-base md:text-xl mb-8 md:mb-10 px-2"
             >
               Planning an event? We cater for parties, corporate events, and
               celebrations of all sizes.
@@ -376,10 +376,10 @@ export default function ContactPage() {
             <motion.div variants={fadeInUp}>
               <a
                 href="tel:+14155551234"
-                className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-8 py-4 text-lg font-medium shadow-xl transition-transform hover:scale-110"
+                className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium shadow-xl transition-transform hover:scale-110"
               >
-                <Phone className="w-5 h-5" />
-                Call for Catering: +1 (415) 555-1234
+                <Phone className="w-4 h-4 md:w-5 md:h-5" />
+                <span className="hidden sm:inline">Call for Catering:</span> +1 (415) 555-1234
               </a>
             </motion.div>
           </motion.div>
