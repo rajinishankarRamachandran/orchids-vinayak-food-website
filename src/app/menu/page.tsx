@@ -30,7 +30,7 @@ const menuItem = {
     preparation: "Knead semolina into stiff dough, roll thin & fry until golden. Fill crispy puris with mashed potatoes, chickpeas & chutneys. Serve with chilled tangy mint water."
   },
   image:
-    "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&h=600&fit=crop",
+    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain",
 }
 
 export default function MenuPage() {
@@ -90,10 +90,10 @@ export default function MenuPage() {
             >
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src={menuItem.image}
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain"
                   alt="Pani Puri"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
             </motion.div>
