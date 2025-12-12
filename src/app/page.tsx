@@ -190,54 +190,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="text-center mb-16"
-          >
-            <motion.span
-              variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase"
-            >
-              Why Choose Us
-            </motion.span>
-            <motion.h2
-              variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3"
-            >
-              The Vinayak Difference
-            </motion.h2>
-          </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {whyCards.map((card, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow bg-white group">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-saffron/10 flex items-center justify-center group-hover:bg-saffron group-hover:scale-110 transition-all">
-                      <card.icon className="w-8 h-8 text-saffron group-hover:text-white transition-colors" />
-                    </div>
-                    <h3 className="text-xl font-serif font-bold text-charcoal mb-3">
-                      {card.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {card.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
       </section>
 
       <section className="py-24 bg-charcoal relative overflow-hidden">
