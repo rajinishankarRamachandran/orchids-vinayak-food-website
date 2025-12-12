@@ -69,33 +69,6 @@ const values = [
 }];
 
 
-const galleryImages = [
-{
-  src: "https://images.unsplash.com/photo-1567337710282-00832b415979?w=600&h=400&fit=crop",
-  alt: "Fresh ingredients being prepared"
-},
-{
-  src: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&h=400&fit=crop",
-  alt: "Traditional spices and chutneys"
-},
-{
-  src: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&h=400&fit=crop",
-  alt: "Chef preparing food"
-},
-{
-  src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
-  alt: "Restaurant interior"
-},
-{
-  src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop",
-  alt: "Customers enjoying food"
-},
-{
-  src: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop",
-  alt: "Beautiful food presentation"
-}];
-
-
 export default function AboutPage() {
   return (
     <div className="overflow-hidden">
@@ -300,62 +273,6 @@ export default function AboutPage() {
                   {value.title}
                 </h3>
                 <p className="text-muted-foreground">{value.description}</p>
-              </motion.div>
-            )}
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="text-center mb-16">
-
-            <motion.span
-              variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase">
-
-              Behind the Scenes
-            </motion.span>
-            <motion.h2
-              variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3">
-
-              Gallery
-            </motion.h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-            {galleryImages.map((image, index) =>
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              className={`relative overflow-hidden rounded-2xl ${
-              index === 0 || index === 5 ? "row-span-2" : ""}`
-              }>
-
-                <div
-                className={`relative ${
-                index === 0 || index === 5 ? "aspect-[3/4]" : "aspect-video"}`
-                }>
-
-                  <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover hover:scale-110 transition-transform duration-500" />
-
-                </div>
               </motion.div>
             )}
           </motion.div>
