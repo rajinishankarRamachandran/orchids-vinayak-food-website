@@ -28,6 +28,23 @@ const menuItem = {
     "Crisp, hollow shells filled with spiced potato, crunchy sev, house chutneys & our signature tangy pani — handcrafted with love.",
   longDescription:
     "Experience the perfect balance of flavors in every bite. Our pani puri features hand-made crispy puris filled with a delicious mixture of spiced potatoes, chickpeas, and topped with our house-special tamarind and mint chutneys. Served with three varieties of our signature pani.",
+  history:
+    "Pani Puri, also known as Golgappa or Puchka across different regions of India, has been a beloved street food for centuries. Its origins trace back to the ancient kingdom of Magadha, where it was created as a light, flavorful snack. The dish evolved over generations, with each region adding its own unique twist to the tangy water and spicy fillings. At Vinayak Food Inc, we've perfected our recipe since 2000, honoring traditional methods while bringing our own family secrets passed down through generations. Every puri is hand-rolled and fried to golden perfection, just as it was done in the bustling markets of Old Delhi.",
+  recipe: {
+    ingredients: {
+      puri: ["Semolina (Suji)", "All-purpose flour", "Baking soda", "Salt", "Water", "Oil for frying"],
+      filling: ["Boiled potatoes (mashed)", "Boiled chickpeas", "Tamarind chutney", "Green chutney", "Chaat masala", "Roasted cumin powder", "Red chili powder", "Sev (chickpea noodles)"],
+      pani: ["Fresh mint leaves", "Coriander leaves", "Green chilies", "Tamarind pulp", "Black salt", "Cumin powder", "Ginger", "Jaggery/Sugar", "Chilled water"]
+    },
+    steps: [
+      "Mix semolina, flour, baking soda, and salt. Knead into a stiff dough with water.",
+      "Roll the dough thin and cut into small circles. Deep fry until golden and puffed.",
+      "Prepare the filling by mixing mashed potatoes, chickpeas, and spices.",
+      "Blend mint, coriander, chilies, and spices with water to make the signature pani.",
+      "Gently crack the top of each puri, fill with potato mixture, add chutneys and sev.",
+      "Pour the tangy pani and serve immediately for maximum crunch."
+    ]
+  },
   image:
     "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&h=600&fit=crop",
   gallery: [
