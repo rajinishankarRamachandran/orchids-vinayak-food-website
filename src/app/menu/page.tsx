@@ -1,8 +1,10 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { supabase } from "@/lib/supabase"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -21,11 +23,20 @@ const staggerContainer = {
   },
 }
 
+type Dish = {
+  id: string
+  name: string
+  description: string
+  price: number
+  category: string
+  image_url: string
+  spice_level: string
+  is_vegetarian: boolean
+  is_available: boolean
+}
+
 const menuItem = {
-  name: "Pani Puri",
   tagline: "Our Signature Dish Since 2000",
-  description:
-    "Crisp, hollow shells filled with spiced potato, crunchy sev, house chutneys & our signature tangy pani — handcrafted with love.",
   longDescription:
     "Experience the perfect balance of flavors in every bite. Our pani puri features hand-made crispy puris filled with a delicious mixture of spiced potatoes, chickpeas, and topped with our house-special tamarind and mint chutneys. Served with three varieties of our signature pani.",
   history:
@@ -79,6 +90,34 @@ const menuItem = {
 }
 
 export default function MenuPage() {
+  const [dishes, setDishes] = useState<Dish[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetchDishes()
+  }, [])
+
+  const fetchDishes = async () => {
+    const { data, error } = await supabase
+      .from("dishes")
+      .select("*")
+      .eq("is_available", true)
+      .order("created_at", { ascending: false })
+
+    if (!error && data) {
+      setDishes(data)
+    }
+    setLoading(false)
+  }
+
+  const groupedDishes = dishes.reduce((acc, dish) => {
+    if (!acc[dish.category]) {
+      acc[dish.category] = []
+    }
+    acc[dish.category].push(dish)
+    return acc
+  }, {} as Record<string, Dish[]>)
+
   return (
     <div className="overflow-hidden">
       <section className="relative py-32 bg-charcoal">
@@ -125,171 +164,61 @@ export default function MenuPage() {
 
       <section className="py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="sticky top-28">
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl mb-6">
-                  <Image
-                    src={menuItem.image}
-                    alt={menuItem.name}
-                    fill
-                    className="object-cover"
-                  />
-                  <Badge className="absolute top-4 left-4 bg-saffron text-white">
-                    <Star className="w-3 h-3 mr-1 fill-current" />
-                    {menuItem.rating} ({menuItem.reviews.toLocaleString()} reviews)
-                  </Badge>
-                </div>
-
-                <div className="grid grid-cols-3 gap-4">
-                  {menuItem.gallery.map((img, index) => (
-                    <div
-                      key={index}
-                      className="relative aspect-video rounded-xl overflow-hidden shadow-md"
-                    >
-                      <Image
-                        src={img}
-                        alt={`${menuItem.name} gallery ${index + 1}`}
-                        fill
-                        className="object-cover hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Badge
-                variant="outline"
-                className="mb-4 border-saffron text-saffron"
-              >
-                {menuItem.tagline}
-              </Badge>
-
-              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mb-4">
-                {menuItem.name}
-              </h2>
-
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                {menuItem.longDescription}
-              </p>
-
-              <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Clock className="w-4 h-4 text-saffron" />
-                  Prep: {menuItem.prepTime}
-                </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Leaf className="w-4 h-4 text-green" />
-                  Vegetarian
-                </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Info className="w-4 h-4 text-saffron" />
-                  {menuItem.allergens.join(", ")}
-                </div>
-              </div>
-
-              <Card className="border-2 border-border mb-6">
-                <CardContent className="p-6 space-y-6">
-                  <div>
-                    <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Portions & Pricing
-                    </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                      {menuItem.prices.map((price) => (
-                        <div
-                          key={price.id}
-                          className="p-4 rounded-xl border-2 border-border bg-white shadow-sm"
-                        >
-                          <p className="font-medium text-charcoal text-sm">
-                            {price.name}
-                          </p>
-                          <p className="text-saffron font-bold text-2xl">
-                            ${price.price}
-                          </p>
+          {loading ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-muted-foreground">Loading menu...</p>
+            </div>
+          ) : dishes.length === 0 ? (
+            <div className="text-center py-20">
+              <p className="text-xl text-muted-foreground">No dishes available at the moment.</p>
+            </div>
+          ) : (
+            <div className="space-y-16">
+              {Object.entries(groupedDishes).map(([category, categoryDishes]) => (
+                <div key={category}>
+                  <h2 className="text-3xl font-serif font-bold text-charcoal mb-8 border-b-2 border-saffron pb-2">
+                    {category}
+                  </h2>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {categoryDishes.map((dish) => (
+                      <Card key={dish.id} className="overflow-hidden hover:shadow-xl transition-shadow">
+                        <div className="relative h-64 w-full">
+                          <Image
+                            src={dish.image_url || menuItem.image}
+                            alt={dish.name}
+                            fill
+                            className="object-cover"
+                          />
+                          {dish.is_vegetarian && (
+                            <Badge className="absolute top-4 left-4 bg-green text-white">
+                              <Leaf className="w-3 h-3 mr-1" />
+                              Vegetarian
+                            </Badge>
+                          )}
                         </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Spice Levels
-                    </label>
-                    <div className="grid sm:grid-cols-3 gap-3">
-                      {menuItem.spiceLevels.map((spice) => (
-                        <div
-                          key={spice.id}
-                          className="p-3 rounded-xl border-2 border-border bg-white text-center"
-                        >
-                          <p className="text-xl mb-1">{spice.icon}</p>
-                          <p className="text-sm font-medium text-charcoal">
-                            {spice.name}
+                        <CardContent className="p-6">
+                          <h3 className="text-2xl font-serif font-bold text-charcoal mb-2">
+                            {dish.name}
+                          </h3>
+                          <p className="text-muted-foreground mb-4 line-clamp-2">
+                            {dish.description}
                           </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Pani Options
-                    </label>
-                    <div className="space-y-3">
-                      {menuItem.waterTypes.map((water) => (
-                        <div
-                          key={water.id}
-                          className="p-3 rounded-xl border-2 border-border bg-white flex justify-between gap-3"
-                        >
-                          <div>
-                            <p className="font-semibold text-charcoal">{water.name}</p>
-                            <p className="text-sm text-muted-foreground">
-                              {water.description}
-                            </p>
+                          <div className="flex items-center justify-between mb-4">
+                            <Badge variant="outline" className="border-saffron text-saffron">
+                              {dish.spice_level}
+                            </Badge>
+                            <span className="text-2xl font-bold text-saffron">
+                              ${dish.price.toFixed(2)}
+                            </span>
                           </div>
-                        </div>
-                      ))}
-                    </div>
+                        </CardContent>
+                      </Card>
+                    ))}
                   </div>
-
-                  <div>
-                    <label className="text-sm font-medium text-charcoal mb-3 block">
-                      Add-ons
-                    </label>
-                    <div className="space-y-2">
-                      {menuItem.extras.map((extra) => (
-                        <div
-                          key={extra.id}
-                          className="flex items-center justify-between p-3 rounded-xl border-2 border-border bg-white"
-                        >
-                          <span className="font-medium text-charcoal">
-                            {extra.name}
-                          </span>
-                          <span className="text-saffron font-semibold">${extra.price}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <div className="p-6 bg-charcoal rounded-2xl text-cream">
-                <p className="text-lg font-serif font-bold">Visit Us to Order</p>
-                <p className="text-cream/80 mt-2">
-                  Menu is display-only. Pricing shown in USD for in-person and pickup orders. No online ordering.
-                </p>
-              </div>
-            </motion.div>
-          </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -403,14 +332,13 @@ export default function MenuPage() {
               variants={fadeInUp}
               className="text-4xl sm:text-5xl font-serif font-bold text-white mb-6"
             >
-              More Items Coming Soon
+              Visit Us to Order
             </motion.h2>
             <motion.p
               variants={fadeInUp}
               className="text-white/90 text-xl mb-10"
             >
-              We&apos;re expanding our menu with more authentic chaat items.
-              Stay tuned!
+              Menu is display-only. Pricing shown in USD for in-person and pickup orders. No online ordering.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Button
@@ -418,7 +346,7 @@ export default function MenuPage() {
                 size="lg"
                 className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg"
               >
-                <Link href="/contact">Get Notified</Link>
+                <Link href="/contact">Visit Us</Link>
               </Button>
             </motion.div>
           </motion.div>
