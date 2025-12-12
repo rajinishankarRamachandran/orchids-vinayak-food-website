@@ -163,68 +163,28 @@ export default function MenuPage() {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-12">
-                <Card className="bg-cream border-none shadow-xl">
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-serif font-bold text-charcoal mb-6">
-                      Ingredients
+              <Card className="bg-cream border-none shadow-xl max-w-3xl mx-auto">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-serif font-bold text-charcoal mb-6 text-center">
+                    Ingredients
+                  </h3>
+                  <div className="flex flex-wrap gap-3 justify-center mb-8">
+                    {[...menuItem.recipe.ingredients.puri, ...menuItem.recipe.ingredients.filling, ...menuItem.recipe.ingredients.pani].map((item, idx) => (
+                      <span key={idx} className="px-4 py-2 bg-saffron/10 text-charcoal rounded-full text-sm">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="text-center pt-6 border-t border-charcoal/10">
+                    <h3 className="text-xl font-serif font-bold text-charcoal mb-3">
+                      Preparation
                     </h3>
-                    <div className="space-y-6">
-                      <div>
-                        <h4 className="font-semibold text-saffron mb-2 text-lg">For the Puri:</h4>
-                        <ul className="space-y-2">
-                          {menuItem.recipe.ingredients.puri.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-charcoal/80">
-                              <span className="text-saffron mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-saffron mb-2 text-lg">For the Filling:</h4>
-                        <ul className="space-y-2">
-                          {menuItem.recipe.ingredients.filling.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-charcoal/80">
-                              <span className="text-saffron mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-saffron mb-2 text-lg">For the Pani:</h4>
-                        <ul className="space-y-2">
-                          {menuItem.recipe.ingredients.pani.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-charcoal/80">
-                              <span className="text-saffron mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-cream border-none shadow-xl">
-                  <CardContent className="p-8">
-                    <h3 className="text-2xl font-serif font-bold text-charcoal mb-6">
-                      Preparation Steps
-                    </h3>
-                    <ol className="space-y-4">
-                      {menuItem.recipe.steps.map((step, idx) => (
-                        <li key={idx} className="flex gap-4">
-                          <span className="flex-shrink-0 w-8 h-8 rounded-full bg-saffron text-white flex items-center justify-center font-bold text-sm">
-                            {idx + 1}
-                          </span>
-                          <p className="text-charcoal/80 leading-relaxed pt-1">{step}</p>
-                        </li>
-                      ))}
-                    </ol>
-                  </CardContent>
-                </Card>
-              </div>
+                    <p className="text-charcoal/80 text-lg">
+                      Hand-rolled puris fried to golden perfection, filled with spiced potatoes & chickpeas, topped with house chutneys, and served with our signature tangy pani.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </motion.div>
         </div>
