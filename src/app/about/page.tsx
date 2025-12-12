@@ -158,22 +158,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  In the bustling streets of Delhi in the year 2000, our founder
-                  set up a humble cart with nothing but a family recipe and a
-                  dream. The aroma of freshly prepared chutneys and the sound of
-                  crispy puris drew crowds from every corner.
+                  In the year 2000, a dream crossed oceans to take root in Sayreville, New Jersey. Our founders brought with them more than just recipes — they carried generations of culinary wisdom, the essence of authentic Indian street food, and an unwavering commitment to preserve the soul of tradition in every bite.
                 </p>
                 <p>
-                  What started as a small venture quickly grew into a beloved
-                  destination. Word spread about the authentic flavors that
-                  transported people back to their childhoods, to their
-                  grandmothers&apos; kitchens.
+                  What began as a bold leap of faith has flourished into a beloved cornerstone of the community. For over two decades, Vinayak Food Inc has been a bridge between continents, serving pani puri and chaat that honor ancestral techniques while embracing the vibrant spirit of our new home. Each dish tells the story of heritage preserved, passion sustained, and tradition celebrated.
                 </p>
                 <p>
-                  Today, Vinayak Food Inc stands as a testament to that original
-                  passion. We&apos;ve grown, but our commitment to authenticity
-                  remains unchanged. Every pani puri we serve carries the same
-                  love and tradition from that very first cart.
+                  Today, we stand proud as guardians of authenticity. From that first day in 2000 to this very moment, our mission remains unchanged: to transport you through flavor, to honor the past while serving the present, and to prove that true tradition knows no boundaries. Every crispy puri, every aromatic chutney, every burst of flavor carries the same dedication that inspired our journey across the seas.
                 </p>
               </div>
             </motion.div>
