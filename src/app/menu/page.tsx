@@ -1,37 +1,37 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 },
-}
+  visible: { opacity: 1, y: 0 }
+};
 
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15 },
-  },
-}
+    transition: { staggerChildren: 0.15 }
+  }
+};
 
 const menuItem = {
   tagline: "Our Signature Dish Since 2000",
   longDescription:
-    "Experience the perfect balance of flavors in every bite. Our pani puri features hand-made crispy puris filled with a delicious mixture of spiced potatoes, chickpeas, and topped with our house-special tamarind and mint chutneys. Served with three varieties of our signature pani.",
+  "Experience the perfect balance of flavors in every bite. Our pani puri features hand-made crispy puris filled with a delicious mixture of spiced potatoes, chickpeas, and topped with our house-special tamarind and mint chutneys. Served with three varieties of our signature pani.",
   history:
-    "Pani Puri, also known as Golgappa or Puchka across different regions of India, has been a beloved street food for centuries. Its origins trace back to the ancient kingdom of Magadha, where it was created as a light, flavorful snack. The dish evolved over generations, with each region adding its own unique twist to the tangy water and spicy fillings. At Vinayak Food Inc, we've perfected our recipe since 2000, honoring traditional methods while bringing our own family secrets passed down through generations. Every puri is hand-rolled and fried to golden perfection, just as it was done in the bustling markets of Old Delhi.",
+  "Pani Puri, also known as Golgappa or Puchka across different regions of India, has been a beloved street food for centuries. Its origins trace back to the ancient kingdom of Magadha, where it was created as a light, flavorful snack. The dish evolved over generations, with each region adding its own unique twist to the tangy water and spicy fillings. At Vinayak Food Inc, we've perfected our recipe since 2000, honoring traditional methods while bringing our own family secrets passed down through generations. Every puri is hand-rolled and fried to golden perfection, just as it was done in the bustling markets of Old Delhi.",
   recipe: {
     ingredients: ["Semolina", "Boiled Potatoes", "Chickpeas", "Tamarind Chutney", "Green Chutney", "Spices", "Mint Water"],
     preparation: "Knead semolina into stiff dough, roll thin & fry until golden. Fill crispy puris with mashed potatoes, chickpeas & chutneys. Serve with chilled tangy mint water."
   },
   image:
-    "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain",
-}
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain"
+};
 
 export default function MenuPage() {
   return (
@@ -43,8 +43,8 @@ export default function MenuPage() {
             alt="Pani Puri spread"
             fill
             className="object-cover opacity-30"
-            priority
-          />
+            priority />
+
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
         </div>
 
@@ -53,24 +53,24 @@ export default function MenuPage() {
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="text-center"
-          >
+            className="text-center">
+
             <motion.span
               variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase"
-            >
+              className="text-saffron font-medium tracking-wider uppercase">
+
               Our Menu
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl sm:text-6xl font-serif font-bold text-cream mt-4 mb-6"
-            >
+              className="text-5xl sm:text-6xl font-serif font-bold text-cream mt-4 mb-6">
+
               Authentic <span className="text-saffron">Flavors</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-cream/80 max-w-2xl mx-auto"
-            >
+              className="text-xl text-cream/80 max-w-2xl mx-auto">
+
               Handcrafted with traditional recipes passed down through
               generations.
             </motion.p>
@@ -86,15 +86,15 @@ export default function MenuPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative"
-            >
+              className="relative">
+
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain"
                   alt="Pani Puri"
                   fill
-                  className="object-contain"
-                />
+                  className="object-contain" />
+
               </div>
             </motion.div>
 
@@ -103,8 +103,8 @@ export default function MenuPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-6"
-            >
+              className="space-y-6">
+
               <div>
                 <span className="text-saffron font-medium tracking-wider uppercase">
                   {menuItem.tagline}
@@ -128,8 +128,8 @@ export default function MenuPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="space-y-16"
-          >
+            className="space-y-16">
+
             <motion.div variants={fadeInUp} className="text-center">
               <span className="text-saffron font-medium tracking-wider uppercase">
                 The Story
@@ -158,11 +158,11 @@ export default function MenuPage() {
                     Ingredients
                   </h3>
                   <div className="flex flex-wrap gap-3 justify-center mb-8">
-                    {menuItem.recipe.ingredients.map((item, idx) => (
-                      <span key={idx} className="px-4 py-2 bg-saffron/10 text-charcoal rounded-full text-sm">
+                    {menuItem.recipe.ingredients.map((item, idx) =>
+                    <span key={idx} className="px-4 py-2 bg-saffron/10 text-charcoal rounded-full text-sm">
                         {item}
                       </span>
-                    ))}
+                    )}
                   </div>
                   <div className="text-center pt-6 border-t border-charcoal/10">
                     <h3 className="text-xl font-serif font-bold text-charcoal mb-3">
@@ -185,18 +185,18 @@ export default function MenuPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={staggerContainer}
-          >
+            variants={staggerContainer}>
+
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-white mb-6"
-            >
+              className="text-4xl sm:text-5xl font-serif font-bold text-white mb-6">
+
               Visit Us to Order
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-white/90 text-xl mb-10"
-            >
+              className="text-white/90 text-xl mb-10">
+
               Step into our store and savor the authentic taste of tradition —<br />
               handcrafted pani puri served fresh, one burst of flavor at a time.
             </motion.p>
@@ -204,14 +204,14 @@ export default function MenuPage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg transition-transform hover:scale-110"
-              >
+                className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg transition-transform hover:scale-110">
+
                 <Link href="/contact">Visit Us</Link>
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
-    </div>
-  )
+    </div>);
+
 }
