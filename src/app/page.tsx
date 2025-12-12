@@ -144,9 +144,9 @@ export default function HomePage() {
 
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6 whitespace-nowrap drop-shadow-2xl"
+              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6 whitespace-nowrap drop-shadow-2xl indian-flag-gradient-text"
             >
-              Where Every Bite <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">Tells a Story</span>
+              Where Every Bite Tells a Story
             </motion.h1>
 
             <motion.p
