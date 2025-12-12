@@ -127,24 +127,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-cream/10">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex justify-center items-center">
             <p className="text-cream/50 text-sm">
               © {new Date().getFullYear()} Vinayak Food Inc. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm">
-              <Link
-                href="#"
-                className="text-cream/50 hover:text-saffron transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="#"
-                className="text-cream/50 hover:text-saffron transition-colors"
-              >
-                Terms of Service
-              </Link>
-            </div>
           </div>
         </div>
       </div>
