@@ -82,7 +82,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-orange-600/30 via-orange-500/40 to-amber-600/30" />
           
           <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full indian-orb-1"
+            className="absolute top-1/4 left-1/4 w-48 h-48 md:w-96 md:h-96 rounded-full indian-orb-1"
             animate={{
               x: [0, 100, 0],
               y: [0, -50, 0]
@@ -95,7 +95,7 @@ export default function HomePage() {
 
           
           <motion.div
-            className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full indian-orb-2"
+            className="absolute bottom-1/3 right-1/4 w-40 h-40 md:w-80 md:h-80 rounded-full indian-orb-2"
             animate={{
               x: [0, -80, 0],
               y: [0, 60, 0]
@@ -108,7 +108,7 @@ export default function HomePage() {
 
           
           <motion.div
-            className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full indian-orb-3"
+            className="absolute top-1/2 left-1/2 w-32 h-32 md:w-64 md:h-64 rounded-full indian-orb-3"
             animate={{
               x: [-50, 50, -50],
               y: [30, -30, 30]
@@ -124,44 +124,44 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-indian-texture opacity-20" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center">
 
-            <motion.div variants={fadeInUp} className="mb-6">
+            <motion.div variants={fadeInUp} className="mb-4 md:mb-6">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
                 width={1400}
                 height={500}
-                className="h-56 sm:h-72 lg:h-80 w-auto max-w-[95vw]"
+                className="h-32 sm:h-56 md:h-72 lg:h-80 w-auto max-w-[90vw]"
                 priority />
 
             </motion.div>
 
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-white/95 mb-6 drop-shadow-xl !whitespace-pre-line">
+              className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-white/95 mb-4 md:mb-6 drop-shadow-xl !whitespace-pre-line px-2">
               Where Every Bite Tells a Story
 
             </motion.h2>
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg">
+              className="text-base sm:text-xl md:text-2xl text-white/90 mb-6 md:mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4">
 
               Authentic Pani Puri & traditional chaat crafted with love since
               2000. Experience the taste of tradition at Vinayak Food Inc.
             </motion.p>
 
-            <motion.div variants={fadeInUp} className="flex flex-wrap justify-center items-center gap-4">
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4">
               <Button
                 asChild
                 size="lg"
-                className="glass-button bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-110">
+                className="glass-button bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-110 w-full sm:w-auto">
 
                 <Link href="/menu">View Menu</Link>
               </Button>
@@ -169,11 +169,11 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="glass-button bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-110">
+                className="glass-button bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-110 w-full sm:w-auto">
 
                 <Link href="/about">
                   Our Story
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
               </Button>
             </motion.div>
@@ -184,36 +184,36 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+          className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-10">
 
-          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2 backdrop-blur-sm bg-white/5">
+          <div className="w-5 h-8 md:w-6 md:h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5 md:p-2 backdrop-blur-sm bg-white/5">
             <motion.div
-              animate={{ y: [0, 12, 0] }}
+              animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-1.5 h-1.5 rounded-full bg-white" />
+              className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-white" />
 
           </div>
         </motion.div>
       </section>
 
-      <section className="py-24 bg-cream">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="text-center mb-16">
+            className="text-center mb-10 md:mb-16">
 
             <motion.span
               variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase">
+              className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
 
               Why Choose Us
             </motion.span>
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3">
+              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3">
 
               Authentic Chaat Experience
             </motion.h2>
@@ -224,19 +224,19 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8">
+            className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
 
             {whyCards.map((card, index) =>
             <motion.div key={index} variants={fadeInUp}>
                 <Card className="border-none shadow-lg hover:shadow-xl transition-shadow h-full bg-white">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-saffron/10 flex items-center justify-center">
-                      <card.icon className="w-8 h-8 text-saffron" />
+                  <CardContent className="p-6 md:p-8 text-center">
+                    <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-4 md:mb-6 rounded-full bg-saffron/10 flex items-center justify-center">
+                      <card.icon className="w-7 h-7 md:w-8 md:h-8 text-saffron" />
                     </div>
-                    <h3 className="text-xl font-serif font-bold text-charcoal mb-3">
+                    <h3 className="text-lg md:text-xl font-serif font-bold text-charcoal mb-2 md:mb-3">
                       {card.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                       {card.description}
                     </p>
                   </CardContent>
@@ -247,34 +247,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 bg-charcoal relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-charcoal relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-grain" />
         </div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}>
+              variants={staggerContainer}
+              className="order-2 lg:order-1">
 
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase">
+                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
 
                 Our Signature
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-4xl sm:text-5xl font-serif font-bold text-cream mt-3 mb-6">
+                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3 mb-4 md:mb-6">
 
                 Pani Puri
               </motion.h2>
               <motion.p
                 variants={fadeInUp}
-                className="text-cream/70 text-lg leading-relaxed mb-8">
+                className="text-cream/70 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
 
                 Crisp, hollow shells filled with spiced potato, crunchy sev,
                 house chutneys & our signature tangy pani — handcrafted since
@@ -282,17 +283,17 @@ export default function HomePage() {
                 the streets of India.
               </motion.p>
 
-              <motion.div variants={fadeInUp} className="space-y-4 mb-8">
-                <p className="text-cream flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-saffron" />
+              <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
                   Choose your spice level: Mild, Medium, or Hot
                 </p>
-                <p className="text-cream flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-saffron" />
+                <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
                   Select your pani: Tangy, Sweet, or Spicy
                 </p>
-                <p className="text-cream flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-saffron" />
+                <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
                   Add extra chutney upon request
                 </p>
               </motion.div>
@@ -301,11 +302,11 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 shadow-lg transition-transform hover:scale-110">
+                  className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110 w-full sm:w-auto">
 
-                  <Link href="/menu" className="flex items-center">
+                  <Link href="/menu" className="flex items-center justify-center">
                     View menu
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                   </Link>
                 </Button>
               </motion.div>
@@ -316,9 +317,9 @@ export default function HomePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative">
+              className="relative order-1 lg:order-2">
 
-              <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/home-page_panipuri-1765525855685.jpg?width=8000&height=8000&resize=contain"
                   alt="Pani Puri plate with chutneys and filling"
@@ -326,33 +327,33 @@ export default function HomePage() {
                   className="object-cover w-full h-full" />
 
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-saffron text-white p-6 rounded-2xl shadow-xl">
-                <p className="text-3xl font-serif font-bold">24+</p>
-                <p className="text-sm opacity-90">Years of Excellence</p>
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
+                <p className="text-2xl md:text-3xl font-serif font-bold">24+</p>
+                <p className="text-xs md:text-sm opacity-90">Years of Excellence</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-cream-dark">
+      <section className="py-16 md:py-24 bg-cream-dark">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="text-center mb-16">
+            className="text-center mb-10 md:mb-16">
 
             <motion.span
               variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase">
+              className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
 
               The Process
             </motion.span>
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3">
+              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3">
 
               How It&apos;s Made
             </motion.h2>
@@ -363,7 +364,7 @@ export default function HomePage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
 
             {howItsMadeSteps.map((step, index) =>
             <motion.div
@@ -375,24 +376,24 @@ export default function HomePage() {
               <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-saffron/50 to-transparent" />
               }
                 <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white shadow-lg flex items-center justify-center">
-                    <step.icon className="w-10 h-10 text-saffron" />
+                  <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-full bg-white shadow-lg flex items-center justify-center">
+                    <step.icon className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-green text-white flex items-center justify-center text-sm font-bold">
+                  <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-green text-white flex items-center justify-center text-xs md:text-sm font-bold">
                     {index + 1}
                   </div>
                 </div>
-                <h3 className="text-xl font-serif font-bold text-charcoal mb-2">
+                <h3 className="text-base md:text-xl font-serif font-bold text-charcoal mb-1 md:mb-2">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground">{step.description}</p>
+                <p className="text-muted-foreground text-xs md:text-base leading-tight md:leading-normal">{step.description}</p>
               </motion.div>
             )}
           </motion.div>
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-saffron to-saffron-dark relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-saffron to-saffron-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-grain" />
         </div>
@@ -406,25 +407,25 @@ export default function HomePage() {
 
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-white mb-6">
+              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6">
 
               Ready to Experience Authentic Taste?
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-white/90 text-xl mb-10 max-w-2xl mx-auto">
+              className="text-white/90 text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto px-2">
 
               Join thousands of happy customers who have made Vinayak Food their
               go-to destination for authentic Indian chaat.
             </motion.p>
             <motion.div
               variants={fadeInUp}
-              className="flex flex-wrap justify-center gap-4">
+              className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
 
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110">
+                className="bg-white text-saffron hover:bg-cream rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto">
 
                 <Link href="/menu">View Menu</Link>
               </Button>
@@ -432,7 +433,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110">
+                className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto">
 
                 <Link href="/contact">Visit Us</Link>
               </Button>
