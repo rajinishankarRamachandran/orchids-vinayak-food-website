@@ -156,9 +156,15 @@ export default function AboutPage() {
               <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3 mb-6">
                 From Cart to Kitchen
               </h2>
-              <div className="text-muted-foreground text-lg leading-snug text-justify">
+              <div className="text-muted-foreground text-lg leading-snug text-justify space-y-4">
                 <p>
-                  In the year 2000, a dream crossed oceans to take root in Sayreville, New Jersey. Our founders brought with them more than just recipes — they carried generations of culinary wisdom, the essence of authentic Indian street food, and an unwavering commitment to preserve the soul of tradition in every bite. What began as a bold leap of faith has flourished into a beloved cornerstone of the community. For over two decades, Vinayak Food Inc has been a bridge between continents, serving pani puri and chaat that honor ancestral techniques while embracing the vibrant spirit of our new home. Each dish tells the story of heritage preserved, passion sustained, and tradition celebrated. Today, we stand proud as guardians of authenticity. From that first day in 2000 to this very moment, our mission remains unchanged: to transport you through flavor, to honor the past while serving the present, and to prove that true tradition knows no boundaries. Every crispy puri, every aromatic chutney, every burst of flavor carries the same dedication that inspired our journey across the seas.
+                  In the year 2000, a dream crossed oceans to take root in Sayreville, New Jersey. Our founders brought generations of culinary wisdom and authentic Indian street food traditions, with an unwavering commitment to preserve heritage in every bite.
+                </p>
+                <p>
+                  For over two decades, Vinayak Food Inc has been a bridge between continents. Each dish honors ancestral techniques while embracing the vibrant spirit of our new home, telling stories of heritage preserved and passion sustained.
+                </p>
+                <p>
+                  Today, we stand proud as guardians of authenticity. Our mission remains unchanged: to transport you through flavor, honor the past while serving the present, and prove that true tradition knows no boundaries.
                 </p>
               </div>
             </motion.div>
