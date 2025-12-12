@@ -250,6 +250,40 @@
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
+.indian-flag-gradient-text {
+  background: linear-gradient(
+    to right,
+    #FF9933 0%,
+    #FF9933 28%,
+    rgba(255, 153, 51, 0.9) 30%,
+    rgba(255, 255, 255, 0.95) 32%,
+    rgba(255, 255, 255, 0.95) 48%,
+    rgba(255, 255, 255, 0.95) 52%,
+    rgba(255, 255, 255, 0.9) 68%,
+    rgba(19, 136, 8, 0.9) 70%,
+    #138808 72%,
+    #138808 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  backdrop-filter: blur(8px);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.5)) drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+  text-shadow: none;
+  position: relative;
+}
+
+.indian-flag-gradient-text::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.6;
+}
+
 nextjs-portal {
   display: none !important;
 }
