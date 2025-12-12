@@ -105,11 +105,11 @@ export default function AboutPage() {
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-cream/80 max-w-2xl mx-auto">
+              className="text-xl text-cream/80 max-w-2xl mx-auto">Rooted in India's vibrant street food legacy, we honor centuries of chaat tradition, preserving authentic flavors — one Pani puri at a time.
 
-                Rooted in India's vibrant street food legacy, we honor centuries of chaat tradition—
-                preserving authentic flavors one pani puri at a time.
-              </motion.p>
+
+
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -151,10 +151,10 @@ export default function AboutPage() {
 
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/pani-puri-1765517875697.jpg?width=8000&height=8000&resize=contain"
-                    alt="Founders of Vinayak Food"
-                    fill
-                    className="object-cover" />
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/pani-puri-1765517875697.jpg?width=8000&height=8000&resize=contain"
+                  alt="Founders of Vinayak Food"
+                  fill
+                  className="object-cover" />
 
               </div>
               <div className="absolute -bottom-8 -right-8 bg-saffron text-white p-8 rounded-2xl shadow-xl">
