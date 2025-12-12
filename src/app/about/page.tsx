@@ -313,7 +313,7 @@ export default function AboutPage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-green hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl">
+                className="bg-white text-green hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl transition-transform hover:scale-110">
 
                 <Link href="/menu">
                   View Menu
@@ -323,7 +323,7 @@ export default function AboutPage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-green hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl">
+                className="bg-white text-green hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl transition-transform hover:scale-110">
 
                 <Link href="/contact">Contact Us</Link>
               </Button>
