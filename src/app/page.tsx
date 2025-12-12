@@ -77,12 +77,12 @@ const howItsMadeSteps = [
 export default function HomePage() {
   return (
     <div className="overflow-hidden">
-      <section className="relative min-h-screen flex items-center justify-center liquid-glass-bg">
+      <section className="relative min-h-screen flex items-center justify-center traditional-indian-bg">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-blue-900/40 to-pink-900/40 animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/30 via-orange-500/40 to-amber-600/30" />
           
           <motion.div
-            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full glass-orb"
+            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full indian-orb-1"
             animate={{
               x: [0, 100, 0],
               y: [0, -50, 0],
@@ -95,7 +95,7 @@ export default function HomePage() {
           />
           
           <motion.div
-            className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full glass-orb-2"
+            className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full indian-orb-2"
             animate={{
               x: [0, -80, 0],
               y: [0, 60, 0],
@@ -108,7 +108,7 @@ export default function HomePage() {
           />
           
           <motion.div
-            className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full glass-orb-3"
+            className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full indian-orb-3"
             animate={{
               x: [-50, 50, -50],
               y: [30, -30, 30],
@@ -120,7 +120,8 @@ export default function HomePage() {
             }}
           />
 
-          <div className="absolute inset-0 backdrop-blur-3xl" />
+          <div className="absolute inset-0 backdrop-blur-2xl" />
+          <div className="absolute inset-0 bg-indian-texture opacity-20" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32">
