@@ -161,7 +161,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="glass-button bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-105">
+                className="glass-button bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-110">
 
                 <Link href="/menu">View Menu</Link>
               </Button>
@@ -169,7 +169,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="glass-button bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-105">
+                className="glass-button bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-110">
 
                 <Link href="/about">
                   Our Story
@@ -301,7 +301,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 shadow-lg">
+                  className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 shadow-lg transition-transform hover:scale-110">
 
                   <Link href="/menu" className="flex items-center">
                     View menu
@@ -424,7 +424,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110">
 
                 <Link href="/menu">View Menu</Link>
               </Button>
@@ -432,7 +432,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105">
+                className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110">
 
                 <Link href="/contact">Visit Us</Link>
               </Button>
