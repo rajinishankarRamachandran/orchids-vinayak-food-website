@@ -37,19 +37,19 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    content: "123 Chaat Street, Food District\nNew Delhi, India 110001",
+    content: "145 Market Street\nSan Francisco, CA 94103",
     action: {
       label: "Get Directions",
-      href: "https://maps.google.com",
+      href: "https://maps.google.com?q=145+Market+Street+San+Francisco+CA+94103",
     },
   },
   {
     icon: Phone,
     title: "Call Us",
-    content: "+91 123 456 7890",
+    content: "+1 (415) 555-1234",
     action: {
       label: "Call Now",
-      href: "tel:+911234567890",
+      href: "tel:+14155551234",
     },
   },
   {
@@ -220,9 +220,9 @@ export default function ContactPage() {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+1 (415) 555-1234"
+                        className="bg-white/50"
                         required
-                        className="bg-white"
                       />
                     </div>
                   </div>
@@ -308,7 +308,7 @@ export default function ContactPage() {
               <div className="sticky top-28">
                 <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl mb-6">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.48129972858!2d77.04417347098828!3d28.52725574015478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1702000000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5103451421735!2d-122.4039525!3d37.793618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064a40f6f2b%3A0x70b4957332b26738!2s145%20Market%20St%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1733960000000!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -375,11 +375,11 @@ export default function ContactPage() {
             </motion.p>
             <motion.div variants={fadeInUp}>
               <a
-                href="tel:+911234567890"
+                href="tel:+14155551234"
                 className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-8 py-4 text-lg font-medium shadow-xl transition-all hover:scale-105"
               >
                 <Phone className="w-5 h-5" />
-                Call for Catering: +91 123 456 7890
+                Call for Catering: +1 (415) 555-1234
               </a>
             </motion.div>
           </motion.div>

@@ -77,18 +77,18 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-saffron shrink-0 mt-0.5" />
                 <span className="text-cream/70">
-                  123 Chaat Street, Food District
+                  145 Market Street, Suite 200
                   <br />
-                  New Delhi, India 110001
+                  San Francisco, CA 94103
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-saffron shrink-0" />
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+14155551234"
                   className="text-cream/70 hover:text-saffron transition-colors"
                 >
-                  +91 123 456 7890
+                  +1 (415) 555-1234
                 </a>
               </li>
               <li className="flex items-center gap-3">

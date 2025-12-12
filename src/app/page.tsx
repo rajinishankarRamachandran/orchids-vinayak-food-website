@@ -113,12 +113,12 @@ export default function HomePage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32">
           <motion.div
-            initial="hidden"
+            initial="visible"
             animate="visible"
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center"
           >
-            <motion.div variants={fadeInUp} className="mb-10">
+            <motion.div initial="visible" animate="visible" variants={fadeInUp} className="mb-10">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
@@ -130,13 +130,17 @@ export default function HomePage() {
             </motion.div>
 
             <motion.h1
+              initial="visible"
+              animate="visible"
               variants={fadeInUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-cream leading-tight mb-6 whitespace-nowrap"
+              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-cream leading-tight mb-6 text-center"
             >
               Where Every Bite <span className="text-saffron">Tells a Story</span>
             </motion.h1>
 
             <motion.p
+              initial="visible"
+              animate="visible"
               variants={fadeInUp}
               className="text-xl sm:text-2xl text-cream/80 mb-10 leading-relaxed max-w-3xl text-justify"
             >
@@ -144,7 +148,7 @@ export default function HomePage() {
               2000. Experience the taste of tradition at Vinayak Food Inc.
             </motion.p>
 
-            <motion.div variants={fadeInUp} className="flex flex-wrap justify-center items-center gap-4">
+            <motion.div initial="visible" animate="visible" variants={fadeInUp} className="flex flex-wrap justify-center items-center gap-4">
               <Button
                 asChild
                 size="lg"

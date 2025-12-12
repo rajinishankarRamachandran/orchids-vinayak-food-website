@@ -93,7 +93,7 @@ export function Navbar() {
               >
                 <Link href="/menu">
                   <ShoppingBag className="w-4 h-4 mr-2" />
-                  Order Now
+                  View Menu
                 </Link>
               </Button>
 
@@ -166,7 +166,7 @@ export function Navbar() {
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         <ShoppingBag className="w-4 h-4 mr-2" />
-                        Order Now
+                        View Menu
                       </Link>
                     </Button>
                   </motion.div>

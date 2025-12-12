@@ -36,9 +36,9 @@ const menuItem = {
     "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop",
   ],
   prices: [
-    { id: "single", name: "Single Plate (6 pcs)", price: 80 },
-    { id: "double", name: "Double Plate (12 pcs)", price: 150 },
-    { id: "family", name: "Family Pack (24 pcs)", price: 280 },
+    { id: "single", name: "Single Plate (6 pcs)", price: 8 },
+    { id: "double", name: "Double Plate (12 pcs)", price: 14 },
+    { id: "family", name: "Family Pack (24 pcs)", price: 26 },
   ],
   spiceLevels: [
     { id: "mild", name: "Mild", icon: "🌶️" },
@@ -51,9 +51,9 @@ const menuItem = {
     { id: "sweet", name: "Sweet (Meetha)", description: "Dates & jaggery blend" },
   ],
   extras: [
-    { id: "chutney", name: "Extra Chutney", price: 20 },
-    { id: "sev", name: "Extra Sev", price: 15 },
-    { id: "pani", name: "Extra Pani (any)", price: 10 },
+    { id: "chutney", name: "Extra Chutney", price: 2 },
+    { id: "sev", name: "Extra Sev", price: 1 },
+    { id: "pani", name: "Extra Pani (any)", price: 1.5 },
   ],
   allergens: ["Gluten", "Dairy-free option available"],
   prepTime: "5-7 mins",
