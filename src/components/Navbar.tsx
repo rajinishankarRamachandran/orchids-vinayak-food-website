@@ -67,7 +67,7 @@ export function Navbar() {
                 <span className="font-serif text-xl font-bold text-white drop-shadow-lg leading-tight">
                   Vinayak Food
                 </span>
-                <span className="text-xs text-saffron font-medium tracking-wider drop-shadow-lg">
+                <span className="text-xs text-white font-medium tracking-wider drop-shadow-lg">
                   Since 2000
                 </span>
               </div>
