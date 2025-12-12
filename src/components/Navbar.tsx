@@ -87,16 +87,6 @@ export function Navbar() {
             </div>
 
             <div className="flex items-center gap-4">
-              <Button
-                asChild
-                className="hidden sm:flex bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 shadow-lg hover:shadow-xl transition-all hover:scale-105"
-              >
-                <Link href="/menu">
-                  <ShoppingBag className="w-4 h-4 mr-2" />
-                  View Menu
-                </Link>
-              </Button>
-
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="md:hidden p-2 rounded-lg hover:bg-cream-dark transition-colors"
@@ -151,25 +141,6 @@ export function Navbar() {
                       </Link>
                     </motion.div>
                   ))}
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="pt-4"
-                  >
-                    <Button
-                      asChild
-                      className="w-full bg-saffron hover:bg-saffron-dark text-white rounded-full"
-                    >
-                      <Link
-                        href="/menu"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <ShoppingBag className="w-4 h-4 mr-2" />
-                        View Menu
-                      </Link>
-                    </Button>
-                  </motion.div>
                 </div>
               </div>
             </motion.nav>
