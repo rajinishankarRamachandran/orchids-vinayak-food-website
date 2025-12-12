@@ -140,7 +140,6 @@ export default function HomePage() {
                 className="h-56 sm:h-72 lg:h-80 w-auto max-w-[95vw]"
                 priority
               />
-              <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mt-6" />
             </motion.div>
 
             <motion.h2
