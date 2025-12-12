@@ -93,7 +93,7 @@ export default function MenuPage() {
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain"
                   alt="Pani Puri"
                   fill
-                  className="object-contain" />
+                  className="object-cover" />
 
               </div>
             </motion.div>
