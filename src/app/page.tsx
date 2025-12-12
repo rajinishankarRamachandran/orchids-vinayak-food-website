@@ -116,7 +116,7 @@ export default function HomePage() {
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-3xl"
+            className="max-w-5xl mx-auto text-center flex flex-col items-center"
           >
             <motion.div variants={fadeInUp} className="mb-6">
               <span className="inline-block px-4 py-2 bg-saffron/20 border border-saffron/30 rounded-full text-saffron text-sm font-medium">
@@ -126,21 +126,20 @@ export default function HomePage() {
 
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-cream leading-tight mb-6"
+              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-cream leading-tight mb-6 whitespace-nowrap"
             >
-              Where Every Bite{" "}
-              <span className="text-saffron">Tells a Story</span>
+              Where Every Bite <span className="text-saffron">Tells a Story</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-xl sm:text-2xl text-cream/80 mb-10 leading-relaxed max-w-2xl"
+              className="text-xl sm:text-2xl text-cream/80 mb-10 leading-relaxed max-w-3xl text-justify"
             >
               Authentic Pani Puri & traditional chaat crafted with love since
               2000. Experience the taste of tradition at Vinayak Food Inc.
             </motion.p>
 
-            <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
+            <motion.div variants={fadeInUp} className="flex flex-wrap justify-center items-center gap-4">
               <Button
                 asChild
                 size="lg"
@@ -152,7 +151,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-cream/30 text-cream hover:bg-cream/10 rounded-full px-8 py-6 text-lg"
+                className="border-2 border-saffron/60 text-saffron bg-white/5 hover:bg-saffron/15 hover:text-white hover:border-saffron rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
                 <Link href="/about">
                   Our Story
