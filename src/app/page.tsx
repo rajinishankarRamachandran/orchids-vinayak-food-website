@@ -131,7 +131,7 @@ export default function HomePage() {
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center">
 
-            <motion.div variants={fadeInUp} className="mb-10">
+            <motion.div variants={fadeInUp} className="mb-6">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
@@ -144,7 +144,7 @@ export default function HomePage() {
 
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl sm:text-4xl font-serif font-bold text-white/95 mb-6 drop-shadow-xl !whitespace-pre-line">
+              className="text-4xl sm:text-5xl font-serif font-bold text-white/95 mb-6 drop-shadow-xl !whitespace-pre-line">
               Where Every Bite Tells a Story
 
             </motion.h2>
