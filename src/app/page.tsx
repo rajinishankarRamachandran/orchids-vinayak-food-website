@@ -143,6 +143,13 @@ export default function HomePage() {
               <div className="w-32 h-1 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mt-6" />
             </motion.div>
 
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl sm:text-4xl font-serif font-bold text-white/95 mb-6 drop-shadow-xl"
+            >
+              Where Every Bite Tells a Story!
+            </motion.h2>
+
             <motion.p
               variants={fadeInUp}
               className="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg"
