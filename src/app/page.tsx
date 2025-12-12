@@ -303,8 +303,8 @@ export default function HomePage() {
                   size="lg"
                   className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 shadow-lg">
 
-                  <Link href="/menu">
-                    View Menu — Starting at $8
+                  <Link href="/menu">View 
+
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
