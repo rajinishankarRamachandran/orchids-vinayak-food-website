@@ -293,6 +293,104 @@ export default function MenuPage() {
         </div>
       </section>
 
+      <section className="py-24 bg-charcoal">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="space-y-16"
+          >
+            <motion.div variants={fadeInUp} className="text-center">
+              <span className="text-saffron font-medium tracking-wider uppercase">
+                The Story
+              </span>
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-cream mt-3 mb-8">
+                History of Pani Puri
+              </h2>
+              <p className="text-cream/80 text-lg leading-relaxed text-justify max-w-4xl mx-auto">
+                {menuItem.history}
+              </p>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <div className="text-center mb-10">
+                <span className="text-saffron font-medium tracking-wider uppercase">
+                  The Recipe
+                </span>
+                <h2 className="text-4xl sm:text-5xl font-serif font-bold text-cream mt-3">
+                  How We Make It
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-12">
+                <Card className="bg-cream border-none shadow-xl">
+                  <CardContent className="p-8">
+                    <h3 className="text-2xl font-serif font-bold text-charcoal mb-6">
+                      Ingredients
+                    </h3>
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="font-semibold text-saffron mb-2 text-lg">For the Puri:</h4>
+                        <ul className="space-y-2">
+                          {menuItem.recipe.ingredients.puri.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-charcoal/80">
+                              <span className="text-saffron mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-saffron mb-2 text-lg">For the Filling:</h4>
+                        <ul className="space-y-2">
+                          {menuItem.recipe.ingredients.filling.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-charcoal/80">
+                              <span className="text-saffron mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-saffron mb-2 text-lg">For the Pani:</h4>
+                        <ul className="space-y-2">
+                          {menuItem.recipe.ingredients.pani.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-charcoal/80">
+                              <span className="text-saffron mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-cream border-none shadow-xl">
+                  <CardContent className="p-8">
+                    <h3 className="text-2xl font-serif font-bold text-charcoal mb-6">
+                      Preparation Steps
+                    </h3>
+                    <ol className="space-y-4">
+                      {menuItem.recipe.steps.map((step, idx) => (
+                        <li key={idx} className="flex gap-4">
+                          <span className="flex-shrink-0 w-8 h-8 rounded-full bg-saffron text-white flex items-center justify-center font-bold text-sm">
+                            {idx + 1}
+                          </span>
+                          <p className="text-charcoal/80 leading-relaxed pt-1">{step}</p>
+                        </li>
+                      ))}
+                    </ol>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-24 bg-gradient-to-br from-saffron to-saffron-dark">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
