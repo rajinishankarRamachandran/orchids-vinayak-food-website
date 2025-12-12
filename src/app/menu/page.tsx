@@ -204,7 +204,7 @@ export default function MenuPage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg"
+                className="bg-white text-saffron hover:bg-cream rounded-full px-8 py-6 text-lg transition-transform hover:scale-110"
               >
                 <Link href="/contact">Visit Us</Link>
               </Button>

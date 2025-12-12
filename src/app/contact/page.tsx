@@ -376,7 +376,7 @@ export default function ContactPage() {
             <motion.div variants={fadeInUp}>
               <a
                 href="tel:+14155551234"
-                className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-8 py-4 text-lg font-medium shadow-xl transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-8 py-4 text-lg font-medium shadow-xl transition-transform hover:scale-110"
               >
                 <Phone className="w-5 h-5" />
                 Call for Catering: +1 (415) 555-1234
