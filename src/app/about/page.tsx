@@ -105,7 +105,7 @@ export default function AboutPage() {
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-cream/80 max-w-2xl mx-auto">Rooted in India's vibrant street food legacy, we honor centuries of chaat tradition, preserving authentic flavors — one Pani puri at a time.
+              className="text-xl text-cream/80 max-w-2xl mx-auto !whitespace-pre-line">Rooted in India's vibrant street food legacy, we honor centuries of chaat tradition, preserving authentic flavors — one Pani puri at a time.
 
 
 
