@@ -118,17 +118,15 @@ export default function HomePage() {
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center"
           >
-            <motion.div variants={fadeInUp} className="mb-6">
-              <div className="inline-flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-cream/20 px-6 py-3 shadow-lg">
-                <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
-                  alt="Vinayak Food Inc logo"
-                  width={220}
-                  height={72}
-                  className="h-16 w-auto drop-shadow-xl"
-                  priority
-                />
-              </div>
+            <motion.div variants={fadeInUp} className="mb-10">
+              <Image
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                alt="Vinayak Food Inc logo"
+                width={400}
+                height={140}
+                className="h-24 sm:h-28 w-auto"
+                priority
+              />
             </motion.div>
 
             <motion.h1
