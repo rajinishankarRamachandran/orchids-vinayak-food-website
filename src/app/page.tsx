@@ -320,10 +320,10 @@ export default function HomePage() {
 
               <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&h=800&fit=crop"
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/home-page_panipuri-1765525855685.jpg?width=8000&height=8000&resize=contain"
                   alt="Pani Puri plate with chutneys and filling"
                   fill
-                  className="object-cover" />
+                  className="object-cover w-full h-full" />
 
               </div>
               <div className="absolute -bottom-6 -left-6 bg-saffron text-white p-6 rounded-2xl shadow-xl">
