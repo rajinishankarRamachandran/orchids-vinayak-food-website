@@ -153,7 +153,7 @@ export default function AboutPage() {
               <span className="text-saffron font-medium tracking-wider uppercase">
                 Our Beginning
               </span>
-              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-charcoal mt-3 mb-6 whitespace-nowrap">
                 Tradition Through Generations
               </h2>
               <div className="text-muted-foreground text-lg leading-snug text-justify space-y-4">
