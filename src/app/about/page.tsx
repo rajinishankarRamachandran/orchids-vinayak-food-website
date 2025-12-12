@@ -40,7 +40,7 @@ const timeline = [
 },
 {
   year: "2024",
-  title: "Two Decades Strong",
+  title: "Two Decades Legacy",
   description:
   "24 years of authentic flavor, unchanged and unforgettable."
 },
