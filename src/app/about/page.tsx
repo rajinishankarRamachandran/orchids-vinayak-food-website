@@ -46,7 +46,7 @@ const timeline = [
 },
 {
   year: "2025",
-  title: "Renovating & Growing Stronger",
+  title: "Growing Stronger",
   description:
   "Growing even stronger with the same authentic flavours."
 }];
