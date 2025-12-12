@@ -1,14 +1,10 @@
 "use client"
 
-import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { supabase } from "@/lib/supabase"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Leaf, Clock, Star, Info } from "lucide-react"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -21,18 +17,6 @@ const staggerContainer = {
     opacity: 1,
     transition: { staggerChildren: 0.15 },
   },
-}
-
-type Dish = {
-  id: string
-  name: string
-  description: string
-  price: number
-  category: string
-  image_url: string
-  spice_level: string
-  is_vegetarian: boolean
-  is_available: boolean
 }
 
 const menuItem = {
@@ -58,66 +42,9 @@ const menuItem = {
   },
   image:
     "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&h=600&fit=crop",
-  gallery: [
-    "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1567337710282-00832b415979?w=400&h=300&fit=crop",
-    "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop",
-  ],
-  prices: [
-    { id: "single", name: "Single Plate (6 pcs)", price: 8 },
-    { id: "double", name: "Double Plate (12 pcs)", price: 14 },
-    { id: "family", name: "Family Pack (24 pcs)", price: 26 },
-  ],
-  spiceLevels: [
-    { id: "mild", name: "Mild", icon: "🌶️" },
-    { id: "medium", name: "Medium", icon: "🌶️🌶️" },
-    { id: "hot", name: "Hot", icon: "🌶️🌶️🌶️" },
-  ],
-  waterTypes: [
-    { id: "tangy", name: "Tangy (Imli)", description: "Sweet & sour tamarind" },
-    { id: "spicy", name: "Spicy (Pudina)", description: "Mint with green chili" },
-    { id: "sweet", name: "Sweet (Meetha)", description: "Dates & jaggery blend" },
-  ],
-  extras: [
-    { id: "chutney", name: "Extra Chutney", price: 2 },
-    { id: "sev", name: "Extra Sev", price: 1 },
-    { id: "pani", name: "Extra Pani (any)", price: 1.5 },
-  ],
-  allergens: ["Gluten", "Dairy-free option available"],
-  prepTime: "5-7 mins",
-  rating: 4.9,
-  reviews: 2847,
 }
 
 export default function MenuPage() {
-  const [dishes, setDishes] = useState<Dish[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetchDishes()
-  }, [])
-
-  const fetchDishes = async () => {
-    const { data, error } = await supabase
-      .from("dishes")
-      .select("*")
-      .eq("is_available", true)
-      .order("created_at", { ascending: false })
-
-    if (!error && data) {
-      setDishes(data)
-    }
-    setLoading(false)
-  }
-
-  const groupedDishes = dishes.reduce((acc, dish) => {
-    if (!acc[dish.category]) {
-      acc[dish.category] = []
-    }
-    acc[dish.category].push(dish)
-    return acc
-  }, {} as Record<string, Dish[]>)
-
   return (
     <div className="overflow-hidden">
       <section className="relative py-32 bg-charcoal">
@@ -164,61 +91,44 @@ export default function MenuPage() {
 
       <section className="py-24 bg-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {loading ? (
-            <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground">Loading menu...</p>
-            </div>
-          ) : dishes.length === 0 ? (
-            <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground">No dishes available at the moment.</p>
-            </div>
-          ) : (
-            <div className="space-y-16">
-              {Object.entries(groupedDishes).map(([category, categoryDishes]) => (
-                <div key={category}>
-                  <h2 className="text-3xl font-serif font-bold text-charcoal mb-8 border-b-2 border-saffron pb-2">
-                    {category}
-                  </h2>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {categoryDishes.map((dish) => (
-                      <Card key={dish.id} className="overflow-hidden hover:shadow-xl transition-shadow">
-                        <div className="relative h-64 w-full">
-                          <Image
-                            src={dish.image_url || menuItem.image}
-                            alt={dish.name}
-                            fill
-                            className="object-cover"
-                          />
-                          {dish.is_vegetarian && (
-                            <Badge className="absolute top-4 left-4 bg-green text-white">
-                              <Leaf className="w-3 h-3 mr-1" />
-                              Vegetarian
-                            </Badge>
-                          )}
-                        </div>
-                        <CardContent className="p-6">
-                          <h3 className="text-2xl font-serif font-bold text-charcoal mb-2">
-                            {dish.name}
-                          </h3>
-                          <p className="text-muted-foreground mb-4 line-clamp-2">
-                            {dish.description}
-                          </p>
-                          <div className="flex items-center justify-between mb-4">
-                            <Badge variant="outline" className="border-saffron text-saffron">
-                              {dish.spice_level}
-                            </Badge>
-                            <span className="text-2xl font-bold text-saffron">
-                              ${dish.price.toFixed(2)}
-                            </span>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src={menuItem.image}
+                  alt="Pani Puri"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <div>
+                <span className="text-saffron font-medium tracking-wider uppercase">
+                  {menuItem.tagline}
+                </span>
+                <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3 mb-6">
+                  Pani Puri
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                {menuItem.longDescription}
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
