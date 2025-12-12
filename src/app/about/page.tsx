@@ -187,10 +187,10 @@ export default function AboutPage() {
             >
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&h=600&fit=crop"
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/pani-puri-1765517875697.jpg?width=8000&height=8000&resize=contain"
                   alt="Founders of Vinayak Food"
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-saffron text-white p-8 rounded-2xl shadow-xl">
