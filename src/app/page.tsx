@@ -99,26 +99,60 @@ const testimonials = [
 export default function HomePage() {
   return (
     <div className="overflow-hidden">
-      <section className="relative min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1920&h=1080&fit=crop"
-            alt="Delicious pani puri served fresh"
-            fill
-            className="object-cover"
-            priority
+      <section className="relative min-h-screen flex items-center justify-center liquid-glass-bg">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-blue-900/40 to-pink-900/40 animate-gradient-shift" />
+          
+          <motion.div
+            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full glass-orb"
+            animate={{
+              x: [0, 100, 0],
+              y: [0, -50, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/50" />
+          
+          <motion.div
+            className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full glass-orb-2"
+            animate={{
+              x: [0, -80, 0],
+              y: [0, 60, 0],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full glass-orb-3"
+            animate={{
+              x: [-50, 50, -50],
+              y: [30, -30, 30],
+            }}
+            transition={{
+              duration: 18,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+
+          <div className="absolute inset-0 backdrop-blur-3xl" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32">
           <motion.div
-            initial="visible"
+            initial="hidden"
             animate="visible"
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center"
           >
-            <motion.div initial="visible" animate="visible" variants={fadeInUp} className="mb-10">
+            <motion.div variants={fadeInUp} className="mb-10 glass-card p-6 rounded-3xl">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
@@ -130,29 +164,25 @@ export default function HomePage() {
             </motion.div>
 
             <motion.h1
-              initial="visible"
-              animate="visible"
               variants={fadeInUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-cream leading-tight mb-6 text-center"
+              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6 whitespace-nowrap drop-shadow-2xl"
             >
-              Where Every Bite <span className="text-saffron">Tells a Story</span>
+              Where Every Bite <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">Tells a Story</span>
             </motion.h1>
 
             <motion.p
-              initial="visible"
-              animate="visible"
               variants={fadeInUp}
-              className="text-xl sm:text-2xl text-cream/80 mb-10 leading-relaxed max-w-3xl text-justify"
+              className="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg"
             >
               Authentic Pani Puri & traditional chaat crafted with love since
               2000. Experience the taste of tradition at Vinayak Food Inc.
             </motion.p>
 
-            <motion.div initial="visible" animate="visible" variants={fadeInUp} className="flex flex-wrap justify-center items-center gap-4">
+            <motion.div variants={fadeInUp} className="flex flex-wrap justify-center items-center gap-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                className="glass-button bg-white/20 hover:bg-white/30 text-white border border-white/30 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-105"
               >
                 <Link href="/menu">View Menu</Link>
               </Button>
@@ -160,7 +190,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-saffron text-cream bg-transparent hover:bg-saffron hover:text-charcoal hover:border-saffron-dark rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                className="glass-button bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-8 py-6 text-lg shadow-2xl hover:shadow-white/20 transition-all hover:scale-105"
               >
                 <Link href="/about">
                   Our Story
@@ -177,11 +207,11 @@ export default function HomePage() {
           transition={{ delay: 1, duration: 1 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
         >
-          <div className="w-6 h-10 rounded-full border-2 border-cream/30 flex items-start justify-center p-2">
+          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2 backdrop-blur-sm bg-white/5">
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
-              className="w-1.5 h-1.5 rounded-full bg-cream"
+              className="w-1.5 h-1.5 rounded-full bg-white"
             />
           </div>
         </motion.div>
