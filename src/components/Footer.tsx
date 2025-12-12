@@ -5,11 +5,11 @@ import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react"
 export function Footer() {
   return (
     <footer className="bg-charcoal text-cream">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="space-y-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3">
-              <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-saffron/50 shadow-lg">
+              <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden ring-2 ring-saffron/50 shadow-lg">
                 <Image
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                   alt="Vinayak Food Inc logo"
@@ -19,16 +19,16 @@ export function Footer() {
                 />
               </div>
               <div>
-                <h3 className="font-serif text-2xl font-bold text-cream">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-cream">
                   Vinayak Food
                 </h3>
                 <p className="text-saffron text-sm">Since 2000</p>
               </div>
             </div>
-            <p className="text-cream/70 leading-relaxed">
+            <p className="text-cream/70 leading-relaxed text-sm md:text-base">
               Where every bite tells a story. Authentic Pani Puri & traditional chaat crafted with love since 2000.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
@@ -47,10 +47,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-6 text-cream">
+            <h4 className="font-serif text-lg font-semibold mb-4 md:mb-6 text-cream">
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 md:space-y-3">
               {[
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About Us" },
@@ -60,7 +60,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-cream/70 hover:text-saffron transition-colors"
+                    className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base"
                   >
                     {link.label}
                   </Link>
@@ -70,13 +70,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-6 text-cream">
+            <h4 className="font-serif text-lg font-semibold mb-4 md:mb-6 text-cream">
               Contact Info
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3 md:space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-saffron shrink-0 mt-0.5" />
-                <span className="text-cream/70">
+                <span className="text-cream/70 text-sm md:text-base">
                   145 Market Street, Suite 200
                   <br />
                   San Francisco, CA 94103
@@ -86,7 +86,7 @@ export function Footer() {
                 <Phone className="w-5 h-5 text-saffron shrink-0" />
                 <a
                   href="tel:+14155551234"
-                  className="text-cream/70 hover:text-saffron transition-colors"
+                  className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base"
                 >
                   +1 (415) 555-1234
                 </a>
@@ -95,7 +95,7 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-saffron shrink-0" />
                 <a
                   href="mailto:hello@vinayakfood.com"
-                  className="text-cream/70 hover:text-saffron transition-colors"
+                  className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base break-all"
                 >
                   hello@vinayakfood.com
                 </a>
@@ -104,20 +104,20 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-semibold mb-6 text-cream">
+            <h4 className="font-serif text-lg font-semibold mb-4 md:mb-6 text-cream">
               Opening Hours
             </h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-saffron shrink-0" />
-                <div className="text-cream/70">
+                <div className="text-cream/70 text-sm md:text-base">
                   <p className="font-medium text-cream">Mon - Fri</p>
                   <p>11:00 AM - 10:00 PM</p>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-saffron shrink-0" />
-                <div className="text-cream/70">
+                <div className="text-cream/70 text-sm md:text-base">
                   <p className="font-medium text-cream">Sat - Sun</p>
                   <p>10:00 AM - 11:00 PM</p>
                 </div>
@@ -126,9 +126,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-cream/10">
+        <div className="mt-10 md:mt-12 pt-6 md:pt-8 border-t border-cream/10">
           <div className="flex justify-center items-center">
-            <p className="text-cream/50 text-sm">
+            <p className="text-cream/50 text-xs md:text-sm text-center">
               © {new Date().getFullYear()} Vinayak Food Inc. All rights reserved.
             </p>
           </div>
