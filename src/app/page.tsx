@@ -15,7 +15,6 @@ import {
   Droplets,
   Cookie,
   Hand,
-  Quote,
 } from "lucide-react"
 
 const fadeInUp = {
@@ -72,27 +71,6 @@ const howItsMadeSteps = [
     icon: Droplets,
     title: "The Pani",
     description: "Our signature tangy mint water, served chilled",
-  },
-]
-
-const testimonials = [
-  {
-    name: "Priya Sharma",
-    text: "The best pani puri I've ever had outside of my grandmother's kitchen. Pure nostalgia!",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop",
-  },
-  {
-    name: "Rahul Verma",
-    text: "Twenty years of consistency. Every visit tastes exactly like the first time — perfect!",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
-  },
-  {
-    name: "Anita Patel",
-    text: "The chutneys are out of this world. I drive 30 minutes just for their pani puri.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
   },
 ]
 
@@ -407,75 +385,6 @@ export default function HomePage() {
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground">{step.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="text-center mb-16"
-          >
-            <motion.span
-              variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase"
-            >
-              Testimonials
-            </motion.span>
-            <motion.h2
-              variants={fadeInUp}
-              className="text-4xl sm:text-5xl font-serif font-bold text-charcoal mt-3"
-            >
-              What Our Customers Say
-            </motion.h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {testimonials.map((testimonial, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="h-full border-none shadow-lg bg-white">
-                  <CardContent className="p-8">
-                    <Quote className="w-10 h-10 text-saffron/30 mb-4" />
-                    <p className="text-charcoal text-lg leading-relaxed mb-6">
-                      &quot;{testimonial.text}&quot;
-                    </p>
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-full overflow-hidden relative">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-charcoal">
-                          {testimonial.name}
-                        </p>
-                        <div className="flex gap-1">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className="w-4 h-4 fill-saffron text-saffron"
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </motion.div>
             ))}
           </motion.div>
