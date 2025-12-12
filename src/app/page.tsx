@@ -122,9 +122,9 @@ export default function HomePage() {
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
-                width={1000}
-                height={360}
-                className="h-48 sm:h-60 lg:h-72 w-auto max-w-[90vw]"
+                width={1400}
+                height={500}
+                className="h-56 sm:h-72 lg:h-80 w-auto max-w-[95vw]"
                 priority
               />
             </motion.div>
