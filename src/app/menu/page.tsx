@@ -26,19 +26,8 @@ const menuItem = {
   history:
     "Pani Puri, also known as Golgappa or Puchka across different regions of India, has been a beloved street food for centuries. Its origins trace back to the ancient kingdom of Magadha, where it was created as a light, flavorful snack. The dish evolved over generations, with each region adding its own unique twist to the tangy water and spicy fillings. At Vinayak Food Inc, we've perfected our recipe since 2000, honoring traditional methods while bringing our own family secrets passed down through generations. Every puri is hand-rolled and fried to golden perfection, just as it was done in the bustling markets of Old Delhi.",
   recipe: {
-    ingredients: {
-      puri: ["Semolina (Suji)", "All-purpose flour", "Baking soda", "Salt", "Water", "Oil for frying"],
-      filling: ["Boiled potatoes (mashed)", "Boiled chickpeas", "Tamarind chutney", "Green chutney", "Chaat masala", "Roasted cumin powder", "Red chili powder", "Sev (chickpea noodles)"],
-      pani: ["Fresh mint leaves", "Coriander leaves", "Green chilies", "Tamarind pulp", "Black salt", "Cumin powder", "Ginger", "Jaggery/Sugar", "Chilled water"]
-    },
-    steps: [
-      "Mix semolina, flour, baking soda, and salt. Knead into a stiff dough with water.",
-      "Roll the dough thin and cut into small circles. Deep fry until golden and puffed.",
-      "Prepare the filling by mixing mashed potatoes, chickpeas, and spices.",
-      "Blend mint, coriander, chilies, and spices with water to make the signature pani.",
-      "Gently crack the top of each puri, fill with potato mixture, add chutneys and sev.",
-      "Pour the tangy pani and serve immediately for maximum crunch."
-    ]
+    ingredients: ["Semolina", "Boiled Potatoes", "Chickpeas", "Tamarind Chutney", "Green Chutney", "Spices", "Mint Water"],
+    preparation: "Knead semolina into stiff dough, roll thin & fry until golden. Fill crispy puris with mashed potatoes, chickpeas & chutneys. Serve with chilled tangy mint water."
   },
   image:
     "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800&h=600&fit=crop",
@@ -169,7 +158,7 @@ export default function MenuPage() {
                     Ingredients
                   </h3>
                   <div className="flex flex-wrap gap-3 justify-center mb-8">
-                    {[...menuItem.recipe.ingredients.puri, ...menuItem.recipe.ingredients.filling, ...menuItem.recipe.ingredients.pani].map((item, idx) => (
+                    {menuItem.recipe.ingredients.map((item, idx) => (
                       <span key={idx} className="px-4 py-2 bg-saffron/10 text-charcoal rounded-full text-sm">
                         {item}
                       </span>
@@ -180,7 +169,7 @@ export default function MenuPage() {
                       Preparation
                     </h3>
                     <p className="text-charcoal/80 text-lg">
-                      Hand-rolled puris fried to golden perfection, filled with spiced potatoes & chickpeas, topped with house chutneys, and served with our signature tangy pani.
+                      {menuItem.recipe.preparation}
                     </p>
                   </div>
                 </CardContent>
