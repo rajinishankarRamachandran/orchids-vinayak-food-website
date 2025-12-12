@@ -43,6 +43,12 @@ const timeline = [
   title: "Two Decades Strong",
   description:
   "24 years of authentic flavor, unchanged and unforgettable."
+},
+{
+  year: "2025",
+  title: "Renovating & Growing Stronger",
+  description:
+  "Growing even stronger with the same authentic flavours."
 }];
 
 
