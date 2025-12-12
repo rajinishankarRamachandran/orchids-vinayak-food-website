@@ -131,7 +131,7 @@ export default function HomePage() {
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center"
           >
-            <motion.div variants={fadeInUp} className="mb-10 p-6 rounded-3xl bg-white/95 backdrop-blur-sm shadow-2xl">
+            <motion.div variants={fadeInUp} className="mb-10">
               <Image
                 src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
