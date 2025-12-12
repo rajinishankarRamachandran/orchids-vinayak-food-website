@@ -119,9 +119,16 @@ export default function HomePage() {
             className="max-w-5xl mx-auto text-center flex flex-col items-center"
           >
             <motion.div variants={fadeInUp} className="mb-6">
-              <span className="inline-block px-4 py-2 bg-saffron/20 border border-saffron/30 rounded-full text-saffron text-sm font-medium">
-                Authentic Indian Chaat Since 2000
-              </span>
+              <div className="inline-flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-cream/20 px-6 py-3 shadow-lg">
+                <Image
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                  alt="Vinayak Food Inc logo"
+                  width={220}
+                  height={72}
+                  className="h-16 w-auto drop-shadow-xl"
+                  priority
+                />
+              </div>
             </motion.div>
 
             <motion.h1
@@ -151,7 +158,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-saffron/60 text-saffron bg-white/5 hover:bg-saffron/15 hover:text-white hover:border-saffron rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                className="border-2 border-saffron text-cream bg-transparent hover:bg-saffron hover:text-charcoal hover:border-saffron-dark rounded-full px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105"
               >
                 <Link href="/about">
                   Our Story
