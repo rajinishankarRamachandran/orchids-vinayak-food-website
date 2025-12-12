@@ -38,6 +38,17 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [lastScrollY])
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
+
   return (
     <>
       <motion.header
@@ -51,9 +62,9 @@ export function Navbar() {
         }`}
       >
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 rounded-full shadow-lg overflow-hidden ring-2 ring-saffron/50 group-hover:scale-105 transition-transform">
+          <div className="flex h-16 md:h-20 items-center justify-between">
+            <Link href="/" className="flex items-center gap-2 md:gap-3 group">
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg overflow-hidden ring-2 ring-saffron/50 group-hover:scale-105 transition-transform">
                 <Image
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
                   alt="Vinayak Food Inc logo"
@@ -64,10 +75,10 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold text-white drop-shadow-lg leading-tight">
+                <span className="font-serif text-lg md:text-xl font-bold text-white drop-shadow-lg leading-tight">
                   Vinayak Food
                 </span>
-                <span className="text-xs text-white font-medium tracking-wider drop-shadow-lg">
+                <span className="text-[10px] md:text-xs text-white font-medium tracking-wider drop-shadow-lg">
                   Since 2000
                 </span>
               </div>
@@ -89,7 +100,7 @@ export function Navbar() {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+                className="md:hidden p-2 rounded-xl hover:bg-white/10 transition-colors"
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? (
@@ -106,14 +117,14 @@ export function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 md:hidden"
           >
             <div
-              className="absolute inset-0 bg-charcoal/50 backdrop-blur-sm"
+              className="absolute inset-0 bg-charcoal/60 backdrop-blur-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <motion.nav
@@ -121,26 +132,52 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 h-full w-72 bg-cream shadow-2xl"
+              className="absolute right-0 top-0 h-full w-[80%] max-w-xs bg-gradient-to-b from-cream to-cream-dark shadow-2xl"
             >
-              <div className="p-6 pt-24">
-                <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-between p-4 border-b border-charcoal/10">
+                <div className="flex items-center gap-2">
+                  <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-saffron/50">
+                    <Image
+                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                      alt="Vinayak Food Inc logo"
+                      fill
+                      className="object-contain bg-white"
+                      sizes="40px"
+                    />
+                  </div>
+                  <span className="font-serif text-lg font-bold text-charcoal">Vinayak Food</span>
+                </div>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 rounded-xl bg-charcoal/5 hover:bg-charcoal/10 transition-colors"
+                  aria-label="Close menu"
+                >
+                  <X className="w-5 h-5 text-charcoal" />
+                </button>
+              </div>
+              <div className="p-6">
+                <div className="flex flex-col gap-2">
                   {navLinks.map((link, index) => (
                     <motion.div
                       key={link.href}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      transition={{ delay: index * 0.08 }}
                     >
                       <Link
                         href={link.href}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-3 px-4 text-lg font-medium text-charcoal hover:text-saffron hover:bg-cream-dark rounded-lg transition-colors"
+                        className="flex items-center py-4 px-5 text-lg font-medium text-charcoal hover:text-saffron hover:bg-saffron/5 rounded-2xl transition-all active:scale-[0.98]"
                       >
                         {link.label}
                       </Link>
                     </motion.div>
                   ))}
+                </div>
+                <div className="mt-8 pt-6 border-t border-charcoal/10">
+                  <p className="text-sm text-charcoal/60 text-center">
+                    Authentic Chaat Since 2000
+                  </p>
                 </div>
               </div>
             </motion.nav>
