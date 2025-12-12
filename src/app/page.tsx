@@ -142,13 +142,6 @@ export default function HomePage() {
               />
             </motion.div>
 
-            <motion.h1
-              variants={fadeInUp}
-              className="text-5xl sm:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6 whitespace-nowrap drop-shadow-2xl text-white"
-            >
-              Where Every Bite Tells a Story
-            </motion.h1>
-
             <motion.p
               variants={fadeInUp}
               className="text-xl sm:text-2xl text-white/90 mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg"
