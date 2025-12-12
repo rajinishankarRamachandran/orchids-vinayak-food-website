@@ -24,25 +24,25 @@ const timeline = [
   year: "2000",
   title: "The Beginning",
   description:
-  "Our founders brought generations of culinary wisdom from India to Sayreville, New Jersey, with unwavering commitment to preserve heritage in every bite."
+  "Generations of Indian street food tradition, now serving Sayreville."
 },
 {
   year: "2005",
   title: "Bridge Between Continents",
   description:
-  "Established as a beloved local destination, honoring ancestral techniques while embracing the vibrant spirit of our new home."
+  "Where ancestral recipes meet American spirit."
 },
 {
   year: "2015",
   title: "Guardians of Authenticity",
   description:
-  "Refined our mission to transport you through flavor, proving that true tradition knows no boundaries."
+  "Keeping heritage alive, one pani puri at a time."
 },
 {
   year: "2024",
   title: "Two Decades Strong",
   description:
-  "Vinayak Food Inc continues serving authentic chaat with passion sustained, honor the past while serving the present."
+  "24 years of authentic flavor, unchanged and unforgettable."
 }];
 
 
