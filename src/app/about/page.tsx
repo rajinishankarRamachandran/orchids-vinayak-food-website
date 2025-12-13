@@ -82,9 +82,10 @@ export default function AboutPage() {
       <section className="relative py-24 md:py-32 bg-charcoal">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1920&h=600&fit=crop"
+            src={assets.aboutPanipuri}
             alt="Vintage kitchen atmosphere"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority />
 
@@ -162,6 +163,7 @@ export default function AboutPage() {
                   src={assets.aboutPanipuri}
                   alt="Founders of Vinayak Food"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                   priority />
 
