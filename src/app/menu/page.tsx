@@ -93,7 +93,8 @@ export default function MenuPage() {
                   src={assets.menuPanipuri}
                   alt="Pani Puri"
                   fill
-                  className="object-cover" />
+                  className="object-cover"
+                  priority />
 
               </div>
             </motion.div>
