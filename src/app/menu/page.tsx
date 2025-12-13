@@ -39,9 +39,10 @@ export default function MenuPage() {
       <section className="relative py-24 md:py-32 bg-charcoal">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1920&h=600&fit=crop"
+            src={assets.menuPanipuri}
             alt="Pani Puri spread"
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
             priority />
 
@@ -93,6 +94,7 @@ export default function MenuPage() {
                   src={assets.menuPanipuri}
                   alt="Pani Puri"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                   priority />
 
