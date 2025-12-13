@@ -11,7 +11,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden ring-2 ring-saffron/50 shadow-lg">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765665334064.png?width=8000&height=8000&resize=contain"
                   alt="Vinayak Food Inc logo"
                   fill
                   className="object-contain bg-white"
