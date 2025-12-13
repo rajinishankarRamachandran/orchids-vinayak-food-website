@@ -133,7 +133,7 @@ export default function HomePage() {
 
             <motion.div variants={fadeInUp} className="mb-4 md:mb-6">
               <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765665334064.png?width=8000&height=8000&resize=contain"
                 alt="Vinayak Food Inc logo"
                 width={1400}
                 height={500}
