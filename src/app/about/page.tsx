@@ -126,10 +126,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
               className="order-2 lg:order-1">
 
               <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
@@ -152,10 +152,10 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
               className="relative order-1 lg:order-2">
 
               <div className="relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
@@ -164,8 +164,7 @@ export default function AboutPage() {
                   alt="Founders of Vinayak Food"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                  priority />
+                  className="object-cover" />
 
               </div>
               <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-saffron text-white p-5 md:p-8 rounded-xl md:rounded-2xl shadow-xl">
@@ -207,10 +206,10 @@ export default function AboutPage() {
               {timeline.map((item, index) =>
               <motion.div
                 key={item.year}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.05, duration: 0.3 }}
                 className={`flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`
                 }>
