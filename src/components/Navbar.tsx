@@ -66,7 +66,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-2 md:gap-3 group">
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg overflow-hidden ring-2 ring-saffron/50 group-hover:scale-105 transition-transform">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765665334064.png?width=8000&height=8000&resize=contain"
                   alt="Vinayak Food Inc logo"
                   fill
                   className="object-contain bg-white"
@@ -138,7 +138,7 @@ export function Navbar() {
                 <div className="flex items-center gap-2">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-saffron/50">
                     <Image
-                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765504740318.png?width=8000&height=8000&resize=contain"
+                      src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765665334064.png?width=8000&height=8000&resize=contain"
                       alt="Vinayak Food Inc logo"
                       fill
                       className="object-contain bg-white"
