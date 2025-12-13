@@ -325,7 +325,8 @@ export default function HomePage() {
                   src={assets.homePanipuri}
                   alt="Pani Puri plate with chutneys and filling"
                   fill
-                  className="object-cover w-full h-full" />
+                  className="object-cover w-full h-full"
+                  priority />
 
               </div>
               <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">

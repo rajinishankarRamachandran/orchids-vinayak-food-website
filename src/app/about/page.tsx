@@ -162,7 +162,8 @@ export default function AboutPage() {
                   src={assets.aboutPanipuri}
                   alt="Founders of Vinayak Food"
                   fill
-                  className="object-cover" />
+                  className="object-cover"
+                  priority />
 
               </div>
               <div className="absolute -bottom-4 -right-4 md:-bottom-8 md:-right-8 bg-saffron text-white p-5 md:p-8 rounded-xl md:rounded-2xl shadow-xl">
