@@ -325,6 +325,7 @@ export default function HomePage() {
                   src={assets.homePanipuri}
                   alt="Pani Puri plate with chutneys and filling"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover w-full h-full"
                   priority />
 
