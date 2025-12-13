@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Users, Award, Sparkles } from "lucide-react";
+import { assets } from "@/assets";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -158,7 +159,7 @@ export default function AboutPage() {
 
               <div className="relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/pani-puri-1765517875697.jpg?width=8000&height=8000&resize=contain"
+                  src={assets.aboutPanipuri}
                   alt="Founders of Vinayak Food"
                   fill
                   className="object-cover" />

@@ -16,6 +16,7 @@ import {
   Cookie,
   Hand } from
 "lucide-react";
+import { assets } from "@/assets";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -133,7 +134,7 @@ export default function HomePage() {
 
             <motion.div variants={fadeInUp} className="mb-4 md:mb-6">
               <Image
-                src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/logo-1765665334064.png?width=8000&height=8000&resize=contain"
+                src={assets.logo}
                 alt="Vinayak Food Inc logo"
                 width={1400}
                 height={500}
@@ -321,7 +322,7 @@ export default function HomePage() {
 
               <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/home-page_panipuri-1765525855685.jpg?width=8000&height=8000&resize=contain"
+                  src={assets.homePanipuri}
                   alt="Pani Puri plate with chutneys and filling"
                   fill
                   className="object-cover w-full h-full" />

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { assets } from "@/assets";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -29,8 +30,7 @@ const menuItem = {
     ingredients: ["Semolina", "Boiled Potatoes", "Chickpeas", "Tamarind Chutney", "Green Chutney", "Spices", "Mint Water"],
     preparation: "Knead semolina into stiff dough, roll thin & fry until golden. Fill crispy puris with mashed potatoes, chickpeas & chutneys. Serve with chilled tangy mint water."
   },
-  image:
-  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain"
+  image: assets.menuPanipuri
 };
 
 export default function MenuPage() {
@@ -90,7 +90,7 @@ export default function MenuPage() {
 
               <div className="relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/menu-page_panipuri-1765526254768.jpg?width=8000&height=8000&resize=contain"
+                  src={assets.menuPanipuri}
                   alt="Pani Puri"
                   fill
                   className="object-cover" />
