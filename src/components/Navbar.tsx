@@ -75,7 +75,7 @@ export function Navbar() {
 
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg md:text-xl font-bold text-white drop-shadow-lg leading-tight">Vinayak Food Inc
+                <span className="font-serif text-lg md:text-xl font-bold text-white drop-shadow-lg leading-tight !whitespace-pre-line">Vinayak Food Inc
 
                 </span>
                 <span className="text-[10px] md:text-xs text-white font-medium tracking-wider drop-shadow-lg">
