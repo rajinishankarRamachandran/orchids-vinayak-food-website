@@ -301,3 +301,49 @@
 nextjs-portal {
   display: none !important;
 }
+
+.curtain {
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  background: #222222;
+  font-family: var(--font-playfair);
+  color: #FFF5E1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+  transition: margin-top 0.6s ease, height 0.6s ease;
+}
+
+.main-content {
+  position: fixed;
+  bottom: 0;
+  height: 450px;
+  width: 100%;
+  background: #FFF5E1;
+  transition: margin-top 0.6s ease;
+}
+
+.reveal-main {
+  height: 400px;
+  background: #FFF5E1;
+  transition: height 0.6s ease, position 0.6s ease;
+}
+
+.main-content.active {
+  position: relative;
+  margin-top: -6%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .main-content.active {
+    margin-top: -118px;
+  }
+}
+
+.reveal-main.activetwo {
+  height: 10px;
+  position: absolute;
+}
