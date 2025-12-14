@@ -96,7 +96,14 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       <div className={`curtain ${scrolled ? 'active' : ''}`}>
-        <span className="text-6xl md:text-[200px] lg:text-[300px] font-serif font-bold">curtain</span>
+        <Image
+          src={assets.logo}
+          alt="Vinayak Food Inc"
+          width={400}
+          height={400}
+          className="w-48 h-48 md:w-96 md:h-96 object-contain"
+          priority
+        />
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
       <div className={`main-content ${scrolled ? 'active' : ''}`}>
