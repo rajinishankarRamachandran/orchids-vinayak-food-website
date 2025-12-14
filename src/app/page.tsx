@@ -41,9 +41,9 @@ const whyCards = [
 },
 {
   icon: Leaf,
-  title: "House-Made Chutneys",
+  title: "Authenticity You Can Crunch",
   description:
-  "Our secret blend of tangy, sweet, and spicy chutneys made fresh daily in-house."
+  "Freshly made in-house every day, using a time-honored blend of ingredients."
 },
 {
   icon: Clock,
@@ -280,10 +280,10 @@ export default function HomePage() {
                 variants={fadeInUp}
                 className="text-cream/70 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
 
-                Crisp, hollow shells filled with spiced potato, crunchy sev,
-                house chutneys & our signature tangy pani — handcrafted since
-                2000. Each bite is an explosion of flavors that transport you to
-                the streets of India.
+                Perfectly crisp, golden-brown hollow shells made from premium semolina — 
+                the authentic foundation of every great pani puri. Handcrafted daily since 
+                2000 using traditional techniques, our puris deliver that signature crunch 
+                with every bite.
               </motion.p>
 
               <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
