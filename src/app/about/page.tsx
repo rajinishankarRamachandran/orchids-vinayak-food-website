@@ -135,7 +135,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-charcoal">
+      <section className="py-16 md:py-24 bg-charcoal relative">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-16">
             <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
@@ -146,22 +146,131 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
-            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
-              Pani Puri, known across India as Golgappa, originated in North India and has become one of the nation's most beloved street foods. This iconic delicacy combines crispy hollow shells with flavorful fillings and signature spiced waters.
-            </p>
+          <div className="relative">
+            <div className="hidden lg:block sticky top-24 float-right w-80 ml-8 mb-8 bg-gradient-to-br from-saffron/10 to-saffron/5 border-2 border-saffron/30 backdrop-blur-lg rounded-2xl p-6 shadow-2xl">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-2 h-2 rounded-full bg-saffron animate-pulse" />
+                <span className="text-saffron font-semibold text-sm tracking-wider uppercase">
+                  Ancient Origins
+                </span>
+              </div>
+              <h3 className="text-xl font-serif font-bold text-cream mb-4">
+                The Puri's Heritage
+              </h3>
+              <div className="space-y-3 text-cream/80 text-sm leading-relaxed text-justify">
+                <p>
+                  The puri traces its origins over 2,500 years to ancient Magadha, modern-day Bihar and Uttar Pradesh, along the banks of the Ganges River. Initially served cold to royalty during intense summer months, this delicacy became a symbol of resourcefulness and culinary artistry.
+                </p>
+                <p>
+                  According to Mahabharata legend, Draupadi created the first puri when challenged by Kunti to feed five sons with limited wheat dough and leftover aloo sabzi—demonstrating ingenuity that defined generations.
+                </p>
+                <p className="pt-2 border-t border-saffron/20">
+                  <span className="font-semibold text-cream">Traditional Craft:</span> Semolina (suji) mixed with all-purpose flour, kneaded firm, rested, rolled thin, and fried at precise temperatures until golden and hollow—a technique unchanged through millennia.
+                </p>
+              </div>
+            </div>
 
-            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
-              At Vinayak Food Inc, we honor this tradition by hand-rolling each puri from premium semolina flour. Our process maintains the authentic techniques that create the perfect golden, crispy sphere with a delicate hollow center.
-            </p>
+            <div className="space-y-12 md:space-y-20">
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div className="order-2 lg:order-1">
+                  <span className="inline-block bg-saffron/20 text-saffron px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+                    Origins
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-cream mb-4">
+                    A Street Food Icon
+                  </h3>
+                  <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+                    Pani Puri, known across India as Golgappa, originated in North India and has become one of the nation's most beloved street foods. This iconic delicacy combines crispy hollow shells with flavorful fillings and signature spiced waters, representing centuries of culinary evolution and regional adaptation.
+                  </p>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src={assets.aboutPanipuri}
+                      alt="Traditional Pani Puri"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
 
-            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
-              We prepare two signature waters daily: Khatta Meetha Pani, a sweet and sour tamarind-jaggery blend, and Theeka Pani, a spicy mint-coriander mixture. Both complement our freshly prepared potato fillings seasoned with traditional spice blends.
-            </p>
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div className="order-1">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src={assets.homePanipuri}
+                      alt="Handcrafted Puri"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="order-2">
+                  <span className="inline-block bg-saffron/20 text-saffron px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+                    Our Craft
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-cream mb-4">
+                    Hand-Rolled Perfection
+                  </h3>
+                  <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+                    At Vinayak Food Inc, we honor this tradition by hand-rolling each puri from premium semolina flour. Our process maintains the authentic techniques that create the perfect golden, crispy sphere with a delicate hollow center—a craft passed down through generations of master artisans.
+                  </p>
+                </div>
+              </div>
 
-            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
-              Every element is crafted fresh each morning, ensuring you experience the authentic taste that has made Pani Puri a cherished part of Indian culinary heritage for generations.
-            </p>
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div className="order-2 lg:order-1">
+                  <span className="inline-block bg-saffron/20 text-saffron px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+                    Signature Waters
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-cream mb-4">
+                    Artisanal Flavor Profiles
+                  </h3>
+                  <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+                    We prepare two signature waters daily: Khatta Meetha Pani, a sweet and sour tamarind-jaggery blend, and Theeka Pani, a spicy mint-coriander mixture. Both complement our freshly prepared potato fillings seasoned with traditional spice blends, creating a harmonious balance of flavors.
+                  </p>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src={assets.aboutPanipuri}
+                      alt="Signature Waters"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                <div className="order-1">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                      src={assets.homePanipuri}
+                      alt="Fresh Daily Preparation"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="order-2">
+                  <span className="inline-block bg-saffron/20 text-saffron px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+                    Daily Commitment
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-cream mb-4">
+                    Fresh Every Morning
+                  </h3>
+                  <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+                    Every element is crafted fresh each morning, ensuring you experience the authentic taste that has made Pani Puri a cherished part of Indian culinary heritage for generations. Our dedication to quality and tradition remains unwavering, from dawn preparation to the moment of service.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
