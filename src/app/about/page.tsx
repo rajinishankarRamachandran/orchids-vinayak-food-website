@@ -136,6 +136,22 @@ export default function AboutPage() {
       </section>
 
       <section className="py-16 md:py-24 bg-charcoal">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6 md:mb-8">
+            <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
+              The Story
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3 mb-6 md:mb-8">
+              History of Pani Puri
+            </h2>
+            <p className="text-cream/80 text-base md:text-lg leading-relaxed text-justify max-w-4xl mx-auto">
+              Pani Puri, also known as Golgappa or Puchka across different regions of India, has been a beloved street food for centuries. Its origins trace back to the ancient kingdom of Magadha, where it was created as a light, flavorful snack. The dish evolved over generations, with each region adding its own unique twist to the tangy water and spicy fillings. At Vinayak Food Inc, we've perfected our recipe since 2000, honoring traditional methods while bringing our own family secrets passed down through generations. Every puri is hand-rolled and fried to golden perfection, just as it was done in the bustling markets of Old Delhi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-charcoal">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 md:mb-16">
             <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
