@@ -132,7 +132,7 @@ export default function AdminDashboard() {
             <div className="flex justify-between items-center">
               <div>
                 <h2 className="text-3xl font-serif font-bold text-charcoal">
-                  Menu Management
+                  Dishes Management
                 </h2>
                 <p className="text-muted-foreground mt-1">
                   Add, edit, or remove dishes from your menu
