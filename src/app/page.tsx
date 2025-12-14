@@ -96,14 +96,43 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       <div className={`curtain ${scrolled ? 'active' : ''}`}>
-        <Image
-          src={assets.logo}
-          alt="Vinayak Food Inc"
-          width={400}
-          height={400}
-          className="w-48 h-48 md:w-96 md:h-96 object-contain"
-          priority
-        />
+        <div className="flex flex-col items-center justify-center max-w-5xl mx-auto px-4">
+          <Image
+            src={assets.logo}
+            alt="Vinayak Food Inc"
+            width={400}
+            height={400}
+            className="w-48 h-48 md:w-64 md:h-64 object-contain mb-6"
+            priority
+          />
+          
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-cream mb-4 text-center drop-shadow-xl px-2">
+            Where Every Bite Tells a Story
+          </h2>
+
+          <p className="text-base sm:text-lg md:text-xl text-cream/90 mb-8 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4">
+            Authentic Pani Puri & traditional chaat crafted with love since 2000. Experience the taste of tradition at Vinayak Food Inc.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto">
+              <Link href="/menu">View Menu</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-cream/20 hover:bg-cream/30 text-cream border-2 border-cream/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto">
+              <Link href="/about">
+                Our Story
+                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
       <div className={`main-content ${scrolled ? 'active' : ''}`}>
