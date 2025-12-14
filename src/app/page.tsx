@@ -100,9 +100,9 @@ export default function HomePage() {
           <Image
             src={assets.logo}
             alt="Vinayak Food Inc"
-            width={400}
-            height={400}
-            className="w-48 h-48 md:w-64 md:h-64 object-contain mb-6"
+            width={600}
+            height={600}
+            className="w-64 h-64 md:w-96 md:h-96 object-contain mb-6"
             priority
           />
           
