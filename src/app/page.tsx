@@ -14,7 +14,8 @@ import {
   Flame,
   Droplets,
   Cookie,
-  Hand } from
+  Hand,
+  X } from
 "lucide-react";
 import { assets } from "@/assets";
 import { useEffect, useState } from "react";
@@ -206,80 +207,31 @@ export default function HomePage() {
           </div>
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={staggerContainer}
-                className="order-2 lg:order-1">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="text-center mb-10 md:mb-16">
+              <motion.span
+                variants={fadeInUp}
+                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
+                History
+              </motion.span>
+              <motion.h2
+                variants={fadeInUp}
+                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3">
+                The Art of Crafting Perfect Puri
+              </motion.h2>
+            </motion.div>
 
-                <motion.span
-                  variants={fadeInUp}
-                  className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
-
-                  Our Signature
-                </motion.span>
-                <motion.h2
-                  variants={fadeInUp}
-                  className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3 mb-4 md:mb-6">
-
-                  The Art of Crafting Perfect Puri
-                </motion.h2>
-                <motion.p
-                  variants={fadeInUp}
-                  className="text-cream/80 text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-justify">
-
-                  At the heart of exceptional Pani Puri lies the puri itself—a masterpiece of culinary precision that demands technical expertise and unwavering attention to detail. Our puris begin with premium-grade semolina flour, carefully selected for its protein content and gluten strength, which ensures the structural integrity necessary for achieving that signature hollow center. The dough is methodically hydrated to an exact consistency, then hand-kneaded using traditional techniques that develop the gluten network essential for optimal expansion during frying. Each portion is rolled to a precise thickness—thin enough to achieve delicate crispness, yet substantial enough to withstand the filling and pani without compromising structural stability.
-                </motion.p>
-
-                <motion.p
-                  variants={fadeInUp}
-                  className="text-cream/80 text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-justify">
-
-                  The frying process is where technical mastery truly shines. Our chefs maintain oil temperature between 350-375°F, the critical range that triggers rapid steam formation within the dough, creating the characteristic hollow sphere. The puris are gently submerged and continuously monitored, turned at precise intervals to ensure even golden-brown coloration and uniform puffing. This controlled thermal shock transforms simple dough circles into ethereal, crispy spheres with paper-thin walls that shatter perfectly upon the first bite. Each batch undergoes rigorous quality inspection—examining shell integrity, hollow formation, color consistency, and that essential audible crunch that distinguishes artisan-quality puris from mass-produced alternatives.
-                </motion.p>
-
-                <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Premium semolina flour sourced from certified mills for consistent protein content and superior gluten development</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Precision-rolled to 1.5mm thickness with specialized techniques for uniform expansion and structural consistency</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Temperature-controlled frying at 350-375°F for perfect hollow formation and golden-brown crispness</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Multi-point quality inspection ensuring shell integrity, optimal crunch, and authentic artisan standards</span>
-                  </p>
-                </motion.div>
-
-                <motion.div variants={fadeInUp}>
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110 w-full sm:w-auto">
-
-                    <Link href="/menu" className="flex items-center justify-center">
-                      View menu
-                      <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
-                    </Link>
-                  </Button>
-                </motion.div>
-              </motion.div>
-
+            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start mb-12">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="relative order-1 lg:order-2">
-
+                className="relative">
                 <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src={assets.homePanipuri}
@@ -288,14 +240,125 @@ export default function HomePage() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover w-full h-full"
                     priority />
-
                 </div>
                 <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
                   <p className="text-2xl md:text-3xl font-serif font-bold">24+</p>
                   <p className="text-xs md:text-sm opacity-90">Years of Excellence</p>
                 </div>
               </motion.div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={staggerContainer}>
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-cream/80 text-base md:text-lg leading-relaxed text-justify">
+                  The authentic preparation of puri begins with small, hollow, fried shells made from wheat and semolina flour. This technique, perfected over generations, requires precise dough consistency and rolling thickness to ensure each puri puffs into a delicate, crispy sphere. Traditional vendors hand-roll each puri, monitoring oil temperature for perfect golden crispness and hollow centers. This dedication transformed a simple snack into a beloved delicacy capturing Indian culinary heritage.
+                </motion.p>
+              </motion.div>
             </div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="mb-12">
+              <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 max-w-4xl mx-auto">
+                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                  <span className="text-justify">Small, hollow shells hand-rolled from wheat and semolina flour for perfect structure</span>
+                </p>
+                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                  <span className="text-justify">Precise dough consistency and rolling thickness ensure delicate crispness</span>
+                </p>
+                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                  <span className="text-justify">Oil temperature monitoring for golden color and hollow centers</span>
+                </p>
+              </motion.div>
+              <motion.div variants={fadeInUp} className="flex justify-center mt-8">
+                <X className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
+              </motion.div>
+            </motion.div>
+
+            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start mb-12">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={staggerContainer}
+                className="lg:col-start-1">
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
+                  Our puris begin with premium-grade semolina flour, carefully selected for its protein content and gluten strength, which ensures the structural integrity necessary for achieving that signature hollow center. The dough is methodically hydrated to an exact consistency, then hand-kneaded using traditional techniques that develop the gluten network essential for optimal expansion during frying.
+                </motion.p>
+                <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4">
+                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span className="text-justify">Premium semolina flour sourced for consistent protein content</span>
+                  </p>
+                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span className="text-justify">Hand-kneaded using traditional techniques for optimal gluten development</span>
+                  </p>
+                </motion.div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="mb-12">
+              <motion.div variants={fadeInUp} className="flex justify-center mb-8">
+                <X className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+              className="max-w-4xl mx-auto">
+              <motion.p
+                variants={fadeInUp}
+                className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
+                The frying process is where technical mastery truly shines. Our chefs maintain oil temperature between 350-375°F, the critical range that triggers rapid steam formation within the dough, creating the characteristic hollow sphere. The puris are gently submerged and continuously monitored, turned at precise intervals to ensure even golden-brown coloration and uniform puffing.
+              </motion.p>
+              <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                  <span className="text-justify">Temperature-controlled frying at 350-375°F for perfect hollow formation</span>
+                </p>
+                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                  <span className="text-justify">Continuous monitoring and precise turning for uniform golden-brown crispness</span>
+                </p>
+                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                  <span className="text-justify">Rigorous quality inspection for shell integrity and authentic artisan standards</span>
+                </p>
+              </motion.div>
+
+              <motion.div variants={fadeInUp}>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110 w-full sm:w-auto">
+                  <Link href="/menu" className="flex items-center justify-center">
+                    View menu
+                    <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
