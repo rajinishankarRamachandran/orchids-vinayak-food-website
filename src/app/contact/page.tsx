@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   MapPin,
   Phone,
@@ -17,13 +17,13 @@ import {
   Instagram,
   Facebook,
   CheckCircle,
-} from "lucide-react"
-import { toast } from "sonner"
+} from "lucide-react";
+import { toast } from "sonner";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
-}
+};
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -31,7 +31,7 @@ const staggerContainer = {
     opacity: 1,
     transition: { staggerChildren: 0.15 },
   },
-}
+};
 
 const contactInfo = [
   {
@@ -67,24 +67,24 @@ const contactInfo = [
     content: "Mon - Fri: 9:00 AM - 5:00 PM\nSat - Sun: 9:00 AM - 3:00 PM",
     action: null,
   },
-]
+];
 
 export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    setIsSubmitting(false);
+    setIsSubmitted(true);
     toast.success("Message sent successfully!", {
       description: "We'll get back to you within 24 hours.",
-    })
-  }
+    });
+  };
 
   return (
     <div className="overflow-hidden">
@@ -386,5 +386,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

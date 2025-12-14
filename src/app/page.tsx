@@ -12,10 +12,9 @@ import {
   Star,
   ArrowRight,
   Flame,
-  Droplets,
   Cookie,
-  Hand } from
-"lucide-react";
+  Hand
+} from "lucide-react";
 import { assets } from "@/assets";
 import { useEffect, useState } from "react";
 
@@ -33,54 +32,52 @@ const staggerContainer = {
 };
 
 const whyCards = [
-{
-  icon: ChefHat,
-  title: "Traditional Since 2000",
-  description:
-  "Over two decades of perfecting the art of authentic chaat, passed down through generations."
-},
-{
-  icon: Leaf,
-  title: "Authenticity You Can Crunch",
-  description:
-  "Freshly made in-house every day, using a time-honored blend of ingredients."
-},
-{
-  icon: Clock,
-  title: "Fresh & Sourced Daily",
-  description:
-  "We source the freshest ingredients every morning from local markets for the best taste."
-}];
-
+  {
+    icon: ChefHat,
+    title: "Traditional Since 2000",
+    description: "Over two decades of perfecting the art of authentic chaat, passed down through generations."
+  },
+  {
+    icon: Leaf,
+    title: "Authenticity You Can Crunch",
+    description: "Freshly made in-house every day, using a time-honored blend of ingredients."
+  },
+  {
+    icon: Clock,
+    title: "Fresh & Sourced Daily",
+    description: "We source the freshest ingredients every morning from local markets for the best taste."
+  }
+];
 
 const howItsMadeSteps = [
-{
-  icon: Cookie,
-  title: "Mix Dough",
-  description: "Hand-kneaded semolina dough with precise water ratio"
-},
-{
-  icon: Hand,
-  title: "Roll & Shape",
-  description: "Rolled to uniform thickness and cut into perfect circles"
-},
-{
-  icon: Flame,
-  title: "Deep Fry",
-  description: "Fried at precise temperature until golden and crispy"
-},
-{
-  icon: Star,
-  title: "Quality Check",
-  description: "Each puri inspected for perfect crunch and hollow center"
-}];
+  {
+    icon: Cookie,
+    title: "Mix Dough",
+    description: "Hand-kneaded semolina dough with precise water ratio"
+  },
+  {
+    icon: Hand,
+    title: "Roll & Shape",
+    description: "Rolled to uniform thickness and cut into perfect circles"
+  },
+  {
+    icon: Flame,
+    title: "Deep Fry",
+    description: "Fried at precise temperature until golden and crispy"
+  },
+  {
+    icon: Star,
+    title: "Quality Check",
+    description: "Each puri inspected for perfect crunch and hollow center"
+  }
+];
 
 export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     console.log("Home page mounted successfully");
-    
+
     const handleScroll = () => {
       if (window.scrollY > 320) {
         setScrolled(true);
@@ -105,7 +102,7 @@ export default function HomePage() {
             className="w-64 h-64 md:w-96 md:h-96 object-contain mb-6"
             priority
           />
-          
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-cream mb-4 text-center drop-shadow-xl px-2">
             Where Every Bite Tells a Story
           </h2>
@@ -118,14 +115,16 @@ export default function HomePage() {
             <Button
               asChild
               size="lg"
-              className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto">
+              className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto"
+            >
               <Link href="/menu">View Menu</Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="bg-cream/20 hover:bg-cream/30 text-cream border-2 border-cream/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto">
+              className="bg-cream/20 hover:bg-cream/30 text-cream border-2 border-cream/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto"
+            >
               <Link href="/about">
                 Our Story
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
@@ -137,12 +136,14 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2">
+            className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2"
+          >
             <div className="w-5 h-8 md:w-6 md:h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5 md:p-2 backdrop-blur-sm bg-white/5">
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
-                className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-white" />
+                className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-white"
+              />
             </div>
           </motion.div>
         </div>
@@ -156,18 +157,18 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="text-center mb-10 md:mb-16">
-
+              className="text-center mb-10 md:mb-16"
+            >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
-
+                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
+              >
                 Why Choose Us
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3">
-
+                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3"
+              >
                 Authentic Chaat Experience
               </motion.h2>
             </motion.div>
@@ -177,10 +178,10 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
-
-              {whyCards.map((card, index) =>
-              <motion.div key={index} variants={fadeInUp}>
+              className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8"
+            >
+              {whyCards.map((card, index) => (
+                <motion.div key={index} variants={fadeInUp}>
                   <Card className="border-none shadow-lg hover:shadow-xl transition-shadow h-full bg-white">
                     <CardContent className="p-6 md:p-8 text-center">
                       <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-4 md:mb-6 rounded-full bg-saffron/10 flex items-center justify-center">
@@ -195,7 +196,7 @@ export default function HomePage() {
                     </CardContent>
                   </Card>
                 </motion.div>
-              )}
+              ))}
             </motion.div>
           </div>
         </section>
@@ -211,15 +212,18 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="text-center mb-10 md:mb-16">
+              className="text-center mb-10 md:mb-16"
+            >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
+                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
+              >
                 Our Heritage
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3">
+                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3"
+              >
                 Two Decades of Tradition
               </motion.h2>
             </motion.div>
@@ -230,22 +234,26 @@ export default function HomePage() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={staggerContainer}
-                className="order-2 lg:order-1">
+                className="order-2 lg:order-1"
+              >
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify">
+                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify"
+                >
                   Since 2000, Vinayak Food has been serving authentic pani puri and traditional Indian chaat to our community. What started as a small family venture has grown into a beloved destination for food lovers seeking genuine flavors and time-honored recipes.
                 </motion.p>
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify">
+                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify"
+                >
                   Our commitment to quality and authenticity has remained unchanged through the years. We continue to prepare every dish with the same care and attention that made us a household name.
                 </motion.p>
                 <motion.div variants={fadeInUp}>
                   <Button
                     asChild
                     size="lg"
-                    className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110">
+                    className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110"
+                  >
                     <Link href="/about" className="flex items-center justify-center">
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
@@ -259,7 +267,8 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="relative order-1 lg:order-2">
+                className="relative order-1 lg:order-2"
+              >
                 <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src={assets.homePanipuri}
@@ -267,7 +276,8 @@ export default function HomePage() {
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover w-full h-full"
-                    priority />
+                    priority
+                  />
                 </div>
                 <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
                   <p className="text-2xl md:text-3xl font-serif font-bold">24+</p>
@@ -285,18 +295,18 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="text-center mb-10 md:mb-16">
-
+              className="text-center mb-10 md:mb-16"
+            >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
-
+                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
+              >
                 The Process
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3">
-
+                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3"
+              >
                 How It&apos;s Made
               </motion.h2>
             </motion.div>
@@ -306,31 +316,33 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-
-              {howItsMadeSteps.map((step, index) =>
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="text-center relative">
-
-                {index < howItsMadeSteps.length - 1 &&
-              <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-saffron/50 to-transparent" />
-              }
-                <div className="relative">
-                  <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-full bg-white shadow-lg flex items-center justify-center">
-                    <step.icon className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
+              className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
+            >
+              {howItsMadeSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  className="text-center relative"
+                >
+                  {index < howItsMadeSteps.length - 1 && (
+                    <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-saffron/50 to-transparent" />
+                  )}
+                  <div className="relative">
+                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-full bg-white shadow-lg flex items-center justify-center">
+                      <step.icon className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
+                    </div>
+                    <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-green text-white flex items-center justify-center text-xs md:text-sm font-bold">
+                      {index + 1}
+                    </div>
                   </div>
-                  <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-green text-white flex items-center justify-center text-xs md:text-sm font-bold">
-                    {index + 1}
-                  </div>
-                </div>
-                <h3 className="text-base md:text-xl font-serif font-bold text-charcoal mb-1 md:mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-muted-foreground text-xs md:text-base leading-tight md:leading-normal">{step.description}</p>
-              </motion.div>
-              )}
+                  <h3 className="text-base md:text-xl font-serif font-bold text-charcoal mb-1 md:mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-muted-foreground text-xs md:text-base leading-tight md:leading-normal">
+                    {step.description}
+                  </p>
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </section>
@@ -345,38 +357,38 @@ export default function HomePage() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}>
-
+              variants={staggerContainer}
+            >
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6">
-
+                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6"
+              >
                 Ready to Experience Authentic Taste?
               </motion.h2>
               <motion.p
                 variants={fadeInUp}
-                className="text-white/90 text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto px-2">
-
+                className="text-white/90 text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto px-2"
+              >
                 Join thousands of happy customers who have made Vinayak Food their
                 go-to destination for authentic Indian chaat.
               </motion.p>
               <motion.div
                 variants={fadeInUp}
-                className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
-
+                className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4"
+              >
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-saffron hover:bg-cream rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto">
-
+                  className="bg-white text-saffron hover:bg-cream rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto"
+                >
                   <Link href="/menu">View Menu</Link>
                 </Button>
                 <Button
                   asChild
                   size="lg"
                   variant="outline"
-                  className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto">
-
+                  className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto"
+                >
                   <Link href="/contact">Visit Us</Link>
                 </Button>
               </motion.div>
@@ -384,6 +396,6 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-    </div>);
-
+    </div>
+  );
 }
