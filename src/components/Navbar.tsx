@@ -70,7 +70,7 @@ export function Navbar() {
                   src={assets.logo}
                   alt="Vinayak Food Inc logo"
                   fill
-                  className="object-contain bg-white"
+                  className="object-contain"
                   sizes="48px"
                   priority />
 
@@ -142,7 +142,7 @@ export function Navbar() {
                     src={assets.logo}
                     alt="Vinayak Food Inc logo"
                     fill
-                    className="object-contain bg-white"
+                    className="object-contain"
                     sizes="40px" />
 
                   </div>
