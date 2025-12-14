@@ -289,15 +289,15 @@ export default function HomePage() {
               <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
-                  Choose your spice level: Mild, Medium, or Hot
+                  Premium semolina flour sourced from certified mills
                 </p>
                 <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
-                  Select your pani: Tangy, Sweet, or Spicy
+                  Perfectly uniform thickness for consistent crunch
                 </p>
                 <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
-                  Add extra chutney upon request
+                  Fried at optimal temperature to lock in freshness
                 </p>
               </motion.div>
 
