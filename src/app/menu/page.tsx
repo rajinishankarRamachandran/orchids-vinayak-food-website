@@ -70,7 +70,7 @@ export default function MenuPage() {
       <section className="relative py-24 md:py-32 bg-charcoal">
         <div className="absolute inset-0 z-0">
           <Image
-            src={assets.menuPanipuri}
+            src={displayImage}
             alt="Pani Puri spread"
             fill
             sizes="100vw"
@@ -122,8 +122,8 @@ export default function MenuPage() {
 
               <div className="relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src={assets.menuPanipuri}
-                  alt="Pani Puri"
+                  src={displayImage}
+                  alt={displayHeading}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
