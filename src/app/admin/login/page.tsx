@@ -13,6 +13,7 @@ import { ChefHat } from "lucide-react"
 export default function AdminLoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState("")
@@ -43,6 +44,12 @@ export default function AdminLoginPage() {
     setSuccess("")
     setLoading(true)
 
+    if (password !== confirmPassword) {
+      setError("Passwords do not match")
+      setLoading(false)
+      return
+    }
+
     const { data, error } = await signUpWithEmail(email, password)
 
     if (error) {
@@ -55,6 +62,7 @@ export default function AdminLoginPage() {
       setSuccess("Account created! Please check your email to verify your account.")
       setEmail("")
       setPassword("")
+      setConfirmPassword("")
     }
     setLoading(false)
   }
@@ -190,6 +198,17 @@ export default function AdminLoginPage() {
                   <p className="text-xs text-muted-foreground">
                     Password must be at least 6 characters
                   </p>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="confirm-password">Confirm Password</Label>
+                  <Input
+                    id="confirm-password"
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                    minLength={6}
+                  />
                 </div>
                 {error && (
                   <p className="text-sm text-red-600 bg-red-50 p-3 rounded-md">
