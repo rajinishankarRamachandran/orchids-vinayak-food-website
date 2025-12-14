@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { assets } from "@/assets";
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -33,7 +35,36 @@ const menuItem = {
   image: assets.menuPanipuri
 };
 
+type MenuContent = {
+  heading: string;
+  tagline: string;
+  description: string;
+  image_url: string;
+};
+
 export default function MenuPage() {
+  const [content, setContent] = useState<MenuContent | null>(null);
+
+  useEffect(() => {
+    fetchContent();
+  }, []);
+
+  const fetchContent = async () => {
+    const { data, error } = await supabase
+      .from("menu_content")
+      .select("*")
+      .single();
+
+    if (!error && data) {
+      setContent(data);
+    }
+  };
+
+  const displayHeading = content?.heading || "Pani Puri";
+  const displayTagline = content?.tagline || menuItem.tagline;
+  const displayDescription = content?.description || menuItem.longDescription;
+  const displayImage = content?.image_url || assets.menuPanipuri;
+
   return (
     <div className="overflow-hidden">
       <section className="relative py-24 md:py-32 bg-charcoal">
@@ -110,14 +141,14 @@ export default function MenuPage() {
 
               <div>
                 <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
-                  {menuItem.tagline}
+                  {displayTagline}
                 </span>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3 mb-4 md:mb-6">
-                  Pani Puri
+                  {displayHeading}
                 </h2>
               </div>
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                {menuItem.longDescription}
+                {displayDescription}
               </p>
             </motion.div>
           </div>
