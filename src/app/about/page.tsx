@@ -144,9 +144,45 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3 mb-6 md:mb-8">
               History of Pani Puri
             </h2>
-            <p className="text-cream/80 text-base md:text-lg leading-relaxed text-justify max-w-4xl mx-auto">
-              Pani Puri, also known as Golgappa or Puchka across different regions of India, has been a beloved street food for centuries. Its origins trace back to the ancient kingdom of Magadha, where it was created as a light, flavorful snack. The dish evolved over generations, with each region adding its own unique twist to the tangy water and spicy fillings. At Vinayak Food Inc, we've perfected our recipe since 2000, honoring traditional methods while bringing our own family secrets passed down through generations. Every puri is hand-rolled and fried to golden perfection, just as it was done in the bustling markets of Old Delhi.
-            </p>
+            <div className="text-cream/80 text-base md:text-lg leading-relaxed text-left max-w-4xl mx-auto space-y-4">
+              <p>
+                Pani Puri, also known as Golgappa, traces its origins to North India, particularly the region of Uttar Pradesh. This beloved street food possibly evolved from Raj-Kachori, where an accidentally-made smaller puri gave birth to what we now know as panipuri. The dish spread across India during the 20th century, carried by people migrating from one part of the country to another.
+              </p>
+              
+              <div className="mt-6">
+                <h3 className="text-cream font-semibold text-lg mb-3">The Evolution:</h3>
+                <ul className="space-y-3 ml-4">
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span>The dish consists of a small, hollow, fried wheat and/or semolina shell filled with spiced mashed potatoes and served with flavored water (diluted chutney)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span>Over time, variations emerged reflecting regional preferences and ingredient availability</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span><strong>Khatta Meetha Pani</strong> (sweet and sour water): Made with tamarind and jaggery, known as the brown water</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span><strong>Theeka Pani</strong> (spicy water): The green water made with mint, coriander, and green chillies</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span>Both waters can include boondi (fried chickpea flour) garnishing</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span>Regional variations include sweet flavors like fruit juices or dates, and toppings like sev</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span>Some regions feature distinctive variations, such as white-colored pani that retains a spicy kick, traditionally handed down through generations</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
