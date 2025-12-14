@@ -309,7 +309,7 @@ export default function AboutPage() {
                       <h3 className="text-lg md:text-xl font-serif font-bold text-cream mt-1 md:mt-2 mb-2 md:mb-3">
                         {item.title}
                       </h3>
-                      <p className="text-cream/70 text-sm md:text-base">{item.description}</p>
+                      <p className="text-cream/70 text-sm md:text-base text-justify">{item.description}</p>
                     </div>
                   </div>
 
