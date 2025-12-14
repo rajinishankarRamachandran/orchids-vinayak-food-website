@@ -78,9 +78,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-saffron shrink-0 mt-0.5" />
                 <span className="text-cream/70 text-sm md:text-base">
-                  145 Market Street, Suite 200
+                  776 Jernee Mill Rd # 108
                   <br />
-                  San Francisco, CA 94103
+                  Sayreville, NJ 08872
                 </span>
               </li>
               <li className="flex items-center gap-3">
