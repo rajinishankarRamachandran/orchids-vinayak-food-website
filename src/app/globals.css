@@ -339,6 +339,7 @@ nextjs-portal {
   position: relative;
   margin-top: -12%;
   height: auto;
+  padding-top: 15%;
 }
 
 @media (max-width: 768px) {
@@ -357,6 +358,7 @@ nextjs-portal {
   
   .main-content.active {
     margin-top: -180px;
+    padding-top: 200px;
   }
 }
 
@@ -375,6 +377,7 @@ nextjs-portal {
   
   .main-content.active {
     margin-top: -150px;
+    padding-top: 170px;
   }
 }
 
