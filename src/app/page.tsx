@@ -56,23 +56,23 @@ const whyCards = [
 const howItsMadeSteps = [
 {
   icon: Cookie,
-  title: "The Dough",
-  description: "Hand-kneaded semolina dough, rolled to perfect thickness"
-},
-{
-  icon: Flame,
-  title: "Deep Fried",
-  description: "Crispy golden puris fried at precise temperature"
+  title: "Mix Dough",
+  description: "Hand-kneaded semolina dough with precise water ratio"
 },
 {
   icon: Hand,
-  title: "The Filling",
-  description: "Spiced potato, chickpeas, and crunchy sev"
+  title: "Roll & Shape",
+  description: "Rolled to uniform thickness and cut into perfect circles"
 },
 {
-  icon: Droplets,
-  title: "The Pani",
-  description: "Our signature tangy mint water, served chilled"
+  icon: Flame,
+  title: "Deep Fry",
+  description: "Fried at precise temperature until golden and crispy"
+},
+{
+  icon: Star,
+  title: "Quality Check",
+  description: "Each puri inspected for perfect crunch and hollow center"
 }];
 
 
