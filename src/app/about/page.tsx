@@ -146,36 +146,21 @@ export default function AboutPage() {
             </h2>
             <div className="text-cream/80 text-base md:text-lg leading-relaxed text-justify max-w-4xl mx-auto space-y-4">
               <p>
-                Pani Puri, also known as Golgappa, traces its origins to North India, particularly the region of Uttar Pradesh. This beloved street food possibly evolved from Raj-Kachori, where an accidentally-made smaller puri gave birth to what we now know as panipuri. The dish spread across India during the 20th century, carried by people migrating from one part of the country to another.
+                Pani Puri, also known as Golgappa, traces its origins to North India, particularly Uttar Pradesh. This beloved street food possibly evolved from Raj-Kachori, where an accidentally-made smaller puri became what we know today. The dish spread across India during the 20th century, carried by migrating communities.
               </p>
               
               <div className="mt-6">
                 <h3 className="text-cream font-semibold text-lg md:text-xl mb-4">The Evolution:</h3>
                 <p>
-                  The authentic preparation begins with the creation of small, hollow, fried shells made from wheat and/or semolina flour. This precise technique, perfected over generations, requires the perfect dough consistency and rolling thickness to ensure each puri puffs up into a delicate, crispy sphere during frying. The puri is then expertly filled with spiced mashed potatoes and served with flavored water (diluted chutney). Over time, variations emerged reflecting regional preferences and ingredient availability, transforming this simple street food into a canvas for culinary creativity across the Indian subcontinent.
+                  The authentic preparation begins with small, hollow, fried shells made from wheat and/or semolina flour. This technique, perfected over generations, requires precise dough consistency and rolling thickness to ensure each puri puffs into a delicate, crispy sphere. Filled with spiced mashed potatoes and served with flavored water, regional variations emerged over time, transforming this street food into a canvas for culinary creativity.
                 </p>
                 
                 <p className="mt-4">
-                  The magic of Pani Puri lies in its signature waters, each telling a different story of India's diverse culinary landscape. Two primary varieties have become legendary: <strong>Khatta Meetha Pani</strong> (sweet and sour water), made with tamarind and jaggery, creates the beloved brown water that balances tanginess with sweetness. <strong>Theeka Pani</strong> (spicy water), the vibrant green water made with fresh mint, coriander, and green chillies, delivers an invigorating kick. Both waters can be enhanced with boondi—tiny, crispy fried chickpea flour pearls that add delightful texture and absorb the aromatic flavors of the pani.
+                  The magic lies in its signature waters: <strong>Khatta Meetha Pani</strong> (sweet and sour) made with tamarind and jaggery creates the beloved brown water, while <strong>Theeka Pani</strong> (spicy green water) made with mint, coriander, and green chillies delivers an invigorating kick. Both can be enhanced with boondi—tiny crispy pearls that add texture.
                 </p>
                 
                 <p className="mt-4">
-                  The art of making authentic Pani Puri has evolved from humble street corners to becoming an iconic representation of Indian street food culture. Traditional vendors would hand-roll each puri, carefully monitoring oil temperature to achieve the perfect golden-brown crispness and hollow interior. The filling would be freshly prepared daily, combining boiled potatoes with secret spice blends passed down through family lines. This dedication to craftsmanship transformed a simple snack into a beloved delicacy that captures the essence of Indian culinary heritage.
-                </p>
-                
-                <ul className="space-y-3 ml-4 mt-4">
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span>Regional variations include sweet flavors like fruit juices or dates, and toppings like sev, reflecting local tastes</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span>Some regions feature distinctive variations, such as white-colored pani that retains a spicy kick, traditionally handed down through generations</span>
-                  </li>
-                </ul>
-                
-                <p className="mt-4">
-                  Today, the art of making Pani Puri continues to evolve while honoring its roots. Modern preparation methods maintain the essential authenticity—the hand-rolled puris, the fresh daily ingredients, the carefully balanced flavors—while adapting to contemporary tastes and dietary preferences. What began as an accidental creation has become a cherished tradition, bringing joy to millions and serving as a testament to India's rich street food culture. Each bite tells the story of centuries of culinary evolution, regional diversity, and the enduring appeal of flavors that perfectly balance crispy, tangy, spicy, and sweet in one unforgettable experience.
+                  Traditional vendors hand-roll each puri, monitoring oil temperature for perfect golden crispness and hollow centers. Fresh daily fillings combine boiled potatoes with secret spice blends passed through generations. This dedication transformed a simple snack into a beloved delicacy capturing Indian culinary heritage, with regional variations including sweet flavors and unique toppings.
                 </p>
               </div>
             </div>
