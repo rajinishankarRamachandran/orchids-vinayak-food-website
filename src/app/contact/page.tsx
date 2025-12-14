@@ -37,10 +37,10 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    content: "145 Market Street\nSan Francisco, CA 94103",
+    content: "776 Jernee Mill Rd # 108\nSayreville, NJ 08872",
     action: {
       label: "Get Directions",
-      href: "https://maps.google.com?q=145+Market+Street+San+Francisco+CA+94103",
+      href: "https://maps.google.com?q=776+Jernee+Mill+Rd+108+Sayreville+NJ+08872",
     },
   },
   {
