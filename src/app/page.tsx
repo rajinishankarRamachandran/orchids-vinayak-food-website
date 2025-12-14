@@ -79,7 +79,8 @@ export default function HomePage() {
     console.log("Home page mounted successfully");
 
     const handleScroll = () => {
-      if (window.scrollY > 320) {
+      const threshold = window.innerHeight * 0.4;
+      if (window.scrollY > threshold) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -99,19 +100,19 @@ export default function HomePage() {
             alt="Vinayak Food Inc"
             width={600}
             height={600}
-            className="w-64 h-64 md:w-96 md:h-96 object-contain mb-6"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-contain mb-4 sm:mb-6"
             priority
           />
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-cream mb-4 text-center drop-shadow-xl px-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-cream mb-3 sm:mb-4 text-center drop-shadow-xl px-2">
             Where Every Bite Tells a Story
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-cream/90 mb-8 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-cream/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4">
             Authentic Pani Puri & traditional chaat crafted with love since 2000. Experience the taste of tradition at Vinayak Food Inc.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4 max-w-md sm:max-w-none">
             <Button
               asChild
               size="lg"
