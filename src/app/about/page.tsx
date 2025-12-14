@@ -151,7 +151,7 @@ export default function AboutPage() {
               
               <div className="mt-6">
                 <h3 className="text-cream font-semibold text-lg mb-3">The Evolution:</h3>
-                <ul className="space-y-3 ml-4">
+                <ul className="space-y-3 ml-4 mb-4">
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
                     <span>The dish consists of a small, hollow, fried wheat and/or semolina shell filled with spiced mashed potatoes and served with flavored water (diluted chutney)</span>
@@ -160,18 +160,13 @@ export default function AboutPage() {
                     <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
                     <span>Over time, variations emerged reflecting regional preferences and ingredient availability</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span><strong>Khatta Meetha Pani</strong> (sweet and sour water): Made with tamarind and jaggery, known as the brown water</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span><strong>Theeka Pani</strong> (spicy water): The green water made with mint, coriander, and green chillies</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span>Both waters can include boondi (fried chickpea flour) garnishing</span>
-                  </li>
+                </ul>
+                
+                <p className="mb-4">
+                  The magic of Pani Puri lies in its signature waters, each telling a different story of India's diverse culinary landscape. Two primary varieties have become legendary: <strong>Khatta Meetha Pani</strong> (sweet and sour water), made with tamarind and jaggery, creates the beloved brown water that balances tanginess with sweetness. <strong>Theeka Pani</strong> (spicy water), the vibrant green water made with fresh mint, coriander, and green chillies, delivers an invigorating kick. Both waters can be enhanced with boondi—tiny, crispy fried chickpea flour pearls that add delightful texture.
+                </p>
+                
+                <ul className="space-y-3 ml-4">
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 rounded-full bg-saffron shrink-0 mt-2" />
                     <span>Regional variations include sweet flavors like fruit juices or dates, and toppings like sev</span>
