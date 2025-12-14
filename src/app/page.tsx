@@ -224,30 +224,38 @@ export default function HomePage() {
                   variants={fadeInUp}
                   className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3 mb-4 md:mb-6">
 
-                  Pani Puri
+                  The Art of Crafting Perfect Puri
                 </motion.h2>
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/70 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
+                  className="text-cream/80 text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-justify">
 
-                  Perfectly crisp, golden-brown hollow shells made from premium semolina — 
-                  the authentic foundation of every great pani puri. Handcrafted daily since 
-                  2000 using traditional techniques, our puris deliver that signature crunch 
-                  with every bite.
+                  At the heart of exceptional Pani Puri lies the puri itself—a masterpiece of culinary precision that demands technical expertise and unwavering attention to detail. Our puris begin with premium-grade semolina flour, carefully selected for its protein content and gluten strength, which ensures the structural integrity necessary for achieving that signature hollow center. The dough is methodically hydrated to an exact consistency, then hand-kneaded using traditional techniques that develop the gluten network essential for optimal expansion during frying. Each portion is rolled to a precise thickness—thin enough to achieve delicate crispness, yet substantial enough to withstand the filling and pani without compromising structural stability.
+                </motion.p>
+
+                <motion.p
+                  variants={fadeInUp}
+                  className="text-cream/80 text-base md:text-lg leading-relaxed mb-6 md:mb-8 text-justify">
+
+                  The frying process is where technical mastery truly shines. Our chefs maintain oil temperature between 350-375°F, the critical range that triggers rapid steam formation within the dough, creating the characteristic hollow sphere. The puris are gently submerged and continuously monitored, turned at precise intervals to ensure even golden-brown coloration and uniform puffing. This controlled thermal shock transforms simple dough circles into ethereal, crispy spheres with paper-thin walls that shatter perfectly upon the first bite. Each batch undergoes rigorous quality inspection—examining shell integrity, hollow formation, color consistency, and that essential audible crunch that distinguishes artisan-quality puris from mass-produced alternatives.
                 </motion.p>
 
                 <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-                  <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
-                    Premium semolina flour sourced from certified mills
+                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span className="text-justify">Premium semolina flour sourced from certified mills for consistent protein content and superior gluten development</span>
                   </p>
-                  <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
-                    Perfectly uniform thickness for consistent crunch
+                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span className="text-justify">Precision-rolled to 1.5mm thickness with specialized techniques for uniform expansion and structural consistency</span>
                   </p>
-                  <p className="text-cream flex items-center gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0" />
-                    Fried at optimal temperature to lock in freshness
+                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span className="text-justify">Temperature-controlled frying at 350-375°F for perfect hollow formation and golden-brown crispness</span>
+                  </p>
+                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span className="text-justify">Multi-point quality inspection ensuring shell integrity, optimal crunch, and authentic artisan standards</span>
                   </p>
                 </motion.div>
 
