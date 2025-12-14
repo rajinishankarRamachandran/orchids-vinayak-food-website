@@ -125,7 +125,6 @@ export default function HomePage() {
               ease: "easeInOut"
             }} />
 
-
           <div className="absolute inset-0 backdrop-blur-2xl" />
           <div className="absolute inset-0 bg-indian-texture opacity-20" />
         </div>
@@ -137,13 +136,13 @@ export default function HomePage() {
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center">
 
-            <div className="mb-4 md:mb-6">
+            <div className="mb-4 md:mb-6 flex justify-center w-full">
               <Image
                 src={assets.logo}
                 alt="Vinayak Food Inc logo"
                 width={1400}
                 height={500}
-                className="h-32 sm:h-56 md:h-72 lg:h-80 w-auto max-w-[90vw]"
+                className="h-24 sm:h-40 md:h-56 lg:h-72 w-auto mx-auto"
                 priority />
 
             </div>
