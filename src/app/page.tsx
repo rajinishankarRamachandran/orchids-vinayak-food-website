@@ -215,51 +215,31 @@ export default function HomePage() {
               <motion.span
                 variants={fadeInUp}
                 className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
-                History
+                Our Heritage
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
                 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3">
-                The Art of Crafting Perfect Puri
+                Two Decades of Tradition
               </motion.h2>
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative">
-                <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={assets.homePanipuri}
-                    alt="Pani Puri plate with chutneys and filling"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover w-full h-full"
-                    priority />
-                </div>
-                <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
-                  <p className="text-2xl md:text-3xl font-serif font-bold">24+</p>
-                  <p className="text-xs md:text-sm opacity-90">Years of Excellence</p>
-                </div>
-              </motion.div>
-
-              <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
-                variants={staggerContainer}>
+                variants={staggerContainer}
+                className="order-2 lg:order-1">
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6">
-                  Every puri at Vinayak Food is a testament to our commitment to authenticity. Our master chefs begin each day before dawn, hand-kneading premium semolina dough using traditional techniques passed down through generations.
+                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify">
+                  Since 2000, Vinayak Food has been serving authentic pani puri and traditional Indian chaat to our community. What started as a small family venture has grown into a beloved destination for food lovers seeking genuine flavors and time-honored recipes.
                 </motion.p>
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6">
-                  Each puri is rolled to precise thickness, ensuring the perfect balance between delicate crispness and structural integrity. The frying process is an art form—temperature-controlled to create that signature golden color and hollow center that defines authentic pani puri.
+                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify">
+                  Our commitment to quality and authenticity has remained unchanged through the years. We continue to prepare every dish with the same care and attention that made us a household name.
                 </motion.p>
                 <motion.div variants={fadeInUp}>
                   <Button
@@ -272,6 +252,27 @@ export default function HomePage() {
                     </Link>
                   </Button>
                 </motion.div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative order-1 lg:order-2">
+                <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src={assets.homePanipuri}
+                    alt="Authentic Pani Puri"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover w-full h-full"
+                    priority />
+                </div>
+                <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
+                  <p className="text-2xl md:text-3xl font-serif font-bold">24+</p>
+                  <p className="text-xs md:text-sm opacity-90">Years of Excellence</p>
+                </div>
               </motion.div>
             </div>
           </div>
