@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { Button } from "@/components/ui/button"
@@ -10,12 +10,15 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Upload } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function AddDishPage() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
+  const [uploading, setUploading] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -26,6 +29,33 @@ export default function AddDishPage() {
     is_vegetarian: true,
     is_available: true,
   })
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploading(true)
+    const fileExt = file.name.split('.').pop()
+    const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`
+    const filePath = `dishes/${fileName}`
+
+    const { data, error } = await supabase.storage
+      .from('dish-images')
+      .upload(filePath, file)
+
+    if (error) {
+      alert('Error uploading file: ' + error.message)
+      setUploading(false)
+      return
+    }
+
+    const { data: urlData } = supabase.storage
+      .from('dish-images')
+      .getPublicUrl(filePath)
+
+    setFormData({ ...formData, image_url: urlData.publicUrl })
+    setUploading(false)
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -149,16 +179,51 @@ export default function AddDishPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="image_url">Image URL</Label>
-                <Input
-                  id="image_url"
-                  type="url"
-                  value={formData.image_url}
-                  onChange={(e) =>
-                    setFormData({ ...formData, image_url: e.target.value })
-                  }
-                  placeholder="https://example.com/image.jpg"
-                />
+                <div className="flex gap-2">
+                  <Input
+                    id="image_url"
+                    type="url"
+                    value={formData.image_url}
+                    onChange={(e) =>
+                      setFormData({ ...formData, image_url: e.target.value })
+                    }
+                    placeholder="https://example.com/image.jpg"
+                  />
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    onChange={handleFileUpload}
+                    className="hidden"
+                  />
+                  <Button 
+                    variant="outline" 
+                    size="icon"
+                    onClick={() => fileInputRef.current?.click()}
+                    disabled={uploading}
+                    type="button"
+                  >
+                    <Upload className="w-4 h-4" />
+                  </Button>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  {uploading ? "Uploading..." : "Enter the image URL or upload a new image"}
+                </p>
               </div>
+
+              {formData.image_url && (
+                <div className="space-y-2">
+                  <Label>Image Preview</Label>
+                  <div className="relative w-full h-48 rounded-lg overflow-hidden border">
+                    <Image
+                      src={formData.image_url}
+                      alt="Preview"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              )}
 
               <div className="flex items-center justify-between">
                 <div className="space-y-1">

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useRouter } from "next/navigation"
 import { getCurrentUser } from "@/lib/auth"
 import { supabase } from "@/lib/supabase"
@@ -30,6 +30,8 @@ export default function MenuContentPage() {
   const [imageUrl, setImageUrl] = useState("")
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [uploading, setUploading] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -60,6 +62,33 @@ export default function MenuContentPage() {
       setImageUrl(data.image_url)
     }
     setLoading(false)
+  }
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploading(true)
+    const fileExt = file.name.split('.').pop()
+    const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`
+    const filePath = `menu/${fileName}`
+
+    const { data, error } = await supabase.storage
+      .from('dish-images')
+      .upload(filePath, file)
+
+    if (error) {
+      alert('Error uploading file: ' + error.message)
+      setUploading(false)
+      return
+    }
+
+    const { data: urlData } = supabase.storage
+      .from('dish-images')
+      .getPublicUrl(filePath)
+
+    setImageUrl(urlData.publicUrl)
+    setUploading(false)
   }
 
   const handleSave = async () => {
@@ -165,12 +194,25 @@ export default function MenuContentPage() {
                   onChange={(e) => setImageUrl(e.target.value)}
                   placeholder="/images/pani-puri.jpg"
                 />
-                <Button variant="outline" size="icon">
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileUpload}
+                  className="hidden"
+                />
+                <Button 
+                  variant="outline" 
+                  size="icon"
+                  onClick={() => fileInputRef.current?.click()}
+                  disabled={uploading}
+                  type="button"
+                >
                   <Upload className="w-4 h-4" />
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground">
-                Enter the image URL or upload a new image
+                {uploading ? "Uploading..." : "Enter the image URL or upload a new image"}
               </p>
             </div>
 
