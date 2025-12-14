@@ -29,7 +29,7 @@ const timeline = [
     year: "2024",
     title: "Trusted by Businesses",
     description:
-      "24 years of proven reliability, serving partners who value consistency and authenticity."
+      "24&nbsp;years of proven reliability, serving partners who value consistency and authenticity."
   },
   {
     year: "2025",
