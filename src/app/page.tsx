@@ -75,7 +75,6 @@ const howItsMadeSteps = [
   description: "Each puri inspected for perfect crunch and hollow center"
 }];
 
-
 export default function HomePage() {
   useEffect(() => {
     console.log("Home page mounted successfully");
@@ -125,8 +124,8 @@ export default function HomePage() {
               ease: "easeInOut"
             }} />
 
-          <div className="absolute inset-0 backdrop-blur-2xl" />
-          <div className="absolute inset-0 bg-indian-texture opacity-20" />
+          <div className="absolute inset-0 backdrop-blur-3xl bg-white/5" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
