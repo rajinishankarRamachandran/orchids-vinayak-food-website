@@ -14,8 +14,7 @@ import {
   Flame,
   Droplets,
   Cookie,
-  Hand,
-  X } from
+  Hand } from
 "lucide-react";
 import { assets } from "@/assets";
 import { useEffect, useState } from "react";
@@ -225,7 +224,7 @@ export default function HomePage() {
               </motion.h2>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start mb-12">
+            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -254,119 +253,27 @@ export default function HomePage() {
                 variants={staggerContainer}>
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/80 text-base md:text-lg leading-relaxed text-justify">
-                  Crafting authentic pani puri is an intricate dance between tradition and precision. Every morning, our master chefs arrive before dawn to begin the meticulous process that transforms humble ingredients into culinary perfection. The foundation starts with premium semolina flour, carefully sourced from trusted suppliers who understand that protein content and grain quality directly impact the final texture. This flour is combined with precise measurements of water, creating a dough consistency that has been perfected through generations of hands-on experience and family recipes passed down through time.
+                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6">
+                  Every puri at Vinayak Food is a testament to our commitment to authenticity. Our master chefs begin each day before dawn, hand-kneading premium semolina dough using traditional techniques passed down through generations.
                 </motion.p>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="mb-12">
-              <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 max-w-4xl mx-auto">
-                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Premium semolina flour selected for optimal protein content and gluten strength</span>
-                </p>
-                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Traditional hand-kneading techniques developed over decades of artisan practice</span>
-                </p>
-                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Precise water-to-flour ratios ensuring perfect dough elasticity and structure</span>
-                </p>
-              </motion.div>
-              <motion.div variants={fadeInUp} className="flex justify-center mt-8">
-                <X className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
-              </motion.div>
-            </motion.div>
-
-            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start mb-12">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                variants={staggerContainer}
-                className="lg:col-start-2">
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
-                  The rolling process requires years of expertise to master. Each portion of dough is carefully portioned by weight, ensuring uniformity across every batch. Our artisans roll each piece to an exact thickness—thin enough to achieve delicate crispness, yet substantial enough to maintain structural integrity during frying. The circular shapes are cut with precision tools, their edges perfectly sealed to trap air inside. This attention to detail is what separates authentic pani puri from mass-produced alternatives, creating that signature hollow center that defines the perfect puri experience.
+                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6">
+                  Each puri is rolled to precise thickness, ensuring the perfect balance between delicate crispness and structural integrity. The frying process is an art form—temperature-controlled to create that signature golden color and hollow center that defines authentic pani puri.
                 </motion.p>
-                <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4">
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Weight-portioned dough for consistent size and cooking uniformity</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Precision-rolled thickness balancing crispness with structural strength</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Expert edge-sealing techniques to trap air for signature hollow centers</span>
-                  </p>
+                <motion.div variants={fadeInUp}>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110">
+                    <Link href="/about" className="flex items-center justify-center">
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+                    </Link>
+                  </Button>
                 </motion.div>
               </motion.div>
             </div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="mb-12">
-              <motion.div variants={fadeInUp} className="flex justify-center mb-8">
-                <X className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={staggerContainer}
-              className="max-w-4xl mx-auto">
-              <motion.p
-                variants={fadeInUp}
-                className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
-                The frying stage is where artistry meets science. Our temperature-controlled fryers maintain a precise range between 350-375°F, the critical window where magic happens. At this exact temperature, moisture within the dough rapidly converts to steam, expanding the interior and creating that iconic hollow sphere. Each puri is gently lowered into the oil, where our chefs use traditional utensils to apply gentle pressure, encouraging even puffing. The puris are turned at calculated intervals, ensuring uniform golden-brown coloration on all surfaces. This process, completed in mere seconds, requires unwavering attention and years of muscle memory to execute flawlessly.
-              </motion.p>
-              <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Temperature-monitored frying at 350-375°F for optimal steam expansion</span>
-                </p>
-                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Traditional pressure techniques applied for even hollow sphere formation</span>
-                </p>
-                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Interval-based turning ensuring uniform golden-brown crispness across all surfaces</span>
-                </p>
-                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Rigorous quality inspection verifying shell integrity and authentic standards</span>
-                </p>
-              </motion.div>
-
-              <motion.div variants={fadeInUp}>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110 w-full sm:w-auto">
-                  <Link href="/menu" className="flex items-center justify-center">
-                    View menu
-                    <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
-                  </Link>
-                </Button>
-              </motion.div>
-            </motion.div>
           </div>
         </section>
 
