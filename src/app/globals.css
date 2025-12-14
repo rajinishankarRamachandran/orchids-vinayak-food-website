@@ -315,6 +315,7 @@ nextjs-portal {
   align-items: center;
   box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
   transition: margin-top 0.6s ease, height 0.6s ease;
+  padding: 1rem;
 }
 
 .main-content {
@@ -339,8 +340,39 @@ nextjs-portal {
 }
 
 @media (max-width: 768px) {
+  .curtain {
+    padding: 1rem 0.5rem;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    height: 350px;
+  }
+  
+  .reveal-main {
+    height: 300px;
+  }
+  
   .main-content.active {
     margin-top: -118px;
+  }
+}
+
+@media (max-width: 480px) {
+  .curtain {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .main-content {
+    height: 280px;
+  }
+  
+  .reveal-main {
+    height: 250px;
+  }
+  
+  .main-content.active {
+    margin-top: -100px;
   }
 }
 
