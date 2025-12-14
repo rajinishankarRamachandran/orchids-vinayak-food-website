@@ -132,21 +132,6 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2"
-          >
-            <div className="w-5 h-8 md:w-6 md:h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5 md:p-2 backdrop-blur-sm bg-white/5">
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-                className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-white"
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
