@@ -17,6 +17,7 @@ import {
   Hand } from
 "lucide-react";
 import { assets } from "@/assets";
+import { useEffect } from "react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -76,6 +77,10 @@ const howItsMadeSteps = [
 
 
 export default function HomePage() {
+  useEffect(() => {
+    console.log("Home page mounted successfully");
+  }, []);
+
   return (
     <div className="overflow-hidden">
       <section className="relative min-h-screen flex items-center justify-center traditional-indian-bg">
