@@ -137,7 +137,7 @@ export default function HomePage() {
             variants={staggerContainer}
             className="max-w-5xl mx-auto text-center flex flex-col items-center">
 
-            <motion.div variants={fadeInUp} className="mb-4 md:mb-6">
+            <div className="mb-4 md:mb-6">
               <Image
                 src={assets.logo}
                 alt="Vinayak Food Inc logo"
@@ -146,24 +146,22 @@ export default function HomePage() {
                 className="h-32 sm:h-56 md:h-72 lg:h-80 w-auto max-w-[90vw]"
                 priority />
 
-            </motion.div>
+            </div>
 
-            <motion.h2
-              variants={fadeInUp}
+            <h2
               className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-white/95 mb-4 md:mb-6 drop-shadow-xl !whitespace-pre-line px-2">
               Where Every Bite Tells a Story
 
-            </motion.h2>
+            </h2>
 
-            <motion.p
-              variants={fadeInUp}
+            <p
               className="text-base sm:text-xl md:text-2xl text-white/90 mb-6 md:mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4">
 
               Authentic Pani Puri & traditional chaat crafted with love since
               2000. Experience the taste of tradition at Vinayak Food Inc.
-            </motion.p>
+            </p>
 
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4">
               <Button
                 asChild
                 size="lg"
@@ -182,7 +180,7 @@ export default function HomePage() {
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </Link>
               </Button>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
 
