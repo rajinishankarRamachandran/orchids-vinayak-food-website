@@ -9,33 +9,33 @@ import { assets } from "@/assets";
 const timeline = [
   {
     year: "2000",
-    title: "The Beginning",
+    title: "Foundation of Excellence",
     description:
-      "Generations of Indian street food tradition, now serving Sayreville."
+      "Established in Sayreville with a commitment to authentic quality and consistent delivery standards."
   },
   {
     year: "2005",
-    title: "Bridge Between Continents",
+    title: "Scaling Operations",
     description:
-      "Where ancestral recipes meet American spirit."
+      "Expanded production capacity while maintaining artisanal quality, serving growing regional demand."
   },
   {
     year: "2015",
-    title: "Guardians of Authenticity",
+    title: "Industry Recognition",
     description:
-      "Keeping heritage alive, one pani puri at a time."
+      "Became preferred supplier for restaurants and caterers seeking authentic Indian street food."
   },
   {
     year: "2024",
-    title: "Years of Authentic Heritage",
+    title: "Trusted by Businesses",
     description:
-      "24 years of authentic flavor, unchanged and unforgettable."
+      "24 years of proven reliability, serving partners who value consistency and authenticity."
   },
   {
     year: "2025",
-    title: "Growing Stronger",
+    title: "Partnership-Ready Growth",
     description:
-      "Growing even stronger with the same authentic flavours."
+      "Enhanced capacity and streamlined supply chains to better serve wholesale and catering partners."
   }
 ];
 
