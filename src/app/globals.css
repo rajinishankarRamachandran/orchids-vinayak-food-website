@@ -335,7 +335,7 @@ nextjs-portal {
 
 .main-content.active {
   position: relative;
-  margin-top: -6%;
+  margin-top: -12%;
   height: auto;
 }
 
@@ -354,7 +354,7 @@ nextjs-portal {
   }
   
   .main-content.active {
-    margin-top: -118px;
+    margin-top: -180px;
   }
 }
 
@@ -372,7 +372,7 @@ nextjs-portal {
   }
   
   .main-content.active {
-    margin-top: -100px;
+    margin-top: -150px;
   }
 }
 
