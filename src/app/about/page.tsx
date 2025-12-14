@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Users, Award, Sparkles, X } from "lucide-react";
+import { ArrowRight, Heart, Users, Award, Sparkles } from "lucide-react";
 import { assets } from "@/assets";
 
 const timeline = [
@@ -146,88 +146,22 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-12">
-            <p className="text-cream/80 text-base md:text-lg leading-relaxed text-justify">
-              Pani Puri, also known as Golgappa, traces its origins to North India, particularly Uttar Pradesh. This beloved street food possibly evolved from Raj-Kachori, where an accidentally-made smaller puri became what we know today. The dish spread across India during the 20th century, carried by migrating communities.
+          <div className="max-w-4xl mx-auto space-y-6">
+            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+              Pani Puri, known across India as Golgappa, originated in North India and has become one of the nation's most beloved street foods. This iconic delicacy combines crispy hollow shells with flavorful fillings and signature spiced waters.
             </p>
 
-            <div>
-              <h3 className="text-cream font-serif font-bold text-xl md:text-2xl mb-6">The Evolution:</h3>
-              
-              <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start mb-12">
-                <div className="lg:col-start-2">
-                  <p className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
-                    The authentic preparation begins with small, hollow, fried shells made from wheat and/or semolina flour. This technique, perfected over generations, requires precise dough consistency and rolling thickness to ensure each puri puffs into a delicate, crispy sphere. Filled with spiced mashed potatoes and served with flavored water, regional variations emerged over time, transforming this street food into a canvas for culinary creativity.
-                  </p>
-                  <div className="space-y-3 md:space-y-4">
-                    <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                      <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                      <span className="text-justify">Precise dough consistency perfected through generations of artisan expertise</span>
-                    </p>
-                    <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                      <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                      <span className="text-justify">Delicate crispy spheres achieved through careful rolling techniques</span>
-                    </p>
-                    <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                      <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                      <span className="text-justify">Regional variations creating diverse culinary expressions across India</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+              At Vinayak Food Inc, we honor this tradition by hand-rolling each puri from premium semolina flour. Our process maintains the authentic techniques that create the perfect golden, crispy sphere with a delicate hollow center.
+            </p>
 
-              <div className="flex justify-center mb-12">
-                <X className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
-              </div>
+            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+              We prepare two signature waters daily: Khatta Meetha Pani, a sweet and sour tamarind-jaggery blend, and Theeka Pani, a spicy mint-coriander mixture. Both complement our freshly prepared potato fillings seasoned with traditional spice blends.
+            </p>
 
-              <div className="max-w-4xl mx-auto mb-12">
-                <p className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
-                  The magic lies in its signature waters: <strong className="text-cream">Khatta Meetha Pani</strong> (sweet and sour) made with tamarind and jaggery creates the beloved brown water, while <strong className="text-cream">Theeka Pani</strong> (spicy green water) made with mint, coriander, and green chillies delivers an invigorating kick. Both can be enhanced with boondi—tiny crispy pearls that add texture.
-                </p>
-                <div className="space-y-3 md:space-y-4">
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Khatta Meetha Pani: tamarind-jaggery blend creating iconic sweet-sour flavor</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Theeka Pani: mint-coriander-chili mixture delivering signature spicy kick</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Boondi pearls adding textural contrast and traditional authenticity</span>
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-center mb-12">
-                <X className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
-              </div>
-
-              <div className="max-w-4xl mx-auto">
-                <p className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
-                  Traditional vendors hand-roll each puri, monitoring oil temperature for perfect golden crispness and hollow centers. Fresh daily fillings combine boiled potatoes with secret spice blends passed through generations. This dedication transformed a simple snack into a beloved delicacy capturing Indian culinary heritage, with regional variations including sweet flavors and unique toppings.
-                </p>
-                <div className="space-y-3 md:space-y-4">
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Hand-rolled preparation maintaining traditional artisan standards</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Temperature-monitored frying ensuring perfect golden hollow spheres</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Secret spice blends passed through generations of family tradition</span>
-                  </p>
-                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
-                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Regional variations celebrating diverse Indian culinary expressions</span>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
+              Every element is crafted fresh each morning, ensuring you experience the authentic taste that has made Pani Puri a cherished part of Indian culinary heritage for generations.
+            </p>
           </div>
         </div>
       </section>
