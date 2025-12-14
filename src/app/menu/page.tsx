@@ -75,8 +75,8 @@ export default function MenuPage() {
             fill
             sizes="100vw"
             className="object-cover opacity-30"
-            priority />
-
+            priority
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
         </div>
 
@@ -85,24 +85,24 @@ export default function MenuPage() {
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="text-center">
-
+            className="text-center"
+          >
             <motion.span
               variants={fadeInUp}
-              className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
-
+              className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
+            >
               Our Menu
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-cream mt-3 md:mt-4 mb-4 md:mb-6">
-
+              className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-cream mt-3 md:mt-4 mb-4 md:mb-6"
+            >
               Authentic <span className="text-saffron">Flavors</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-base md:text-xl text-cream/80 max-w-2xl mx-auto px-2">
-
+              className="text-base md:text-xl text-cream/80 max-w-2xl mx-auto px-2"
+            >
               Handcrafted with traditional recipes passed down through
               generations.
             </motion.p>
@@ -118,8 +118,8 @@ export default function MenuPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3 }}
-              className="relative order-1">
-
+              className="relative order-1"
+            >
               <div className="relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src={displayImage}
@@ -128,8 +128,8 @@ export default function MenuPage() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                   unoptimized
-                  priority />
-
+                  priority
+                />
               </div>
             </motion.div>
 
@@ -138,8 +138,8 @@ export default function MenuPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3 }}
-              className="space-y-4 md:space-y-6 order-2">
-
+              className="space-y-4 md:space-y-6 order-2"
+            >
               <div>
                 <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
                   {displayTagline}
@@ -163,8 +163,8 @@ export default function MenuPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="space-y-12 md:space-y-16">
-
+            className="space-y-12 md:space-y-16"
+          >
             <motion.div variants={fadeInUp} className="text-center">
               <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
                 The Story
@@ -193,11 +193,11 @@ export default function MenuPage() {
                     Ingredients
                   </h3>
                   <div className="flex flex-wrap gap-2 md:gap-3 justify-center mb-6 md:mb-8">
-                    {menuItem.recipe.ingredients.map((item, idx) =>
-                    <span key={idx} className="px-3 md:px-4 py-1.5 md:py-2 bg-saffron/10 text-charcoal rounded-full text-xs md:text-sm">
+                    {menuItem.recipe.ingredients.map((item, idx) => (
+                      <span key={idx} className="px-3 md:px-4 py-1.5 md:py-2 bg-saffron/10 text-charcoal rounded-full text-xs md:text-sm">
                         {item}
                       </span>
-                    )}
+                    ))}
                   </div>
                   <div className="text-center pt-5 md:pt-6 border-t border-charcoal/10">
                     <h3 className="text-lg md:text-xl font-serif font-bold text-charcoal mb-2 md:mb-3">
@@ -220,18 +220,18 @@ export default function MenuPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={staggerContainer}>
-
+            variants={staggerContainer}
+          >
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6">
-
+              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6"
+            >
               Visit Us to Order
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-white/90 text-base md:text-xl mb-8 md:mb-10 px-2">
-
+              className="text-white/90 text-base md:text-xl mb-8 md:mb-10 px-2"
+            >
               Step into our store and savor the authentic taste of tradition —<br className="hidden sm:block" />
               handcrafted pani puri served fresh, one burst of flavor at a time.
             </motion.p>
@@ -239,14 +239,14 @@ export default function MenuPage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-saffron hover:bg-cream rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-transform hover:scale-110 w-full sm:w-auto">
-
+                className="bg-white text-saffron hover:bg-cream rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg transition-transform hover:scale-110 w-full sm:w-auto"
+              >
                 <Link href="/contact">Visit Us</Link>
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }
