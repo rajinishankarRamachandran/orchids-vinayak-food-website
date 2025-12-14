@@ -163,20 +163,7 @@ export default function MenuPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="space-y-12 md:space-y-16"
           >
-            <motion.div variants={fadeInUp} className="text-center">
-              <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
-                The Story
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3 mb-6 md:mb-8">
-                History of Pani Puri
-              </h2>
-              <p className="text-cream/80 text-base md:text-lg leading-relaxed text-justify max-w-4xl mx-auto">
-                {menuItem.history}
-              </p>
-            </motion.div>
-
             <motion.div variants={fadeInUp}>
               <div className="text-center mb-8 md:mb-10">
                 <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
