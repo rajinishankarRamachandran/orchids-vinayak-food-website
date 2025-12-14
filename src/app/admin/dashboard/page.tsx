@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import { getCurrentUser, signOut } from "@/lib/auth"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { LogOut, Edit, Home } from "lucide-react"
+import { LogOut, Edit, Home, Plus } from "lucide-react"
 import Link from "next/link"
 
 export default function AdminDashboard() {
@@ -87,12 +87,20 @@ export default function AdminDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button asChild className="bg-saffron hover:bg-saffron-dark">
-                <Link href="/admin/dashboard/menu-content">
-                  <Edit className="w-4 h-4 mr-2" />
-                  Edit Menu Page
-                </Link>
-              </Button>
+              <div className="flex gap-3">
+                <Button asChild className="bg-saffron hover:bg-saffron-dark">
+                  <Link href="/admin/dashboard/menu-content">
+                    <Edit className="w-4 h-4 mr-2" />
+                    Edit Menu Page
+                  </Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/admin/dashboard/add-dish">
+                    <Plus className="w-4 h-4 mr-2" />
+                    Add Dish
+                  </Link>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
