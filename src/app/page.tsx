@@ -142,7 +142,7 @@ export default function HomePage() {
                 alt="Vinayak Food Inc logo"
                 width={1400}
                 height={500}
-                className="h-24 sm:h-40 md:h-56 lg:h-72 w-auto mx-auto"
+                className="h-32 sm:h-40 md:h-56 lg:h-72 w-auto mx-auto"
                 priority />
 
             </div>
