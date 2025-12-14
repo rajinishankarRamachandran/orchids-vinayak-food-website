@@ -255,7 +255,7 @@ export default function HomePage() {
                 <motion.p
                   variants={fadeInUp}
                   className="text-cream/80 text-base md:text-lg leading-relaxed text-justify">
-                  The authentic preparation of puri begins with small, hollow, fried shells made from wheat and semolina flour. This technique, perfected over generations, requires precise dough consistency and rolling thickness to ensure each puri puffs into a delicate, crispy sphere. Traditional vendors hand-roll each puri, monitoring oil temperature for perfect golden crispness and hollow centers. This dedication transformed a simple snack into a beloved delicacy capturing Indian culinary heritage.
+                  Crafting authentic pani puri is an intricate dance between tradition and precision. Every morning, our master chefs arrive before dawn to begin the meticulous process that transforms humble ingredients into culinary perfection. The foundation starts with premium semolina flour, carefully sourced from trusted suppliers who understand that protein content and grain quality directly impact the final texture. This flour is combined with precise measurements of water, creating a dough consistency that has been perfected through generations of hands-on experience and family recipes passed down through time.
                 </motion.p>
               </motion.div>
             </div>
@@ -269,15 +269,15 @@ export default function HomePage() {
               <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 max-w-4xl mx-auto">
                 <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Small, hollow shells hand-rolled from wheat and semolina flour for perfect structure</span>
+                  <span className="text-justify">Premium semolina flour selected for optimal protein content and gluten strength</span>
                 </p>
                 <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Precise dough consistency and rolling thickness ensure delicate crispness</span>
+                  <span className="text-justify">Traditional hand-kneading techniques developed over decades of artisan practice</span>
                 </p>
                 <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Oil temperature monitoring for golden color and hollow centers</span>
+                  <span className="text-justify">Precise water-to-flour ratios ensuring perfect dough elasticity and structure</span>
                 </p>
               </motion.div>
               <motion.div variants={fadeInUp} className="flex justify-center mt-8">
@@ -291,20 +291,24 @@ export default function HomePage() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={staggerContainer}
-                className="lg:col-start-1">
+                className="lg:col-start-2">
                 <motion.p
                   variants={fadeInUp}
                   className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
-                  Our puris begin with premium-grade semolina flour, carefully selected for its protein content and gluten strength, which ensures the structural integrity necessary for achieving that signature hollow center. The dough is methodically hydrated to an exact consistency, then hand-kneaded using traditional techniques that develop the gluten network essential for optimal expansion during frying.
+                  The rolling process requires years of expertise to master. Each portion of dough is carefully portioned by weight, ensuring uniformity across every batch. Our artisans roll each piece to an exact thickness—thin enough to achieve delicate crispness, yet substantial enough to maintain structural integrity during frying. The circular shapes are cut with precision tools, their edges perfectly sealed to trap air inside. This attention to detail is what separates authentic pani puri from mass-produced alternatives, creating that signature hollow center that defines the perfect puri experience.
                 </motion.p>
                 <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4">
                   <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                     <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Premium semolina flour sourced for consistent protein content</span>
+                    <span className="text-justify">Weight-portioned dough for consistent size and cooking uniformity</span>
                   </p>
                   <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                     <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                    <span className="text-justify">Hand-kneaded using traditional techniques for optimal gluten development</span>
+                    <span className="text-justify">Precision-rolled thickness balancing crispness with structural strength</span>
+                  </p>
+                  <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                    <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                    <span className="text-justify">Expert edge-sealing techniques to trap air for signature hollow centers</span>
                   </p>
                 </motion.div>
               </motion.div>
@@ -330,20 +334,24 @@ export default function HomePage() {
               <motion.p
                 variants={fadeInUp}
                 className="text-cream/80 text-base md:text-lg leading-relaxed text-justify mb-6">
-                The frying process is where technical mastery truly shines. Our chefs maintain oil temperature between 350-375°F, the critical range that triggers rapid steam formation within the dough, creating the characteristic hollow sphere. The puris are gently submerged and continuously monitored, turned at precise intervals to ensure even golden-brown coloration and uniform puffing.
+                The frying stage is where artistry meets science. Our temperature-controlled fryers maintain a precise range between 350-375°F, the critical window where magic happens. At this exact temperature, moisture within the dough rapidly converts to steam, expanding the interior and creating that iconic hollow sphere. Each puri is gently lowered into the oil, where our chefs use traditional utensils to apply gentle pressure, encouraging even puffing. The puris are turned at calculated intervals, ensuring uniform golden-brown coloration on all surfaces. This process, completed in mere seconds, requires unwavering attention and years of muscle memory to execute flawlessly.
               </motion.p>
               <motion.div variants={fadeInUp} className="space-y-3 md:space-y-4 mb-6 md:mb-8">
                 <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Temperature-controlled frying at 350-375°F for perfect hollow formation</span>
+                  <span className="text-justify">Temperature-monitored frying at 350-375°F for optimal steam expansion</span>
                 </p>
                 <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Continuous monitoring and precise turning for uniform golden-brown crispness</span>
+                  <span className="text-justify">Traditional pressure techniques applied for even hollow sphere formation</span>
                 </p>
                 <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
                   <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
-                  <span className="text-justify">Rigorous quality inspection for shell integrity and authentic artisan standards</span>
+                  <span className="text-justify">Interval-based turning ensuring uniform golden-brown crispness across all surfaces</span>
+                </p>
+                <p className="text-cream flex items-start gap-2 md:gap-3 text-sm md:text-base">
+                  <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-saffron shrink-0 mt-2" />
+                  <span className="text-justify">Rigorous quality inspection verifying shell integrity and authentic standards</span>
                 </p>
               </motion.div>
 
