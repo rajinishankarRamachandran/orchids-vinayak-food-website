@@ -182,7 +182,7 @@
 }
 
 .traditional-indian-bg {
-  background: linear-gradient(135deg, #E76F00 0%, #D35400 25%, #C45D00 50%, #E67E22 75%, #FF8C33 100%);
+  background: linear-gradient(135deg, #F58B2E 0%, #E67E22 25%, #D87019 50%, #F09542 75%, #FFA351 100%);
   background-size: 400% 400%;
   animation: gradient-shift 20s ease infinite;
 }
