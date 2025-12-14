@@ -63,7 +63,7 @@ export default function MenuPage() {
   const displayHeading = content?.heading || "Pani Puri";
   const displayTagline = content?.tagline || menuItem.tagline;
   const displayDescription = content?.description || menuItem.longDescription;
-  const displayImage = content?.image_url || assets.menuPanipuri;
+  const displayImage = assets.menuPanipuri;
 
   return (
     <div className="overflow-hidden">
