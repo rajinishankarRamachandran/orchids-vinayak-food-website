@@ -366,6 +366,47 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-charcoal">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 md:mb-16">
+            <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
+              Meet Our Team
+            </span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3">
+              The Masters Behind the Magic
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            {chefs.map((chef, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-charcoal/80 to-charcoal border border-cream/10 p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-300 group hover:border-saffron/30"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-saffron to-saffron-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <span className="text-2xl md:text-3xl font-serif font-bold text-white">
+                      {chef.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-cream">
+                      {chef.name}
+                    </h3>
+                    <p className="text-saffron text-sm md:text-base font-medium mt-1">
+                      {chef.role}
+                    </p>
+                  </div>
+                </div>
+                <p className="text-cream/80 text-sm md:text-base leading-relaxed text-justify">
+                  {chef.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-gradient-to-br from-green to-green-dark">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <div>
