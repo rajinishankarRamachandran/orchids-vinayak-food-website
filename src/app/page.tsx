@@ -137,7 +137,7 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="mt-12 md:mt-16">
+            className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2">
             <div className="w-5 h-8 md:w-6 md:h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5 md:p-2 backdrop-blur-sm bg-white/5">
               <motion.div
                 animate={{ y: [0, 10, 0] }}
