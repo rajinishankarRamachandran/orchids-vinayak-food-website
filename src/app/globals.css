@@ -218,13 +218,34 @@
   filter: blur(2px);
 }
 
-.indian-orb-3 {
-  background: radial-gradient(circle at 50% 50%, rgba(211, 84, 0, 0.4), rgba(255, 140, 51, 0.1));
-  backdrop-filter: blur(40px);
-  border: 1px solid rgba(211, 84, 0, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(211, 84, 0, 0.37);
-  filter: blur(2px);
-}
+  .indian-orb-3 {
+    background: radial-gradient(circle at 50% 50%, rgba(211, 84, 0, 0.4), rgba(255, 140, 51, 0.1));
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(211, 84, 0, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(211, 84, 0, 0.37);
+    filter: blur(2px);
+  }
+
+  .bg-terracotta {
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(139, 69, 19, 0.03) 2px,
+        rgba(139, 69, 19, 0.03) 4px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 2px,
+        rgba(160, 82, 45, 0.02) 2px,
+        rgba(160, 82, 45, 0.02) 4px
+      ),
+      linear-gradient(135deg, #D2691E 0%, #CD853F 50%, #D2691E 100%);
+    background-size: 100% 100%, 100% 100%, 200% 200%;
+    animation: gradient-shift 20s ease infinite;
+  }
 
 .liquid-glass-bg {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);

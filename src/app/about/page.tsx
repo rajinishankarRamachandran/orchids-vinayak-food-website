@@ -126,7 +126,7 @@ export default function AboutPage() {
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
       <div className={`main-content ${scrolled ? 'active' : ''}`}>
-        <section className="py-16 md:py-24 bg-cream">
+        <section className="py-16 md:py-24 bg-terracotta">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
               <motion.div
@@ -435,7 +435,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-cream-dark">
+        <section className="py-16 md:py-24 bg-terracotta">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
