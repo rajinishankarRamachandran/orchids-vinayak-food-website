@@ -110,7 +110,7 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div
