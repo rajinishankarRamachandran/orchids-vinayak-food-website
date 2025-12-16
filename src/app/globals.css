@@ -311,7 +311,6 @@ nextjs-portal {
   height: 100vh;
   position: relative;
   z-index: 2;
-  background: #222222;
   font-family: var(--font-playfair);
   color: #FFF5E1;
   display: flex;
@@ -331,23 +330,14 @@ nextjs-portal {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.35;
+  opacity: 1;
   pointer-events: none;
-  z-index: 1;
-}
-
-.curtain::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(34, 34, 34, 0.7), rgba(34, 34, 34, 0.85));
-  pointer-events: none;
-  z-index: 1;
+  z-index: 0;
 }
 
 .curtain > * {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .main-content {
