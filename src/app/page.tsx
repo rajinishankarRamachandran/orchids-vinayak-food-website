@@ -112,26 +112,26 @@ export default function HomePage() {
             Authentic Pani Puri & traditional chaat crafted with love since 2000. Experience the taste of tradition at Vinayak Food Inc.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4 max-w-md sm:max-w-none">
-            <Button
-              asChild
-              size="lg"
-              className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto"
-            >
-              <Link href="/menu">View Menu</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="bg-cream/20 hover:bg-cream/30 text-cream border-2 border-cream/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto"
-            >
-              <Link href="/about">
-                Our Story
-                <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-              </Link>
-            </Button>
-          </div>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4 max-w-md sm:max-w-none">
+              <Button
+                asChild
+                size="lg"
+                className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto"
+              >
+                <Link href="/menu">View Menu</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-cream/20 hover:bg-cream/30 text-cream border-2 border-cream/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto"
+              >
+                <Link href="/about">
+                  Our Story
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                </Link>
+              </Button>
+            </div>
         </div>
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
