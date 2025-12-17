@@ -112,7 +112,7 @@ export default function AboutPage() {
       <div className={`curtain ${scrolled ? 'active' : ''}`}>
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
+            <span className="text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-semibold tracking-wider uppercase text-base md:text-lg">
               Our Story
             </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-cream mt-3 md:mt-4 mb-4 md:mb-6">
