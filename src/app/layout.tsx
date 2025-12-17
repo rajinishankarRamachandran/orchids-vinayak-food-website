@@ -42,6 +42,12 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+        <Script
+          id="orchids-browser-logs"
+          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
+          strategy="afterInteractive"
+          data-orchids-project-id="f8ae4c5b-5b81-492a-bdb0-f9f9a9db7191"
+        />
           <Script
             id="orchids-browser-logs"
             src="https://eijqjpaciqzybkqsdtgy.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
