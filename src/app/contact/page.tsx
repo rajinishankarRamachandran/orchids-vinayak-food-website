@@ -130,8 +130,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/backdrop-1765942449313.jpg?width=8000&height=8000&resize=contain"
+            alt="Background pattern"
+            fill
+            className="object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-saffron/5 to-white/95" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
