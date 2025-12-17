@@ -126,7 +126,7 @@ export default function AboutPage() {
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
       <div className={`main-content ${scrolled ? 'active' : ''}`}>
-        <section className="py-16 md:py-24 bg-gradient-to-br from-saffron/20 to-cream">
+        <section className="py-16 md:py-24 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
               <motion.div
