@@ -9,17 +9,20 @@ import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false,
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
@@ -36,27 +39,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable}`}>
-      <head>
-        <link rel="preload" as="image" href="/images/logo.png" />
-        <link rel="preload" as="image" href="/images/home-panipuri.jpg" />
-        <link rel="preload" as="image" href="/images/menu-panipuri.jpg" />
-        <link rel="preload" as="image" href="/images/about-panipuri.jpg" />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Script
-          id="orchids-browser-logs"
-          src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
-          strategy="afterInteractive"
-          data-orchids-project-id="f8ae4c5b-5b81-492a-bdb0-f9f9a9db7191"
-        />
-        <Script
-          id="orchids-browser-logs"
-          src="https://eijqjpaciqzybkqsdtgy.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
-          strategy="afterInteractive"
-          data-orchids-project-id="f8ae4c5b-5b81-492a-bdb0-f9f9a9db7191"
-        />
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <Script
+            id="orchids-browser-logs"
+            src="https://eijqjpaciqzybkqsdtgy.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
+            strategy="lazyOnload"
+            data-orchids-project-id="f8ae4c5b-5b81-492a-bdb0-f9f9a9db7191"
+          />
         <Navbar />
         <main>{children}</main>
         <Footer />

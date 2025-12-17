@@ -20,14 +20,14 @@ import { useEffect, useState } from "react";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
 };
 
 const staggerContainer = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15 }
+    transition: { staggerChildren: 0.1 }
   }
 };
 
@@ -76,18 +76,20 @@ export default function HomePage() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    console.log("Home page mounted successfully");
-
+    let ticking = false;
+    
     const handleScroll = () => {
-      const threshold = window.innerHeight * 0.4;
-      if (window.scrollY > threshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const threshold = window.innerHeight * 0.4;
+          setScrolled(window.scrollY > threshold);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -102,6 +104,7 @@ export default function HomePage() {
             height={600}
             className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-contain mb-4 sm:mb-6"
             priority
+            loading="eager"
           />
 
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-cream mb-3 sm:mb-4 text-center drop-shadow-xl px-2">
@@ -141,7 +144,7 @@ export default function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
               className="text-center mb-10 md:mb-16"
             >
@@ -162,7 +165,7 @@ export default function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
               className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8"
             >
@@ -196,7 +199,7 @@ export default function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
               className="text-center mb-10 md:mb-16"
             >
@@ -218,7 +221,7 @@ export default function HomePage() {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-50px", amount: 0.3 }}
                 variants={staggerContainer}
                 className="order-2 lg:order-1"
               >
@@ -262,7 +265,7 @@ export default function HomePage() {
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover w-full h-full"
-                    priority
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
@@ -279,7 +282,7 @@ export default function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
               className="text-center mb-10 md:mb-16"
             >
@@ -300,7 +303,7 @@ export default function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
               className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
             >
@@ -342,7 +345,7 @@ export default function HomePage() {
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
             >
               <motion.h2
