@@ -385,9 +385,9 @@ nextjs-portal {
 
 .main-content.active {
   position: relative;
-  margin-top: -10%;
+  margin-top: 0;
   height: auto;
-  padding-top: 12%;
+  padding-top: 0;
   min-height: 100vh;
 }
 
