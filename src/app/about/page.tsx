@@ -115,9 +115,9 @@ export default function AboutPage() {
             <span className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base">
               Our Story
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-cream mt-3 md:mt-4 mb-4 md:mb-6">
-              A Legacy of <span className="text-saffron">Tradition</span>
-            </h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-cream mt-3 md:mt-4 mb-4 md:mb-6">
+                A Legacy of <span className="bg-gradient-to-br from-green to-green-dark bg-clip-text text-transparent">Tradition</span>
+              </h1>
             <p className="text-base md:text-xl text-cream/80 max-w-2xl mx-auto !whitespace-pre-line px-2">
               Rooted in India's vibrant street food legacy, we honor centuries of chaat tradition, preserving authentic flavors — one Pani puri at a time.
             </p>
