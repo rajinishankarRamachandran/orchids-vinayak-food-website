@@ -107,19 +107,19 @@ export default function HomePage() {
             loading="eager"
           />
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-cream mb-3 sm:mb-4 text-center drop-shadow-xl px-2">
+          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-cream mb-4 sm:mb-5 md:mb-6 text-center drop-shadow-xl px-3 sm:px-4 leading-tight">
             Where Every Bite Tells a Story
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-cream/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4">
+          <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-cream/90 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4 sm:px-6">
             Authentic Pani Puri & traditional chaat crafted with love since 2000. Experience the taste of tradition at Vinayak Food Inc.
           </p>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full px-4 max-w-md sm:max-w-none">
+            <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 w-full px-4 max-w-sm sm:max-w-none">
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto font-semibold"
+                className="bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white rounded-full px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-xl transition-all hover:scale-105 sm:hover:scale-110 w-full sm:w-auto font-semibold"
               >
                 <Link href="/menu">View Menu</Link>
               </Button>
@@ -127,7 +127,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-cream/20 hover:bg-cream/30 text-cream border-2 border-cream/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl transition-all hover:scale-110 w-full sm:w-auto"
+                className="bg-cream/20 hover:bg-cream/30 text-cream border-2 border-cream/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-xl transition-all hover:scale-105 sm:hover:scale-110 w-full sm:w-auto"
               >
                 <Link href="/about">
                   Our Story
@@ -139,24 +139,24 @@ export default function HomePage() {
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
       <div className={`main-content ${scrolled ? 'active' : ''}`}>
-        <section className="py-16 md:py-24 bg-cream">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-cream">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
-              className="text-center mb-10 md:mb-16"
+              className="text-center mb-8 sm:mb-10 md:mb-14 lg:mb-16"
             >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
+                className="text-saffron font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
               >
                 Why Choose Us
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3 px-2"
               >
                 Authentic Chaat Experience
               </motion.h2>
@@ -167,19 +167,19 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8"
             >
               {whyCards.map((card, index) => (
                 <motion.div key={index} variants={fadeInUp}>
                   <Card className="border-none shadow-lg hover:shadow-xl transition-shadow h-full bg-white">
-                    <CardContent className="p-6 md:p-8 text-center">
-                      <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-4 md:mb-6 rounded-full bg-saffron/10 flex items-center justify-center">
-                        <card.icon className="w-7 h-7 md:w-8 md:h-8 text-saffron" />
+                    <CardContent className="p-5 sm:p-6 md:p-7 lg:p-8 text-center">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6 rounded-full bg-saffron/10 flex items-center justify-center">
+                        <card.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-saffron" />
                       </div>
-                      <h3 className="text-lg md:text-xl font-serif font-bold text-charcoal mb-2 md:mb-3">
+                      <h3 className="text-base sm:text-lg md:text-xl font-serif font-bold text-charcoal mb-2 md:mb-3">
                         {card.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                      <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm md:text-base">
                         {card.description}
                       </p>
                     </CardContent>
@@ -190,7 +190,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-charcoal relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-charcoal relative overflow-hidden">
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0 bg-grain" />
           </div>
@@ -201,23 +201,23 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
-              className="text-center mb-10 md:mb-16"
+              className="text-center mb-8 sm:mb-10 md:mb-14 lg:mb-16"
             >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
+                className="text-saffron font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
               >
                 Our Heritage
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-cream mt-2 md:mt-3"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-cream mt-2 md:mt-3 px-2"
               >
                 Two Decades of Tradition
               </motion.h2>
             </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -227,13 +227,13 @@ export default function HomePage() {
               >
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify"
+                  className="text-cream/90 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6 text-justify"
                 >
                   Since 2000, Vinayak Food has been serving authentic pani puri and traditional Indian chaat to our community. What started as a small family venture has grown into a beloved destination for food lovers seeking genuine flavors and time-honored recipes.
                 </motion.p>
                 <motion.p
                   variants={fadeInUp}
-                  className="text-cream/90 text-base md:text-lg leading-relaxed mb-6 text-justify"
+                  className="text-cream/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-7 md:mb-8 text-justify"
                 >
                   Our commitment to quality and authenticity has remained unchanged through the years. We continue to prepare every dish with the same care and attention that made us a household name.
                 </motion.p>
@@ -241,7 +241,7 @@ export default function HomePage() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 md:px-8 shadow-lg transition-transform hover:scale-110"
+                    className="bg-saffron hover:bg-saffron-dark text-white rounded-full px-6 sm:px-7 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-lg transition-transform hover:scale-105 sm:hover:scale-110 w-full sm:w-auto"
                   >
                     <Link href="/about" className="flex items-center justify-center">
                       Learn More
@@ -256,45 +256,45 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="relative order-1 lg:order-2"
+                className="relative order-1 lg:order-2 max-w-md mx-auto lg:max-w-none"
               >
-                <div className="relative aspect-square rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-square rounded-xl sm:rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src={assets.homePanipuri}
                     alt="Authentic Pani Puri"
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 90vw, 50vw"
                     className="object-cover w-full h-full"
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-saffron text-white p-4 md:p-6 rounded-xl md:rounded-2xl shadow-xl">
-                  <p className="text-2xl md:text-3xl font-serif font-bold">24+</p>
-                  <p className="text-xs md:text-sm opacity-90">Years of Excellence</p>
+                <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6 bg-saffron text-white p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl">
+                  <p className="text-xl sm:text-2xl md:text-3xl font-serif font-bold">24+</p>
+                  <p className="text-[10px] sm:text-xs md:text-sm opacity-90 whitespace-nowrap">Years of Excellence</p>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-cream-dark">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-cream-dark">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
-              className="text-center mb-10 md:mb-16"
+              className="text-center mb-8 sm:mb-10 md:mb-14 lg:mb-16"
             >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-sm md:text-base"
+                className="text-saffron font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
               >
                 The Process
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3 px-2"
               >
                 How It&apos;s Made
               </motion.h2>
@@ -305,7 +305,7 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px", amount: 0.3 }}
               variants={staggerContainer}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8"
+              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-8"
             >
               {howItsMadeSteps.map((step, index) => (
                 <motion.div
@@ -317,17 +317,17 @@ export default function HomePage() {
                     <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-saffron/50 to-transparent" />
                   )}
                   <div className="relative">
-                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 md:mb-6 rounded-full bg-white shadow-lg flex items-center justify-center">
-                      <step.icon className="w-8 h-8 md:w-10 md:h-10 text-saffron" />
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mx-auto mb-3 sm:mb-4 md:mb-5 lg:mb-6 rounded-full bg-white shadow-lg flex items-center justify-center">
+                      <step.icon className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 text-saffron" />
                     </div>
-                    <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-green text-white flex items-center justify-center text-xs md:text-sm font-bold">
+                    <div className="absolute -top-1 -right-1 sm:top-0 sm:right-0 md:-top-1 md:-right-1 lg:-top-2 lg:-right-2 w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 rounded-full bg-green text-white flex items-center justify-center text-[10px] sm:text-xs md:text-sm font-bold">
                       {index + 1}
                     </div>
                   </div>
-                  <h3 className="text-base md:text-xl font-serif font-bold text-charcoal mb-1 md:mb-2">
+                  <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-serif font-bold text-charcoal mb-1 sm:mb-1.5 md:mb-2 px-1">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-xs md:text-base leading-tight md:leading-normal">
+                  <p className="text-muted-foreground text-[10px] sm:text-xs md:text-sm lg:text-base leading-tight sm:leading-snug md:leading-normal px-1">
                     {step.description}
                   </p>
                 </motion.div>
@@ -336,7 +336,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gradient-to-br from-saffron to-saffron-dark relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-saffron to-saffron-dark relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-grain" />
           </div>
@@ -350,25 +350,25 @@ export default function HomePage() {
             >
               <motion.h2
                 variants={fadeInUp}
-                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-4 md:mb-6"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-3 sm:mb-4 md:mb-5 lg:mb-6 px-2"
               >
                 Ready to Experience Authentic Taste?
               </motion.h2>
               <motion.p
                 variants={fadeInUp}
-                className="text-white/90 text-base md:text-xl mb-8 md:mb-10 max-w-2xl mx-auto px-2"
+                className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-7 md:mb-8 lg:mb-10 max-w-2xl mx-auto px-2 sm:px-4"
               >
                 Join thousands of happy customers who have made Vinayak Food their
                 go-to destination for authentic Indian chaat.
               </motion.p>
               <motion.div
                 variants={fadeInUp}
-                className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4"
+                className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 px-4 max-w-md sm:max-w-none mx-auto"
               >
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-saffron hover:bg-cream rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto"
+                  className="bg-white text-saffron hover:bg-cream rounded-full px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105 sm:hover:scale-110 w-full sm:w-auto font-semibold"
                 >
                   <Link href="/menu">View Menu</Link>
                 </Button>
@@ -376,7 +376,7 @@ export default function HomePage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-110 w-full sm:w-auto"
+                  className="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 backdrop-blur-xl rounded-full px-6 sm:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-105 sm:hover:scale-110 w-full sm:w-auto"
                 >
                   <Link href="/contact">Visit Us</Link>
                 </Button>
