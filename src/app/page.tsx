@@ -102,12 +102,12 @@ export default function HomePage() {
             alt="Vinayak Food Inc"
             width={600}
             height={600}
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-contain mb-4 sm:mb-6"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-contain mb-2 sm:mb-3"
             priority
             loading="eager"
           />
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-cream mb-3 sm:mb-4 text-center drop-shadow-xl px-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-cream mb-3 sm:mb-4 text-center drop-shadow-xl px-2">
             Where Every Bite Tells a Story
           </h2>
 
