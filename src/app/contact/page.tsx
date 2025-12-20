@@ -46,10 +46,10 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (415) 555-1234",
+    content: "+1 (732) 257-4440",
     action: {
       label: "Call Now",
-      href: "tel:+14155551234",
+      href: "tel:+17322574440",
     },
   },
   {
@@ -229,7 +229,7 @@ export default function ContactPage() {
                       <Input
                         id="phone"
                         type="tel"
-                        placeholder="+1 (415) 555-1234"
+                        placeholder="+1 (732) 257-4440"
                         className="bg-white/50 h-11 md:h-12"
                         required
                       />
@@ -384,11 +384,11 @@ export default function ContactPage() {
             </motion.p>
             <motion.div variants={fadeInUp}>
               <a
-                href="tel:+14155551234"
+                href="tel:+17322574440"
                 className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium shadow-xl transition-transform hover:scale-110"
               >
                 <Phone className="w-4 h-4 md:w-5 md:h-5" />
-                <span className="hidden sm:inline">Call for Catering:</span> +1 (415) 555-1234
+                <span className="hidden sm:inline">Call for Catering:</span> +1 (732) 257-4440
               </a>
             </motion.div>
           </motion.div>
