@@ -67,18 +67,18 @@ export default function MenuPage() {
 
   return (
     <div className="overflow-hidden">
-      <section className="relative py-24 md:py-32 bg-charcoal">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={displayImage}
-            alt="Pani Puri spread"
-            fill
-            sizes="100vw"
-            className="object-cover opacity-30"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 to-charcoal" />
-        </div>
+        <section className="relative py-24 md:py-32 bg-charcoal">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-b from-charcoal/90 to-charcoal/60" />
+            <Image
+              src={displayImage}
+              alt="Pani Puri spread"
+              fill
+              sizes="100vw"
+              className="object-cover opacity-50"
+              priority
+            />
+          </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
