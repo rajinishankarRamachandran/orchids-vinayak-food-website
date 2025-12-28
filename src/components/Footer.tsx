@@ -30,11 +30,13 @@ export function Footer() {
               Where every bite tells a story. Authentic Pani Puri & traditional chaat crafted with love since 2000.
             </p>
             <div className="flex gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
+                <a
+                  href="https://www.instagram.com/vinayakfoods__/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
+                  aria-label="Instagram"
+                >
                 <Instagram className="w-5 h-5" />
               </a>
               <a

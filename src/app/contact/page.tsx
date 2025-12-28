@@ -339,11 +339,13 @@ export default function ContactPage() {
                       content.
                     </p>
                     <div className="flex gap-3 md:gap-4">
-                      <a
-                        href="#"
-                        className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
-                        aria-label="Instagram"
-                      >
+                        <a
+                          href="https://www.instagram.com/vinayakfoods__/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cream/10 hover:bg-saffron flex items-center justify-center transition-colors"
+                          aria-label="Instagram"
+                        >
                         <Instagram className="w-5 h-5 md:w-6 md:h-6" />
                       </a>
                       <a
