@@ -11,13 +11,13 @@ export function Footer() {
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3">
               <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden ring-2 ring-saffron/50 shadow-lg">
-                <Image
-                  src={assets.logo}
-                  alt="Vinayak Food Inc logo"
-                  fill
-                  className="object-contain bg-white"
-                  sizes="56px"
-                />
+                  <Image
+                    src={assets.logo}
+                    alt="Vinayak Food Inc logo"
+                    fill
+                    className="object-contain"
+                    sizes="56px"
+                  />
               </div>
               <div>
                 <h3 className="font-serif text-xl md:text-2xl font-bold text-cream">
