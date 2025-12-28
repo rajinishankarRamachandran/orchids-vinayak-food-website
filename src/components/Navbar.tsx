@@ -68,7 +68,7 @@ export function Navbar() {
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg overflow-hidden ring-2 ring-saffron/50 group-hover:scale-105 transition-transform">
                 <Image
                   src={assets.logo}
-                  alt="Vinayak Foods Inc logo"
+                  alt="Vinayak Food Inc logo"
                   fill
                   className="object-contain"
                   sizes="48px"
@@ -76,7 +76,7 @@ export function Navbar() {
 
               </div>
               <div className="flex flex-col">
-                <span className="font-serif text-lg md:text-xl font-bold text-white drop-shadow-lg leading-tight !whitespace-pre-line">Vinayak Foods Inc
+                <span className="font-serif text-lg md:text-xl font-bold text-white drop-shadow-lg leading-tight !whitespace-pre-line">Vinayak Food Inc
 
                 </span>
                 <span className="text-[10px] md:text-xs text-white font-medium tracking-wider drop-shadow-lg">
@@ -140,13 +140,13 @@ export function Navbar() {
                   <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-saffron/50">
                     <Image
                     src={assets.logo}
-                    alt="Vinayak Foods Inc logo"
+                    alt="Vinayak Food Inc logo"
                     fill
                     className="object-contain"
                     sizes="40px" />
 
                   </div>
-                  <span className="font-serif text-lg font-bold text-charcoal">Vinayak Foods</span>
+                  <span className="font-serif text-lg font-bold text-charcoal">Vinayak Food Inc</span>
                 </div>
                 <button
                 onClick={() => setIsMobileMenuOpen(false)}

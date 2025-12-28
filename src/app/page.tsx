@@ -99,7 +99,7 @@ export default function HomePage() {
         <div className="flex flex-col items-center justify-center max-w-5xl mx-auto px-4">
           <Image
             src={assets.logo}
-            alt="Vinayak Foods Inc"
+            alt="Vinayak Food Inc"
             width={600}
             height={600}
             className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-contain mb-2 sm:mb-3"
@@ -112,7 +112,7 @@ export default function HomePage() {
           </h2>
 
           <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-cream/90 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4 sm:px-6">
-            Authentic Pani Puri & traditional chaat crafted with love since 2000. Experience the taste of tradition at Vinayak Foods Inc.
+            Authentic Pani Puri & traditional chaat crafted with love since 2000. Experience the taste of tradition at Vinayak Food Inc.
           </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 w-full px-4 max-w-sm sm:max-w-none">
@@ -229,7 +229,7 @@ export default function HomePage() {
                   variants={fadeInUp}
                   className="text-cream/90 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-5 md:mb-6 text-justify"
                 >
-                  Since 2000, Vinayak Foods has been serving authentic pani puri and traditional Indian chaat to our community. What started as a small family venture has grown into a beloved destination for food lovers seeking genuine flavors and time-honored recipes.
+                  Since 2000, Vinayak Food Inc has been serving authentic pani puri and traditional Indian chaat to our community. What started as a small family venture has grown into a beloved destination for food lovers seeking genuine flavors and time-honored recipes.
                 </motion.p>
                 <motion.p
                   variants={fadeInUp}
@@ -358,7 +358,7 @@ export default function HomePage() {
                 variants={fadeInUp}
                 className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-7 md:mb-8 lg:mb-10 max-w-2xl mx-auto px-2 sm:px-4"
               >
-                Join thousands of happy customers who have made Vinayak Foods their
+                Join thousands of happy customers who have made Vinayak Food Inc their
                 go-to destination for authentic Indian chaat.
               </motion.p>
               <motion.div
