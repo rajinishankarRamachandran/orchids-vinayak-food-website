@@ -73,7 +73,7 @@ const chefs = [
   {
     name: "Deepak Gupta",
     role: "Distribution & Wholesale Manager",
-    description: "Deepak's passion for connecting authentic flavors with communities drives our wholesale operations. With a decade of experience in food logistics, he ensures our fresh pani puri reaches homes and shops across the region while maintaining the quality and care that defines Vinayak Food Inc."
+    description: "Deepak's passion for connecting authentic flavors with communities drives our wholesale operations. With a decade of experience in food logistics, he ensures our fresh pani puri reaches homes and shops across the region while maintaining the quality and care that defines Vinayak Foods Inc."
   }
 ];
 
@@ -147,7 +147,7 @@ export default function AboutPage() {
                     In the year 2000, a dream crossed oceans to take root in Sayreville, New Jersey. Our founders brought generations of culinary wisdom and authentic Indian street food traditions, with an unwavering commitment to preserve heritage in every bite.
                   </p>
                   <p>
-                    For over two decades, Vinayak Food Inc has been a bridge between continents. Each dish honors ancestral techniques while embracing the vibrant spirit of our new home, telling stories of heritage preserved and passion sustained.
+                    For over two decades, Vinayak Foods Inc has been a bridge between continents. Each dish honors ancestral techniques while embracing the vibrant spirit of our new home, telling stories of heritage preserved and passion sustained.
                   </p>
                   <p>
                     Today, we stand proud as guardians of authenticity. Our mission remains unchanged: to transport you through flavor, honor the past while serving the present, and prove that true tradition knows no boundaries.
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
                     src={assets.aboutPanipuri}
-                    alt="Founders of Vinayak Food"
+                    alt="Founders of Vinayak Foods"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
@@ -291,7 +291,7 @@ export default function AboutPage() {
                       Hand-Rolled Perfection
                     </motion.h3>
                     <motion.p variants={fadeInUp} className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
-                      At Vinayak Food Inc, we honor this tradition by hand-rolling each puri from premium semolina flour. Our process maintains the authentic techniques that create the perfect golden, crispy sphere with a delicate hollow center—a craft passed down through generations of master artisans.
+                      At Vinayak Foods Inc, we honor this tradition by hand-rolling each puri from premium semolina flour. Our process maintains the authentic techniques that create the perfect golden, crispy sphere with a delicate hollow center—a craft passed down through generations of master artisans.
                     </motion.p>
                   </motion.div>
                 </div>

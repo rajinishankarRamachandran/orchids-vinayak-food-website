@@ -13,7 +13,7 @@ export function Footer() {
               <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden ring-2 ring-saffron/50 shadow-lg">
                   <Image
                     src={assets.logo}
-                    alt="Vinayak Food Inc logo"
+                    alt="Vinayak Foods Inc logo"
                     fill
                     className="object-contain"
                     sizes="56px"
@@ -21,7 +21,7 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="font-serif text-xl md:text-2xl font-bold text-cream">
-                  Vinayak Food
+                  Vinayak Foods
                 </h3>
                 <p className="text-saffron text-sm">Since 2000</p>
               </div>
@@ -130,7 +130,7 @@ export function Footer() {
         <div className="mt-10 md:mt-12 pt-6 md:pt-8 border-t border-cream/10">
           <div className="flex justify-center items-center">
             <p className="text-cream/50 text-xs md:text-sm text-center">
-              © {new Date().getFullYear()} Vinayak Food Inc. All rights reserved.
+              © {new Date().getFullYear()} Vinayak Foods Inc. All rights reserved.
             </p>
           </div>
         </div>

@@ -27,7 +27,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Vinayak Food Inc - Authentic Indian Chaat Since 2000",
+  title: "Vinayak Foods Inc - Authentic Indian Chaat Since 2000",
   description:
     "Experience authentic Indian street food & chaat. Handcrafted pani puri with traditional recipes passed down through generations. Fresh ingredients, bold flavors.",
 };
