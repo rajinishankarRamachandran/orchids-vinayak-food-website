@@ -102,7 +102,7 @@ export default function HomePage() {
             alt="Vinayak Foods Inc"
             width={600}
             height={600}
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-contain mb-2 sm:mb-3 mix-blend-multiply"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 object-contain mb-2 sm:mb-3"
             priority
             loading="eager"
           />
