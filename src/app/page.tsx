@@ -139,8 +139,11 @@ export default function HomePage() {
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
       <div className={`main-content ${scrolled ? 'active' : ''}`}>
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-cream">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#FFF9F2] relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+            <div className="absolute inset-0 bg-grain" />
+          </div>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial="hidden"
               whileInView="visible"
