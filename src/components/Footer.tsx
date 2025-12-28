@@ -116,13 +116,13 @@ export function Footer() {
                   <p>9:00 AM - 5:00 PM</p>
                 </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-saffron shrink-0" />
-                <div className="text-cream/70 text-sm md:text-base">
-                  <p className="font-medium text-cream">Sat - Sun</p>
-                  <p>9:00 AM - 3:00 PM</p>
-                </div>
-              </li>
+                <li className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-saffron shrink-0" />
+                  <div className="text-cream/70 text-sm md:text-base">
+                    <p className="font-medium text-cream">Sat - Sun</p>
+                    <p>Holiday</p>
+                  </div>
+                </li>
             </ul>
           </div>
         </div>

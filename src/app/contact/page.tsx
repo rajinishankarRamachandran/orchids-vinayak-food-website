@@ -61,12 +61,12 @@ const contactInfo = [
       href: "mailto:hello@vinayakfood.com",
     },
   },
-  {
-    icon: Clock,
-    title: "Opening Hours",
-    content: "Mon - Fri: 9:00 AM - 5:00 PM\nSat - Sun: 9:00 AM - 3:00 PM",
-    action: null,
-  },
+    {
+      icon: Clock,
+      title: "Opening Hours",
+      content: "Mon - Fri: 9:00 AM - 5:00 PM\nSat - Sun: Holiday",
+      action: null,
+    },
 ];
 
 export default function ContactPage() {
