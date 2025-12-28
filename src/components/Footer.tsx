@@ -16,11 +16,11 @@ export function Footer() {
                     alt="Vinayak Foods Inc logo"
                     fill
                     className="object-contain"
-                    sizes="56px"
+                    sizes="50px"
                   />
               </div>
               <div>
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-cream">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-cream whitespace-nowrap">
                   Vinayak Foods Inc
                 </h3>
                 <p className="text-saffron text-sm">Since 2000</p>
