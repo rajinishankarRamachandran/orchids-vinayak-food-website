@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import {
   MapPin,
   Building2,
+  Phone,
   Mail,
   Clock,
   Send,
@@ -407,14 +408,14 @@ export default function ContactPage() {
                       href="tel:+17328227935"
                       className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
                     >
-                      <Building2 className="w-4 h-4" />
+                      <Phone className="w-4 h-4" />
                       +1 (732) 822-7935
                     </a>
                     <a
                       href="tel:+17323477840"
                       className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
                     >
-                      <Building2 className="w-4 h-4" />
+                      <Phone className="w-4 h-4" />
                       +1 (732) 347-7840
                     </a>
                   </div>
