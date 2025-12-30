@@ -56,10 +56,10 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "hello@vinayakfood.com",
+    content: "vinayakfoods23@gmail.com",
     action: {
       label: "Send Email",
-      href: "mailto:hello@vinayakfood.com",
+      href: "mailto:vinayakfoods23@gmail.com",
     },
   },
     {

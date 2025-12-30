@@ -104,7 +104,7 @@ export default function AdminLoginPage() {
                   <Input
                     id="signin-email"
                     type="email"
-                    placeholder="admin@vinayakfood.com"
+                      placeholder="vinayakfoods23@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -179,7 +179,7 @@ export default function AdminLoginPage() {
                   <Input
                     id="signup-email"
                     type="email"
-                    placeholder="admin@vinayakfood.com"
+                      placeholder="vinayakfoods23@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required

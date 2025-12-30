@@ -114,12 +114,12 @@ export function Footer() {
                   </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-saffron shrink-0" />
-                <a
-                  href="mailto:hello@vinayakfood.com"
-                  className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base break-all"
-                >
-                  hello@vinayakfood.com
-                </a>
+                  <a
+                    href="mailto:vinayakfoods23@gmail.com"
+                    className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base break-all"
+                  >
+                    vinayakfoods23@gmail.com
+                  </a>
               </li>
             </ul>
           </div>
