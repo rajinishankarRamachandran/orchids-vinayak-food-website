@@ -10,13 +10,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import {
   MapPin,
-  Phone,
+  Building2,
   Mail,
   Clock,
   Send,
   Instagram,
   Facebook,
   CheckCircle,
+  Phone,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -44,8 +45,8 @@ const contactInfo = [
     },
   },
   {
-    icon: Phone,
-    title: "Call Us",
+    icon: Building2,
+    title: "Office Phone",
     content: "+1 (732) 257-4440\n+1 (732) 822-7935",
     action: {
       label: "Call Now",

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react"
+import { MapPin, Building2, Mail, Clock, Instagram, Facebook } from "lucide-react"
 import { assets } from "@/assets"
 
 export function Footer() {
@@ -85,9 +85,9 @@ export function Footer() {
                   Sayreville, NJ 08872
                 </span>
               </li>
-                <li className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-saffron shrink-0 mt-1" />
-                  <div className="flex flex-col gap-1">
+                  <li className="flex items-start gap-3">
+                    <Building2 className="w-5 h-5 text-saffron shrink-0 mt-1" />
+                    <div className="flex flex-col gap-1">
                     <a
                       href="tel:+17322574440"
                       className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base"
