@@ -46,7 +46,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call Us",
-    content: "+1 (732) 257-4440",
+    content: "+1 (732) 257-4440\n+1 (732) 822-7935",
     action: {
       label: "Call Now",
       href: "tel:+17322574440",
@@ -395,22 +395,29 @@ export default function ContactPage() {
                   Call for Catering
                 </button>
               ) : (
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="tel:+17322574440"
-                    className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
-                  >
-                    <Phone className="w-4 h-4" />
-                    +1 (732) 257-4440
-                  </a>
-                  <a
-                    href="tel:+17323477840"
-                    className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
-                  >
-                    <Phone className="w-4 h-4" />
-                    +1 (732) 347-7840
-                  </a>
-                </div>
+                  <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+                    <a
+                      href="tel:+17322574440"
+                      className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
+                    >
+                      <Phone className="w-4 h-4" />
+                      +1 (732) 257-4440
+                    </a>
+                    <a
+                      href="tel:+17328227935"
+                      className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
+                    >
+                      <Phone className="w-4 h-4" />
+                      +1 (732) 822-7935
+                    </a>
+                    <a
+                      href="tel:+17323477840"
+                      className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
+                    >
+                      <Phone className="w-4 h-4" />
+                      +1 (732) 347-7840
+                    </a>
+                  </div>
               )}
             </motion.div>
           </motion.div>
