@@ -17,7 +17,6 @@ import {
   Instagram,
   Facebook,
   CheckCircle,
-  Phone,
 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -392,7 +391,7 @@ export default function ContactPage() {
                   onClick={() => setShowCateringNumbers(true)}
                   className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-8 py-4 text-lg md:text-xl font-medium shadow-xl transition-transform hover:scale-110"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Building2 className="w-5 h-5" />
                   Call for Catering
                 </button>
               ) : (
@@ -401,21 +400,21 @@ export default function ContactPage() {
                       href="tel:+17322574440"
                       className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
                     >
-                      <Phone className="w-4 h-4" />
+                      <Building2 className="w-4 h-4" />
                       +1 (732) 257-4440
                     </a>
                     <a
                       href="tel:+17328227935"
                       className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
                     >
-                      <Phone className="w-4 h-4" />
+                      <Building2 className="w-4 h-4" />
                       +1 (732) 822-7935
                     </a>
                     <a
                       href="tel:+17323477840"
                       className="inline-flex items-center gap-2 bg-white text-green hover:bg-cream rounded-full px-6 py-3 text-base md:text-lg font-medium shadow-lg transition-transform hover:scale-105"
                     >
-                      <Phone className="w-4 h-4" />
+                      <Building2 className="w-4 h-4" />
                       +1 (732) 347-7840
                     </a>
                   </div>
