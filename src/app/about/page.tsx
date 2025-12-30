@@ -66,12 +66,12 @@ const values = [
 
 const chefs = [
   {
-    name: "Kaushal Naik",
+    name: "Deepak Gupta",
     role: "Production Lead & Quality Master",
     description: "With 15 years of expertise in traditional pani puri craftsmanship, Kaushal ensures every batch meets our uncompromising standards. His dedication to perfecting the hollow puri and maintaining consistency has made him the backbone of our production facility, bringing authentic taste to homes and businesses alike."
   },
   {
-    name: "Deepak Gupta",
+    name: "Kaushal Naik",
     role: "Distribution & Wholesale Manager",
     description: "Deepak's passion for connecting authentic flavors with communities drives our wholesale operations. With a decade of experience in food logistics, he ensures our fresh pani puri reaches homes and shops across the region while maintaining the quality and care that defines Vinayak Foods Inc."
   }
