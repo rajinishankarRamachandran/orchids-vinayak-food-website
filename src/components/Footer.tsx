@@ -94,15 +94,24 @@ export function Footer() {
                     +1 (732) 257-4440
                   </a>
                 </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-saffron shrink-0" />
-                  <a
-                    href="tel:+17328227935"
-                    className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base"
-                  >
-                    +1 (732) 822-7935
-                  </a>
-                </li>
+                  <li className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-saffron shrink-0" />
+                    <a
+                      href="tel:+17328227935"
+                      className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base"
+                    >
+                      +1 (732) 822-7935
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-saffron shrink-0" />
+                    <a
+                      href="tel:+17323477840"
+                      className="text-cream/70 hover:text-saffron transition-colors text-sm md:text-base"
+                    >
+                      +1 (732) 347-7840
+                    </a>
+                  </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-saffron shrink-0" />
                 <a

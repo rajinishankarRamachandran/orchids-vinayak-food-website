@@ -47,7 +47,7 @@ const contactInfo = [
   {
     icon: Building2,
     title: "Office Phone",
-    content: "+1 (732) 257-4440\n+1 (732) 822-7935",
+    content: "+1 (732) 257-4440\n+1 (732) 822-7935\n+1 (732) 347-7840",
     action: {
       label: "Call Now",
       href: "tel:+17322574440",
