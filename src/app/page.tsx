@@ -271,9 +271,19 @@ export default function HomePage() {
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6 bg-saffron text-white p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl">
-                  <p className="text-xl sm:text-2xl md:text-3xl font-serif font-bold">24+</p>
-                  <p className="text-[10px] sm:text-xs md:text-sm opacity-90 whitespace-nowrap">Years of Excellence</p>
+                <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6 bg-saffron text-white p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl flex items-center gap-3 md:gap-4">
+                  <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
+                    <Image
+                      src={assets.streetFoodIcon}
+                      alt="Experience"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xl sm:text-2xl md:text-3xl font-serif font-bold">24+</p>
+                    <p className="text-[10px] sm:text-xs md:text-sm opacity-90 whitespace-nowrap">Years of Excellence</p>
+                  </div>
                 </div>
               </motion.div>
             </div>
