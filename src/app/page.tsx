@@ -107,10 +107,6 @@ export default function HomePage() {
             loading="eager"
           />
 
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-samarkan text-cream mb-3 sm:mb-4 md:mb-5 text-center drop-shadow-xl px-3 sm:px-4 leading-tight">
-            Vinayak Foods Inc
-          </h1>
-
           <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-samarkan text-cream mb-4 sm:mb-5 md:mb-6 text-center drop-shadow-xl px-3 sm:px-4 leading-tight">
             Where Every Bite Tells a Story
           </h2>
