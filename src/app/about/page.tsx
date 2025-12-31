@@ -323,11 +323,11 @@ export default function AboutPage() {
                   >
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                       <Image
-                        src={assets.aboutPanipuri}
-                        alt="Signature Waters"
+                        src={assets.artisanalPuri}
+                        alt="Artisanal Puri"
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </motion.div>
