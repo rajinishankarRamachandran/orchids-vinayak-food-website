@@ -248,13 +248,13 @@ export default function AboutPage() {
                     className="order-1 lg:order-2"
                   >
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                      <Image
-                        src={assets.aboutPanipuri}
-                        alt="Traditional Pani Puri"
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-cover"
-                      />
+                        <Image
+                          src={assets.menuPanipuri}
+                          alt="Traditional Pani Puri"
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="object-cover"
+                        />
                     </div>
                   </motion.div>
                 </div>
