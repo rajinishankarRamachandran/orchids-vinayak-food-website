@@ -107,9 +107,9 @@ export default function HomePage() {
             loading="eager"
           />
 
-          <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-samarkan text-cream mb-4 sm:mb-5 md:mb-6 text-center drop-shadow-xl px-3 sm:px-4 leading-tight">
+          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-samarkan text-cream mb-4 sm:mb-5 md:mb-6 text-center drop-shadow-xl px-3 sm:px-4 leading-tight">
             Where Every Bite Tells a Story
-          </h2>
+          </h1>
 
           <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-cream/90 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-3xl text-center drop-shadow-lg px-4 sm:px-6">
             Authentic Pani Puri & traditional chaat crafted with love since 2000. Experience the taste of tradition at Vinayak Foods Inc.
