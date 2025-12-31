@@ -139,10 +139,15 @@ export default function HomePage() {
       </div>
       <div className={`reveal-main ${scrolled ? 'activetwo' : ''}`}></div>
       <div className={`main-content ${scrolled ? 'active' : ''}`}>
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#FFF9F2] relative overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-            <div className="absolute inset-0 bg-grain" />
-          </div>
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url(${assets.whyChooseUsBg})`,
+              filter: 'brightness(0.85)',
+            }}
+          />
+          <div className="absolute inset-0 bg-[#F28705]/70" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial="hidden"
@@ -153,13 +158,13 @@ export default function HomePage() {
             >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
+                className="text-white font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
               >
                 Why Choose Us
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3 px-2"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mt-2 md:mt-3 px-2"
               >
                 Authentic Chaat Experience
               </motion.h2>
