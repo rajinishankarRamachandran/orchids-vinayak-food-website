@@ -144,20 +144,28 @@ export default function HomePage() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
               backgroundImage: `url(${assets.whyChooseUsBg})`,
-              filter: 'brightness(0.4)',
+              filter: 'brightness(0.5) saturate(0.8)',
             }}
           />
-          <div className="absolute inset-0 bg-[#1a1a1a]/60" />
           <div 
-            className="absolute inset-0 opacity-20"
+            className="absolute inset-0 opacity-10"
             style={{
-              backgroundImage: `repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(242, 135, 5, 0.3) 10px,
-                rgba(242, 135, 5, 0.3) 20px
-              )`,
+              backgroundImage: `radial-gradient(circle at 20% 50%, rgba(242, 135, 5, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(242, 135, 5, 0.15) 0%, transparent 50%),
+                repeating-linear-gradient(
+                  0deg,
+                  transparent,
+                  transparent 40px,
+                  rgba(255, 255, 255, 0.03) 40px,
+                  rgba(255, 255, 255, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                  90deg,
+                  transparent,
+                  transparent 40px,
+                  rgba(255, 255, 255, 0.03) 40px,
+                  rgba(255, 255, 255, 0.03) 41px
+                )`,
             }}
           />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
