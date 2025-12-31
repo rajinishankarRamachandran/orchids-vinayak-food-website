@@ -144,28 +144,6 @@ export default function HomePage() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
               backgroundImage: `url(${assets.whyChooseUsBg})`,
-              filter: 'brightness(0.5) saturate(0.8)',
-            }}
-          />
-          <div 
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `radial-gradient(circle at 20% 50%, rgba(242, 135, 5, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(242, 135, 5, 0.15) 0%, transparent 50%),
-                repeating-linear-gradient(
-                  0deg,
-                  transparent,
-                  transparent 40px,
-                  rgba(255, 255, 255, 0.03) 40px,
-                  rgba(255, 255, 255, 0.03) 41px
-                ),
-                repeating-linear-gradient(
-                  90deg,
-                  transparent,
-                  transparent 40px,
-                  rgba(255, 255, 255, 0.03) 40px,
-                  rgba(255, 255, 255, 0.03) 41px
-                )`,
             }}
           />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -178,13 +156,13 @@ export default function HomePage() {
             >
               <motion.span
                 variants={fadeInUp}
-                className="text-white font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
+                className="text-saffron font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
               >
                 Why Choose Us
               </motion.span>
               <motion.h2
                 variants={fadeInUp}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mt-2 md:mt-3 px-2"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-charcoal mt-2 md:mt-3 px-2"
               >
                 Authentic Chaat Experience
               </motion.h2>
