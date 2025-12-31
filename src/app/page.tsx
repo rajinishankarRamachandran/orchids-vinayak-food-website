@@ -144,10 +144,22 @@ export default function HomePage() {
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
               backgroundImage: `url(${assets.whyChooseUsBg})`,
-              filter: 'brightness(0.85)',
+              filter: 'brightness(0.4)',
             }}
           />
-          <div className="absolute inset-0 bg-[#F28705]/70" />
+          <div className="absolute inset-0 bg-[#1a1a1a]/60" />
+          <div 
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: `repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(242, 135, 5, 0.3) 10px,
+                rgba(242, 135, 5, 0.3) 20px
+              )`,
+            }}
+          />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               initial="hidden"
