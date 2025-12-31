@@ -41,6 +41,15 @@
 /* Updated: 2025-12-12T04:24:07.369Z */
 /* Updated: 2025-12-12T04:16:00.339Z */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Samarkan';
+  src: url('/fonts/SAMARKAN.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -51,6 +60,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-playfair);
+  --font-samarkan: 'Samarkan', serif;
   --color-saffron: #E76F00;
   --color-saffron-light: #FF8C33;
   --color-saffron-dark: #C45D00;
@@ -185,6 +195,10 @@
 
 .font-sans {
   font-family: var(--font-dm-sans);
+}
+
+.font-samarkan {
+  font-family: 'Samarkan', serif;
 }
 
 .bg-grain {
