@@ -249,7 +249,7 @@ export default function AboutPage() {
                   >
                     <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                         <Image
-                          src={assets.menuPanipuri}
+                          src={assets.streetFoodIcon}
                           alt="Traditional Pani Puri"
                           fill
                           sizes="(max-width: 1024px) 100vw, 50vw"
