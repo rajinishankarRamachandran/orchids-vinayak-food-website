@@ -311,7 +311,7 @@ export default function AboutPage() {
                       Artisanal Flavor Profiles
                     </motion.h3>
                     <motion.p variants={fadeInUp} className="text-cream/90 text-base md:text-lg leading-relaxed text-justify">
-                      We prepare two signature waters daily: Khatta Meetha Pani, a sweet and sour tamarind-jaggery blend, and Theeka Pani, a spicy mint-coriander mixture. Both complement our freshly prepared potato fillings seasoned with traditional spice blends, creating a harmonious balance of flavors.
+                      Our pani puri shells are delicately rolled and fried to perfect hollow spheres using traditional techniques. Light and crisp, with a gentle toasted aroma, each shell balances crunch and finesse. Every bite reflects the legacy and precision of authentic Indian chaat craftsmanship.
                     </motion.p>
                   </motion.div>
                   <motion.div
