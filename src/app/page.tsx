@@ -156,7 +156,7 @@ export default function HomePage() {
             >
               <motion.span
                 variants={fadeInUp}
-                className="text-saffron font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
+                className="text-charcoal font-medium tracking-wider uppercase text-xs sm:text-sm md:text-base"
               >
                 Why Choose Us
               </motion.span>
